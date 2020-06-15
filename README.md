@@ -6,6 +6,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
   - [User Experience](#user-experience)
     - [User Stories](#user-stories)
     - [Site Owner Stories](#site-owner-stories)
+    - [Colours](#colours)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks](#frameworks)
@@ -29,6 +30,10 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
 - As the site owner, I want to offer a visually striking site so that shoppers will have confidence in my business' quality.
 - As the site owner, I want an admin interface so that I modify site content when the menu changes.
 - As the site owner, I want to be able to view a history of all orders on the site so that I can track the performance of the business over time.
+
+### Colours
+
+![alt text](https://res.cloudinary.com/wondrouswebworks/image/upload/v1592252012/burgersaurus/colour-palette_xyvt0u.png "Colour Palette")
 
 ## Technologies Used
 
