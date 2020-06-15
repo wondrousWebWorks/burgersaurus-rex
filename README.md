@@ -31,6 +31,8 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
 
 ### Colours
 
+While I was looking for a suitable colour palette for Burgersaurus Rex, I noticed that a lot of take away businesses have very vibrant colour schemes on their sites. Since this seemed to be prevalent in the industry, I decided to follow suit for this project. the following colour palette was ultimately selected and can be viewed on [coolors.co](https://coolors.co/ef476f-ffd166-06d6a0-118ab2-073b4c). There is a strong contrast between all the colours, and the selection of colours should make different areas of the site distinct and easy to notice.
+
 ![alt text](https://res.cloudinary.com/wondrouswebworks/image/upload/v1592252012/burgersaurus/colour-palette_xyvt0u.png "Colour Palette")
 
 ## Technologies Used
