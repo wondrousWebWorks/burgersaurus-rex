@@ -7,7 +7,8 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
     - [User Stories](#user-stories)
     - [Site Owner Stories](#site-owner-stories)
     - [Colours](#colours)
-    - [Wireframes](#wireframes)
+    - [Fonts](#fonts)
+  - [Wireframes](#wireframes)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries, Frameworks & Tools](#libraries-frameworks--tools)
@@ -36,7 +37,11 @@ While I was looking for a suitable colour palette for Burgersaurus Rex, I notice
 
 ![alt text](https://res.cloudinary.com/wondrouswebworks/image/upload/v1592252012/burgersaurus/colour-palette_xyvt0u.png "Colour Palette")
 
-### Wireframes
+### Fonts
+
+I took inpiration from Nandos, my favourite restaurant, and looked for a font equally cartoony and unique for my project. I finally settled on [Miltonian Tattoo](https://fonts.google.com/specimen/Miltonian+Tattoo?sidebar.open&selection.family=Miltonian+Tattoo&preview.text_type=custom&query=miltonian#standard-styles). Coupled with this is [Open Sans](https://fonts.google.com/specimen/Open+Sans?sidebar.open&selection.family=Miltonian+Tattoo&preview.text_type=custom&query=open#standard-styles), commonly used with the cartoony Miltonian Tattoo to provide a more regular font to balance site text. Both fonts were imported from [Google Fonts](https://fonts.google.com/?preview.text_type=custom&query=open#standard-styles).
+
+## Wireframes
 
 Wireframes can be viewed [here](https://github.com/wondrousWebWorks/burgersaurus-rex/tree/master/wireframes)
 
@@ -59,6 +64,7 @@ Wireframes can be viewed [here](https://github.com/wondrousWebWorks/burgersaurus
 - [Font Awesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [Cloudinary](https://cloudinary.com/about)
+- [Balsamiq](https://balsamiq.com/)
 - [mockDrop](https://mockdrop.io/)
 
 ## Disclaimer
