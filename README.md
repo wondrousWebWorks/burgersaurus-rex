@@ -10,6 +10,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries, Frameworks & Tools](#libraries-frameworks--tools)
+  - [Disclaimer](#disclaimer)
 
 ## User Experience
 
@@ -52,3 +53,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
 - [Google Fonts](https://fonts.google.com/)
 - [Cloudinary](https://cloudinary.com/about)
 - [mockDrop](https://mockdrop.io/)
+
+## Disclaimer
+
+This site is intended for **educational purposes** only, and is not intended for use in any other capacity.
