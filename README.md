@@ -9,10 +9,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
     - [Colours](#colours)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
-    - [Frameworks](#frameworks)
-    - [Database](#database)
-    - [Libraries](#libraries)
-    - [Other](#other)
+    - [Libraries, Frameworks & Tools](#libraries-frameworks--tools)
 
 ## User Experience
 
@@ -39,23 +36,19 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
 
 ### Languages
 
-- HTML
-- CSS
-- JavaScript
-- Python
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
+- [Python](https://www.python.org/about/)
 
-### Frameworks
+### Libraries, Frameworks & Tools
 
-- Django
-
-### Database
-
-- Postgress
-
-### Libraries
-
-- Bootstrap
-
-### Other
-
-- Sass
+- [Django 3](https://www.djangoproject.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Git](https://git-scm.com/about)
+- [GitHub](https://github.com/)
+- [Bootstrap 4](https://getbootstrap.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [Cloudinary](https://cloudinary.com/about)
+- [mockDrop](https://mockdrop.io/)
