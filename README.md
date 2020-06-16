@@ -8,6 +8,12 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
     - [Site Owner Stories](#site-owner-stories)
     - [Colours](#colours)
     - [Fonts](#fonts)
+    - [Site Layout](#site-layout)
+      - [Home Page](#home-page)
+      - [Menu Page](#menu-page)
+      - [About Page](#about-page)
+      - [Order Summary Page](#order-summary-page)
+      - [Checkout Page](#checkout-page)
   - [Wireframes](#wireframes)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
@@ -41,9 +47,23 @@ While I was looking for a suitable colour palette for Burgersaurus Rex, I notice
 
 I took inpiration from Nandos, my favourite restaurant, and looked for a font equally cartoony and unique for my project. I finally settled on [Miltonian Tattoo](https://fonts.google.com/specimen/Miltonian+Tattoo?sidebar.open&selection.family=Miltonian+Tattoo&preview.text_type=custom&query=miltonian#standard-styles). Coupled with this is [Open Sans](https://fonts.google.com/specimen/Open+Sans?sidebar.open&selection.family=Miltonian+Tattoo&preview.text_type=custom&query=open#standard-styles), commonly used with the cartoony Miltonian Tattoo to provide a more regular font to balance site text. Both fonts were imported from [Google Fonts](https://fonts.google.com/?preview.text_type=custom&query=open#standard-styles).
 
+### Site Layout
+
+Due to Django's ability to effortlessly render multi-page sites, Burgersaurus rex was designed to feature multiple pages.
+
+#### Home Page
+
+#### Menu Page
+
+#### About Page
+
+#### Order Summary Page
+
+#### Checkout Page
+
 ## Wireframes
 
-Wireframes can be viewed [here](https://github.com/wondrousWebWorks/burgersaurus-rex/tree/master/wireframes)
+All wireframes were created using [Balsamiq](https://balsamiq.com/) and can be viewed [here](https://github.com/wondrousWebWorks/burgersaurus-rex/tree/master/wireframes).
 
 ## Technologies Used
 
