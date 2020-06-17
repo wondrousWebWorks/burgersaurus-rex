@@ -17,7 +17,8 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
   - [Wireframes](#wireframes)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
-    - [Libraries, Frameworks & Tools](#libraries-frameworks--tools)
+    - [Libraries & Frameworks](#libraries--frameworks)
+    - [Tools](#tools)
   - [Disclaimer](#disclaimer)
 
 ## User Experience
@@ -74,19 +75,22 @@ All wireframes were created using [Balsamiq](https://balsamiq.com/) and can be v
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
 - [Python](https://www.python.org/about/)
 
-### Libraries, Frameworks & Tools
+### Libraries & Frameworks
 
-- [Django 3](https://www.djangoproject.com/)
+- [Django](https://www.djangoproject.com/)
 - [PostgreSQL](https://www.postgresql.org/)
-- [Git](https://git-scm.com/about)
-- [GitHub](https://github.com/)
-- [Bootstrap 4](https://getbootstrap.com/)
+- [Bootstrap](https://getbootstrap.com/)
+
+### Tools
+
 - [Font Awesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [Cloudinary](https://cloudinary.com/about)
 - [Balsamiq](https://balsamiq.com/)
 - [mockDrop](https://mockdrop.io/)
-
+- [Git](https://git-scm.com/about)
+- [GitHub](https://github.com/)
+  
 ## Disclaimer
 
 This site is intended for **educational purposes** only, and is not intended for use in any other capacity.

@@ -1,0 +1,57 @@
+@import 'config';
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: $off-white;
+}
+
+#navbar {
+    background: linear-gradient(to right, $light-blue, $green, $dark-blue) !important;
+    background-repeat: repeat;
+    height: 10vh;
+
+    .logo-img {
+        height: 70%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .navbar-brand {
+        font-family: 'Metal Mania', cursive !important;
+        font-size: 1.7rem;
+    }
+
+    button.navbar-toggler {
+        font-size: 2.5rem !important;
+
+        .navbar-toggler-icon {
+            padding-top: .6rem;
+        }
+    }
+
+    #delivery-banner {
+        transform: translateY(10vh);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #navbar {
+        .navbar-collapse ul {
+            width: 100%;
+            background-color: $dark-blue;
+            padding-left: 2rem;
+        }
+
+        #search-input  input {
+            display: inline-block !important;
+            width: 60%;
+        }
+
+        #delivery-banner h4 {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Miltonian+Tattoo&family=Open+Sans&display=swap');
+
+$pink: #EF476F;
+$yellow: #FFD166;
+$green: #06D6A0;
+$light-blue: #118AB2;
+$dark-blue: #073B4C;
+$off-white: #f7f7f7;
+
+.bg-pink {
+    background-color: $pink;
+}
+
+.bg-yellow {
+    background-color: $yellow;
+}
+
+.bg-green {
+    background-color: $green;
+}
+
+.bg-light-blue {
+    background-color: $light-blue;
+}
+
+.bg-dark-blue {
+    background-color: $dark-blue;
+}
+
+.pink {
+    color: $pink;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.green {
+    color: $green;
+}
+
+.light-blue {
+    color: $light-blue;
+}
+
+.dark-blue {
+    color: $dark-blue;
+}
