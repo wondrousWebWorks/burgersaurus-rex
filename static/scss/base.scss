@@ -1,5 +1,9 @@
 @import 'config';
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
@@ -33,7 +37,30 @@ body {
     }
 
     #delivery-banner {
-        transform: translateY(10vh);
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        top: 10vh;
+        left: 0;
+    }
+}
+
+#header {
+    padding: 0;
+    position: relative;
+    display: block;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 0% 100%);
+
+    .image-wrapper::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        box-shadow: inset 12rem 12rem 18rem #000,
+                    inset -12rem -12rem 18rem #000;
+        // z-index: 10;
     }
 }
 
