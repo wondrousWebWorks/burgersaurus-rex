@@ -1,0 +1,31 @@
+@media screen and (max-width: 576px) {
+    #navbar {
+        padding: 0;
+
+        .navbar-collapse {
+            position: relative;
+            z-index: 10;
+            width: 100vw;
+
+            ul {
+                width: 100%;
+                background-color: var(--quanary-color);
+                padding-left: 2rem;
+            }
+        }
+
+        #search-input  input {
+            display: inline-block !important;
+            width: 60%;
+        }
+
+        #delivery-banner {
+            font-size: 1rem;
+        }
+    }#header {
+        .image-wrapper::after {
+            box-shadow: inset 4rem 4rem 7rem #000,
+                        inset -4rem -4rem 7rem #000;
+        }
+    }
+}

@@ -7,11 +7,11 @@ html {
 body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    background-color: $off-white;
+    background-color: var(--body-color);
 }
 
 #navbar {
-    background: linear-gradient(to right, $light-blue, $green, $dark-blue) !important;
+    background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
     background-repeat: repeat;
     height: 10vh;
 
@@ -36,20 +36,78 @@ body {
         }
     }
 
+    #search-input button {
+        background-color: var(--secondary-color);
+    }
+
     #delivery-banner {
         position: absolute;
         width: 100%;
         margin: 0;
         top: 10vh;
         left: 0;
+        background-color: var(--tertiary-color);
     }
 }
 
 #header {
+    height: 97vh;
     padding: 0;
     position: relative;
     display: block;
     clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 0% 100%);
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 12vh;
+
+        li {
+            height: .5rem;
+            background-color: var(--primary-color);
+        }
+    }
+
+    a.carousel-control {
+        font-size: 3rem;
+        color: var(--secondary-color);
+        z-index: 30;
+    }
+
+    .image-wrapper {
+        height: 97vh;
+        width: 100vw;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        .call-to-action {
+            text-align: center;
+            position: absolute;
+            bottom: 30vh;
+            left: 0;
+            right: 0;
+            z-index: 20;
+
+            h1 {
+                font-family: "Miltonian Tattoo", cursive;
+                font-size: 4rem;
+                color: white;
+            }
+
+            a {
+                font-size: 2rem;
+                font-family: "Metal Mania", sans-serif;
+                background-color: var(--quarternary-color);
+                color: white;
+                clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 45% 75%, 25% 98%, 25% 75%, 0% 75%);
+                }
+            }
+        }
+    }
 
     .image-wrapper::after {
         content: "";
@@ -58,27 +116,31 @@ body {
         width: 100%;
         top: 0;
         left: 0;
-        box-shadow: inset 12rem 12rem 18rem #000,
-                    inset -12rem -12rem 18rem #000;
-        // z-index: 10;
+        box-shadow: inset 15rem 15rem 30rem #000,
+                    inset -15rem -15rem 30rem #000;
+    }
+
+    .image-wrapper-1 {
+        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/ham-burger-with-vegetables-1639557_er26ay.jpg');
+    }
+
+    .image-wrapper-2 {
+        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592432817/burgersaurus/fried-fries-with-burger-on-ceramic-plate-3052248_1_ke0nk0.jpg');
+    }
+
+    .image-wrapper-3 {
+        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592432745/burgersaurus/pizza-2619967_1_ngyxe3.jpg');
     }
 }
 
-@media screen and (max-width: 576px) {
-    #navbar {
-        .navbar-collapse ul {
-            width: 100%;
-            background-color: $dark-blue;
-            padding-left: 2rem;
-        }
-
-        #search-input  input {
-            display: inline-block !important;
-            width: 60%;
-        }
-
-        #delivery-banner h4 {
-            font-size: 1rem;
-        }
-    }
+#delivery-info-wrapper {
+    position: relative;
+    transform: translateY(-30%);
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
+    clip-path: polygon(0% 12%, 100% 0%, 100% 100%, 0% 88%);
+    z-index: -1;
 }
+
+@import 'media-queries';
