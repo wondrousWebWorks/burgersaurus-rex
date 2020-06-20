@@ -22,10 +22,22 @@
         #delivery-banner {
             font-size: 1rem;
         }
-    }#header {
+    }
+    
+    #header {
         .image-wrapper::after {
             box-shadow: inset 4rem 4rem 7rem #000,
                         inset -4rem -4rem 7rem #000;
+        }
+
+        .image-wrapper {
+            .call-to-action {
+                bottom: 20vh;
+                
+                h1 {
+                    font-size: 3rem;
+                }
+            }
         }
     }
 }

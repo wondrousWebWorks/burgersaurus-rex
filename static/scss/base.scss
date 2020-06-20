@@ -8,12 +8,33 @@ body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     background-color: var(--body-color);
+    background: var(--body-color) url("https://www.transparenttextures.com/patterns/food.png") repeat;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #FFB81C #111;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #007749, #FFB81C);
+    outline: 1px solid slategrey;
+    border-radius: 4px;
 }
 
 #navbar {
     background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
     background-repeat: repeat;
     height: 10vh;
+    width: 100%;
 
     .logo-img {
         height: 70%;
@@ -63,7 +84,7 @@ body {
     padding: 0;
     position: relative;
     display: block;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 
     .carousel-indicators {
         position: absolute;
@@ -129,29 +150,52 @@ body {
     }
 
     .image-wrapper-1 {
-        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/ham-burger-with-vegetables-1639557_er26ay.jpg');
+        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592431649/burgersaurus/burger.jpg');
     }
 
     .image-wrapper-2 {
-        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592432817/burgersaurus/fried-fries-with-burger-on-ceramic-plate-3052248_1_ke0nk0.jpg');
+        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592432817/burgersaurus/hotdog.jpg');
     }
 
     .image-wrapper-3 {
-        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592432745/burgersaurus/pizza-2619967_1_ngyxe3.jpg');
+        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592662748/burgersaurus/ingredients.png');
     }
 }
 
 #delivery-info-wrapper {
     position: relative;
-    transform: translateY(-30%);
+    margin-top: $section-margin-top;
     width: 100%;
     height: 70vh;
     background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
-    clip-path: polygon(0% 12%, 100% 0%, 100% 100%, 0% 88%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
     z-index: -1;
 }
 
+#landing-page-info-boxes {
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    margin-top: $section-margin-top;
+
+    .landing-page-info-box {
+        min-height: 70vh;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: inset 5rem 5rem 8rem #000,
+        inset -5rem -5rem 8rem #000;
+    }
+
+    .landing-page-info-box-1 {
+        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592674351/burgersaurus/clovers.jpg');
+    }
+
+    .landing-page-info-box-2 {
+        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592674351/burgersaurus/awards.jpg');
+    }
+}
+
 footer {
+    margin-top: $section-margin-top;
     background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
     clip-path: polygon(0 20%, 100% 0, 100% 100%, 75% 100%, 0% 100%);
 
