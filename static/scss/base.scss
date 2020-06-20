@@ -40,6 +40,14 @@ body {
         background-color: var(--secondary-color);
     }
 
+    a.nav-link {
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            transform: rotateZ(360deg);
+        }
+    }
+
     #delivery-banner {
         position: absolute;
         width: 100%;
@@ -62,7 +70,7 @@ body {
         bottom: 12vh;
 
         li {
-            height: .5rem;
+            height: .8rem;
             background-color: var(--primary-color);
         }
     }
@@ -141,6 +149,30 @@ body {
     background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
     clip-path: polygon(0% 12%, 100% 0%, 100% 100%, 0% 88%);
     z-index: -1;
+}
+
+footer {
+    background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 75% 100%, 0% 100%);
+
+    .nav-links li {
+        transition: transform .5s ease-in-out;
+
+        &:hover {
+            transform: rotateY(360deg);
+        }
+
+        & a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    .social-and-copyright i {
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+    }
 }
 
 @import 'media-queries';
