@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    <div id="header" class="container-fluid">
+    <section id="header" class="container-fluid">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="carousel-item image-wrapper image-wrapper-3">
                     <div class="call-to-action">
-                        <h1 class="text-center p-xs-3 mb-xs-3 mb-lg-5">Only the best ingredients for the best taste</h1>
+                        <h1 class="text-center p-xs-3 mb-xs-3 mb-lg-5">Go on. You deserve the best ingredients!</h1>
                         <a href="#" class="btn call-to-action-btn pt-2 pb-4 text-center">Read More</a>
                     </div>
                 </div>
@@ -38,23 +38,30 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
-    <div class="container-fluid" id="delivery-info-wrapper">
+    </section>
 
-    </div>
+    <section class="container-fluid" id="delivery-info-wrapper">
 
-    <div class="container-fluid">
+    </section>
+
+    <section class="container-fluid">
         <div id="landing-page-info-boxes" class="row">
             <div class="col-12 col-md-6 pl-0 pr-1">
                 <div class="landing-page-info-box landing-page-info-box-1">
-
+                    <h2 class="text-white px-4">We proudly support Irish producers</h2>
+                    <p class="text-white p-5">
+                        Sure, we might be able to source our ingredients cheaper elsewhere. However, we firmly believe in supporting Irish farmers and get a lot of our ingredients from local small businesses. It's all good and from the 'hood.
+                    </p>
                 </div>
             </div>
             <div class="col-12 col-md-6 pr-0 pl-1">
                 <div class="landing-page-info-box landing-page-info-box-2">
-
+                    <h2 class="text-white x-4">We might've won an award or two...</h2>
+                    <p class="text-white p-5">
+                        Yes yes, we know you're not supposed to blow your own horn... and yet we did it! We'll let you be the ultimate judge, but if you disagree with our awards for <span>Best Tasting Burger</span> and <span>Takeaway of the Year</span>, you're wrong of course. Just joking!
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 {% endblock %}

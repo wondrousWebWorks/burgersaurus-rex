@@ -7,13 +7,13 @@ html {
 body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--body-color);
+    // background-color: var(--body-color);
     background: var(--body-color) url("https://www.transparenttextures.com/patterns/food.png") repeat;
 }
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: #FFB81C #111;
+    scrollbar-color: var(--tertiary-color) #111;
 }
 
 ::-webkit-scrollbar {
@@ -25,7 +25,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #007749, #FFB81C);
+    background: linear-gradient(to bottom, var(--primary-color), var(--tertiary-color));
     outline: 1px solid slategrey;
     border-radius: 4px;
 }
@@ -151,14 +151,17 @@ body {
 
     .image-wrapper-1 {
         background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592431649/burgersaurus/burger.jpg');
+        background-attachment: fixed;
     }
 
     .image-wrapper-2 {
         background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592432817/burgersaurus/hotdog.jpg');
+        background-attachment: fixed;
     }
 
     .image-wrapper-3 {
         background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592662748/burgersaurus/ingredients.png');
+        background-attachment: fixed;
     }
 }
 
@@ -177,20 +180,61 @@ body {
     margin-top: $section-margin-top;
 
     .landing-page-info-box {
+        text-align: center;
         min-height: 70vh;
-        background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        box-shadow: inset 5rem 5rem 8rem #000,
-        inset -5rem -5rem 8rem #000;
+        box-shadow: inset 8rem 8rem 8rem #000,
+                    inset -8rem -8rem 8rem #000;
+                    transition: all .5s ease-in-out;
+
+        h2 {
+            position: absolute;
+            top: 50%;
+            width: 80%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transform: translateY(-50%);
+            font-family: "Miltonian Tattoo", cursive;
+            font-size: 3rem;
+            transition: all .5s ease-in-out;
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+        }
+
+        &:hover {
+            box-shadow: inset 15rem 15rem 15rem #000,
+            inset -15rem -15rem 15rem #000;
+
+            p {
+                opacity: 1;
+                transform: translateY(-3rem);
+            }
+
+            h2 {
+                transform: translateY(-7rem);
+            }
+        }
     }
 
     .landing-page-info-box-1 {
         background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592674351/burgersaurus/clovers.jpg');
+        background-attachment: fixed;
+        background-position: left;
     }
 
     .landing-page-info-box-2 {
         background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592674351/burgersaurus/awards.jpg');
+        background-attachment: fixed;
+        background-position: right;
     }
 }
 
