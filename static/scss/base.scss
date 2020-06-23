@@ -6,9 +6,13 @@ html {
 
 body {
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    // background-color: var(--body-color);
-    background: var(--body-color) url("https://www.transparenttextures.com/patterns/food.png") repeat;
+    font-family: 'Miltonian Tattoo', sans-serif;
+    background-color: var(--body-color);
+    // background: var(--body-color) url("https://www.transparenttextures.com/patterns/food.png") repeat;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
 }
 
 * {
@@ -34,7 +38,6 @@ body {
     background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
     background-repeat: repeat;
     height: 10vh;
-    width: 100%;
 
     .logo-img {
         height: 70%;
@@ -47,6 +50,16 @@ body {
     .navbar-brand {
         font-family: 'Metal Mania', cursive !important;
         font-size: 1.7rem;
+        transform: rotateZ(-5deg);
+    }
+
+    p.nav-para {
+        font-family: "Miltonian Tattoo", cursive;
+    }
+
+    a.nav-link {
+        font-family: "Metal Mania", sans-serif;
+        font-size: 1.4rem;
     }
 
     button.navbar-toggler {
@@ -84,7 +97,8 @@ body {
     padding: 0;
     position: relative;
     display: block;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 88% 91%, 76% 91%, 64% 94%, 52% 94%, 40% 96%, 29% 95%, 18% 98%, 9% 97%, 0% 100%);
+    // clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 
     .carousel-indicators {
         position: absolute;
@@ -118,7 +132,6 @@ body {
             z-index: 20;
 
             h1 {
-                font-family: "Miltonian Tattoo", cursive;
                 font-size: 4rem;
                 color: white;
             }
@@ -150,7 +163,7 @@ body {
     }
 
     .image-wrapper-1 {
-        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592431649/burgersaurus/burger.jpg');
+        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/burger-close-up.jpg');
         background-attachment: fixed;
     }
 
@@ -165,28 +178,57 @@ body {
     }
 }
 
-#delivery-info-wrapper {
-    position: relative;
+#ordering-process-wrapper {
     margin-top: $section-margin-top;
     width: 100%;
-    height: 70vh;
-    background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    padding: 8vh 0;
     z-index: -1;
+
+    #ordering-process-heading {
+        font-size: 4rem;
+        transform: rotateZ(-5deg);
+        text-align: center;
+        margin-bottom: 5rem;
+        width: 85%;
+        margin: auto;
+    }
+
+    .ordering-process-image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
 }
 
 #landing-page-info-boxes {
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    // clip-path: polygon(80% 0, 100% 10%, 100% 90%, 20% 100%, 0 90%, 0 10%);
+    clip-path: polygon(0 10%, 8% 8%, 15% 9%, 22% 7%, 37% 8%, 49% 6%, 54% 7%, 62% 5%, 71% 6%, 79% 4%, 87% 5%, 92% 4%, 96% 6%, 100% 1%, 100% 90%, 94% 91%, 86% 89%, 78% 92%, 68% 90%, 58% 93%, 46% 92%, 33% 95%, 25% 94%, 15% 97%, 7% 96%, 0 100%);
+    background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
+    transition: all .5s ease-in-out;
     margin-top: $section-margin-top;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100vw;
+    overflow: hidden;
 
     .landing-page-info-box {
         text-align: center;
-        min-height: 70vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        box-shadow: inset 8rem 8rem 8rem #000,
-                    inset -8rem -8rem 8rem #000;
-                    transition: all .5s ease-in-out;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s ease-in-out;
+
+        img {
+            transition: all .5s ease-in-out;
+        }
 
         h2 {
             position: absolute;
@@ -196,9 +238,9 @@ body {
             right: 0;
             margin: auto;
             transform: translateY(-50%);
-            font-family: "Miltonian Tattoo", cursive;
             font-size: 3rem;
             transition: all .5s ease-in-out;
+            text-shadow: 2px 2px #222;
         }
 
         p {
@@ -210,9 +252,17 @@ body {
             transition: all .5s ease-in-out;
         }
 
+        img.landing-page-info-box-1-image {
+            height: 65%;
+        }
+
+        img.landing-page-info-box-2-image {
+            height: 80%;
+        }
+
         &:hover {
-            box-shadow: inset 15rem 15rem 15rem #000,
-            inset -15rem -15rem 15rem #000;
+            box-shadow: inset 15rem 15rem 20rem #000,
+                        inset -15rem -15rem 20rem #000;
 
             p {
                 opacity: 1;
@@ -222,44 +272,54 @@ body {
             h2 {
                 transform: translateY(-7rem);
             }
+
+            img {
+                opacity: .35;
+            }
         }
-    }
-
-    .landing-page-info-box-1 {
-        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592674351/burgersaurus/clovers.jpg');
-        background-attachment: fixed;
-        background-position: left;
-    }
-
-    .landing-page-info-box-2 {
-        background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592674351/burgersaurus/awards.jpg');
-        background-attachment: fixed;
-        background-position: right;
     }
 }
 
 footer {
     margin-top: $section-margin-top;
     background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 75% 100%, 0% 100%);
+    clip-path: polygon(0 10%, 6% 8%, 15% 9%, 25% 7%, 31% 9%, 44% 7%, 54% 7%, 62% 5%, 67% 7%, 74% 4%, 83% 6%, 88% 4%, 95% 4%, 100% 1%, 100% 100%, 0 100%);
+
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .nav-links li {
-        transition: transform .5s ease-in-out;
-
-        &:hover {
-            transform: rotateY(360deg);
-        }
 
         & a {
             text-decoration: none;
             color: white;
+            font-family: "Metal Mania", sans-serif;
+            font-size: 1.3rem;
+            transition: all .5s ease-in-out;
+
+            &:hover {
+                color: var(--secondary-color);
+            }
         }
     }
 
-    .social-and-copyright i {
-        text-decoration: none;
+    .social-and-copyright {
         color: white;
-        font-size: 2rem;
+
+        & i {
+            color: white;
+            text-decoration: none;
+            font-size: 3rem;
+            transition: all .5s ease-in-out;
+            
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
     }
 }
 

@@ -33,11 +33,63 @@
         .image-wrapper {
             .call-to-action {
                 bottom: 20vh;
-                
+
                 h1 {
                     font-size: 3rem;
                 }
             }
+        }
+    }
+
+    #landing-page-info-boxes {
+    
+        .landing-page-info-box {
+    
+            h2 {
+                width: 90%;
+                font-size: 2rem;
+            }
+    
+            p {
+                font-size: 1.2rem;
+            }
+    
+            img.landing-page-info-box-1-image {
+                height: 65%;
+            }
+    
+            img.landing-page-info-box-2-image {
+                height: 80%;
+            }
+    
+            &:hover {
+                box-shadow: inset 15rem 15rem 20rem #000,
+                            inset -15rem -15rem 20rem #000;
+    
+                p {
+                    opacity: 1;
+                    transform: translateY(-3rem);
+                }
+    
+                h2 {
+                    transform: translateY(-7rem);
+                }
+    
+                img {
+                    opacity: .35;
+                }
+            }
+        }
+    }
+
+    footer { 
+        article {
+            text-align: center;
+        }
+
+        hr {
+            width: 60%;
+            background-color: var(--secondary-color);
         }
     }
 }
