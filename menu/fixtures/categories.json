@@ -43,7 +43,7 @@
       "model": "menu.category",
       "pk": 6,
       "fields": {
-        "name": "drink",
+        "name": "drinks",
         "friendly_name": "Drinks"
       }
     },

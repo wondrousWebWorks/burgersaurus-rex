@@ -39,3 +39,11 @@
     </div>
 </section> 
 {% endblock %}
+
+{% block content %}
+    {% for menu_item in menu %}
+        <article id="burgers">
+            <p>{{ menu_item.name }}</p>
+        </article>
+    {% endfor %}
+{% endblock %}

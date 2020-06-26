@@ -25,8 +25,22 @@
         <li class="nav-item active">
             <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-white" href="#">Menu</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Menu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'menu' %}">Full Menu</a>
+            <a class="dropdown-item" href="{% url 'menu' %}?category=meal_deals">Meal Deals</a>
+            <a class="dropdown-item" href="{% url 'menu' %}?category=burgers">Burgers</a>
+            <a class="dropdown-item" href="{% url 'menu' %}?category=hotdogs">Hotdogs</a>
+            <a class="dropdown-item" href="{% url 'menu' %}?category=kebabs">Kebabs</a>
+            <a class="dropdown-item" href="{% url 'menu' %}?category=fish">Fish</a>
+            <a class="dropdown-item" href="{% url 'menu' %}?category=chips">Chips</a>
+            <a class="dropdown-item" href="{% url 'menu' %}?category=extras">Extras</a>
+            <a class="dropdown-item" href="{% url 'menu' %}?category=drinks">Drinks</a>
+            </div>
         </li>
         <li class="nav-item">
             <a class="nav-link text-white" href="#">About</a>
