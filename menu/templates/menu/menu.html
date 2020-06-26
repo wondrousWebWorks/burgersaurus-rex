@@ -41,9 +41,22 @@
 {% endblock %}
 
 {% block content %}
+<article id="menu" class="container">
     {% for menu_item in menu %}
-        <article id="burgers">
-            <p>{{ menu_item.name }}</p>
-        </article>
+        <div class="row border-bottom pb-1 mb-2">
+            <div class="col-sm-10">
+                <h3>{{ menu_item.name }}</h3>
+                <p>{{ menu_item.description }}</p>
+                <h4>Allergens:</h4>
+                {% for allergen in menu_item.allergens.all%}
+                    <span class="btn btn-warning">{{ allergen }}</span>
+                {% endfor %}
+            </div>
+            <div class="col-sm-2">
+                <p>{{ menu_item.price }}</p>
+                <a href=""><i class="fas fa-cart-plus"></i></a>
+            </div>
+        </div>
     {% endfor %}
+</article>
 {% endblock %}
