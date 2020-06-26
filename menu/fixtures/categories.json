@@ -1,58 +1,66 @@
 [
     {
-      "pk": 1,
       "model": "menu.category",
+      "pk": 1,
       "fields": {
         "name": "meal_deals",
         "friendly_name": "Meal Deals"
       }
     },
     {
+      "model": "menu.category",
       "pk": 2,
-      "model": "menu.category",
-      "fields": {
-        "name": "burgers",
-        "friendly_name": "Burgers"
-      }
-    },
-    {
-      "pk": 3,
-      "model": "menu.category",
       "fields": {
         "name": "hotdogs",
         "friendly_name": "Hotdogs"
       }
     },
     {
-      "pk": 4,
       "model": "menu.category",
+      "pk": 3,
       "fields": {
         "name": "fish",
         "friendly_name": "Fish"
       }
     },
     {
-      "pk": 5,
       "model": "menu.category",
+      "pk": 4,
+      "fields": {
+        "name": "kebabs",
+        "friendly_name": "Kebabs"
+      }
+    },
+    {
+      "model": "menu.category",
+      "pk": 5,
       "fields": {
         "name": "chips",
         "friendly_name": "Chips"
       }
     },
     {
-      "pk": 6,
       "model": "menu.category",
+      "pk": 6,
       "fields": {
-        "name": "drinks",
+        "name": "drink",
         "friendly_name": "Drinks"
       }
     },
     {
-      "pk": 7,
       "model": "menu.category",
+      "pk": 7,
       "fields": {
         "name": "extras",
         "friendly_name": "Extras"
+      }
+    },
+    {
+      "model": "menu.category",
+      "pk": 8,
+      "fields": {
+        "name": "burgers",
+        "friendly_name": "Burgers"
       }
     }
   ]

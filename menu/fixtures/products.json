@@ -1,0 +1,1008 @@
+[
+    {
+        "model": "menu.product",
+        "pk": 1,
+        "fields": {
+            "category": 8,
+            "name": "Classic Burger",
+            "description": "Proven to stand the test of time. A solid quarter pound beef patty, juicy tomato, crispy lettuce, tasty gherkin and Burgersaurus Rex Basting Sauce in a fresh bun.",
+            "price": "4.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 2,
+        "fields": {
+            "category": 8,
+            "name": "Cheeseburger",
+            "description": "Take our Classic burger and add a double helping of Cheddar cheese. We know it's cheesy (get it?), but we guarantee you'll absolutely luuuurve this burger.",
+            "price": "5.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 3,
+        "fields": {
+            "category": 8,
+            "name": "Burgersaurus Rex Burger",
+            "description": "The undisputed KING of burgers. Period. Two quarter pound beef patties, juicy tomato, crispy lettuce, smoked bacon, mushrooms, fried onions and Burgersaurus Rex Basting Sauce in a fresh bun. Can you handle it?",
+            "price": "7.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 4,
+        "fields": {
+            "category": 8,
+            "name": "Bacon & Guacamole Burger",
+            "description": "Take one cheeseburger, add smooooky bacon smoooth guacamole. The result is this. A true treat for your tastebuds.",
+            "price": "7.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 5,
+        "fields": {
+            "category": 8,
+            "name": "Bacon, Egg & Cheese Burger",
+            "description": "What came first? The bacon or the egg? Wait. What? Actually the quarter pound beef patty, followed by a slice of cheese, our popular smoky bacon and a free-range egg. Top it with our legendary secret sauce and you get this. A masterpiece!",
+            "price": "7.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                2,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 6,
+        "fields": {
+            "category": 8,
+            "name": "Bacon & Blue Cheese Burger",
+            "description": "Are you feeling blue? Just kidding. This burger is suitable for any colour! A delicious quarter pound beef patty, topped with a double helping of smoky bacon and flavoursome blue cheese. Add juicy tomato and crispy lettuce, and let your tastebuds marvel at this onslaught of flavour.",
+            "price": "7.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 7,
+        "fields": {
+            "category": 8,
+            "name": "Chicken Fillet Burger",
+            "description": "Don't give a cluck about beef? We've got you covered! How about a battered chicken fillet, topped with mayo, fruity tomato, the crispiest lettuce and our in-house mayo made with free-range eggs? Give it go! Don't be chicken...",
+            "price": "6.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                2,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 8,
+        "fields": {
+            "category": 8,
+            "name": "Something's Fishy Burger",
+            "description": "Roses are red, violets are blue. If you don't fancy beef or chicken, this burger is for you! Sustainably-sourced cod, with beefsteak tomato (sorry, we had to include something beefy), yummy lettuce, our in-house mayo made with free-range eggs and tartar sauce. It's certainly a different kettle of fish!",
+            "price": "6.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                3,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 9,
+        "fields": {
+            "category": 8,
+            "name": "Very Vegeratian Burger",
+            "description": "Don't worry. We haven't forgotten about you! Our veggie patties are made with love, beans, soy, sweetcorn and love. Yes, we included love twice on purpose! Add beafsteak tomato (the only beef is in the name), fresh letuce, a sprinkle or fresh rocket and our special egg-free mayo. *Our veggie patties are cooked away from meat products &#x1F601;",
+            "price": "5.50",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                7,
+                8
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 10,
+        "fields": {
+            "category": 2,
+            "name": "Classic Hotdog",
+            "description": "It's all in the name. A 30cm (yes, that's right) pork sausage grilled to perfection, topped with fried onions, kethcup and mustard on and equally impressive bun. Who let the dogs out? We did!",
+            "price": "5.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 11,
+        "fields": {
+            "category": 2,
+            "name": "Burgersaurus Rex Hotdog",
+            "description": "Take your hotdog to the next level! Feast your eyes on a bacon-wrapped pork sausage, creamy grated cheese, crispy onion flakes and our Burgersaurus rex Hotdog Sauce. You won't find a more impressive hotdog anywhere. Period.",
+            "price": "6.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 12,
+        "fields": {
+            "category": 2,
+            "name": "Breakfast Hotdog",
+            "description": "Served all day long. Well, during opening hours anyway... Our famous pork sausage, with scrambled egg, hash browns and a helping of cheese. The best way to enjoy brinner!",
+            "price": "6.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                2,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 13,
+        "fields": {
+            "category": 2,
+            "name": "Veggiedog",
+            "description": "The same goodness as our Classic Hotdog, but with a meat-free sausage made of mycoprotein, onion and soy. One does not simply create such a delicious veggie alternative... But we HAVE, so dig in!",
+            "price": "6.50",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                7,
+                8
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 14,
+        "fields": {
+            "category": 3,
+            "name": "Battered Cod",
+            "description": "Do you believe in Cod? We sure hope so! Wrapped in a delicious crispy batter. It's really tasty. We cod you not.",
+            "price": "5.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                3,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 15,
+        "fields": {
+            "category": 3,
+            "name": "Battered Hake",
+            "description": "We looked into our Magic Hake Ball, and it said that you have to try this. Once a favourite, always a favourite.",
+            "price": "5.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                3,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 16,
+        "fields": {
+            "category": 3,
+            "name": "Breaded Scampi",
+            "description": "We know what you're thinking. \"Oh for gods hake. Not another fish pun!\". We'll give you a break for now. Our breaded scampi is scampi-ly (oops) dressed in a light vinegar dressing and simply melts in the mouth.",
+            "price": "5.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                3,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 17,
+        "fields": {
+            "category": 4,
+            "name": "Beef Kebab",
+            "description": "Slow-cooked, tender beef in pita bread with juicy tomato, crispy lettuce and fresh onion. Add some of our very own Kebab sauce, and you've got an instant classic!",
+            "price": "5.75",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 18,
+        "fields": {
+            "category": 4,
+            "name": "Lamb Kebab",
+            "description": "Succulent, tender lamb in pita bread with juicy tomato, crispy lettuce and fresh onion. Add some of our very own Kebab sauce, and you've got an instant classic!",
+            "price": "5.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 19,
+        "fields": {
+            "category": 4,
+            "name": "Chicken Kebab",
+            "description": "Slow-cooked chicken breast in pita bread with juicy tomato, crispy lettuce and fresh onion. A popular alternative for those who don't fancy red meat.",
+            "price": "5.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 20,
+        "fields": {
+            "category": 5,
+            "name": "Thick-cut Chips",
+            "description": "Chunky chips made from Irish potatoes. Mouthwateringly delicious!",
+            "price": "2.90",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 21,
+        "fields": {
+            "category": 5,
+            "name": "Thin-cut Chips",
+            "description": "Prefer a thinner cut? These chips would be what is considered \"American\" style. Like our other potatoes, made from the best quality Irish potatoes.",
+            "price": "2.90",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 22,
+        "fields": {
+            "category": 5,
+            "name": "Garlic Chips",
+            "description": "An Irish favourite! A very generous portion of our popular chips drenched in a creamy garlic sauce. Keep those vampires away!",
+            "price": "4.00",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 23,
+        "fields": {
+            "category": 5,
+            "name": "Garlic & Cheese Chips",
+            "description": "Oh yes! If you think our Garlic Chips aren't rich enough, try this! The same creamy, garlicy goodness with a layer of melted cheddar cheese on top.",
+            "price": "4.70",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 24,
+        "fields": {
+            "category": 5,
+            "name": "Garlic, Bacon & Cheese Chips",
+            "description": "Now we're talking! Everyone knows that bacon is life. Well, we're talking about meat eaters specifically. Our Garlic, Bacon & Cheese chips can easily serve as a meal on it's own. Dig in!",
+            "price": "5.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 25,
+        "fields": {
+            "category": 5,
+            "name": "Curry Chips",
+            "description": "Our chips + McDonnells Curry Sauce = perfection. It's simple math!",
+            "price": "5.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 26,
+        "fields": {
+            "category": 6,
+            "name": "Coca Cola 0.33L Can",
+            "description": "",
+            "price": "1.10",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 27,
+        "fields": {
+            "category": 6,
+            "name": "Coca Cola 0.5L Bottle",
+            "description": "",
+            "price": "1.40",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 28,
+        "fields": {
+            "category": 6,
+            "name": "Coca Cola Zero 0.33L Can",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 29,
+        "fields": {
+            "category": 6,
+            "name": "Coca Cola Zero 0.5L Bottle",
+            "description": "",
+            "price": "1.30",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 30,
+        "fields": {
+            "category": 6,
+            "name": "Diet Coke 0.33L Can",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 31,
+        "fields": {
+            "category": 6,
+            "name": "Diet Coke 0.5L Bottle",
+            "description": "",
+            "price": "1.30",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 32,
+        "fields": {
+            "category": 6,
+            "name": "Sprite 0.33L Can",
+            "description": "",
+            "price": "1.10",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 33,
+        "fields": {
+            "category": 6,
+            "name": "Sprite 0.5L Bottle",
+            "description": "",
+            "price": "1.40",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 34,
+        "fields": {
+            "category": 6,
+            "name": "Sprite Zero 0.33L Can",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 35,
+        "fields": {
+            "category": 6,
+            "name": "Sprite Zero 0.5L Bottle",
+            "description": "",
+            "price": "1.30",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 36,
+        "fields": {
+            "category": 6,
+            "name": "Club Orange 0.33L Can",
+            "description": "",
+            "price": "1.10",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 37,
+        "fields": {
+            "category": 6,
+            "name": "Club Orange 0.5L Bottle",
+            "description": "",
+            "price": "1.40",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 38,
+        "fields": {
+            "category": 6,
+            "name": "Club Zero 0.33L Can",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 39,
+        "fields": {
+            "category": 6,
+            "name": "Club Zero 0.5L Bottle",
+            "description": "",
+            "price": "1.30",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 40,
+        "fields": {
+            "category": 6,
+            "name": "Volvic Still Water 0.5L Bottle",
+            "description": "",
+            "price": "1.20",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 41,
+        "fields": {
+            "category": 6,
+            "name": "Volvic Sparkling Water 0.5L Bottle",
+            "description": "",
+            "price": "1.20",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 42,
+        "fields": {
+            "category": 6,
+            "name": "Fruit Shoot Strawberry 0.2L Bottle",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 43,
+        "fields": {
+            "category": 6,
+            "name": "Fruit Shoot Apple & Blackcurrant 0.2L Bottle",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 44,
+        "fields": {
+            "category": 7,
+            "name": "Crispy Onion Rings",
+            "description": "Eight ginormous onion rings in a crispy batter. Need we say more?",
+            "price": "3.00",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 45,
+        "fields": {
+            "category": 7,
+            "name": "Chicken Nuggets",
+            "description": "Six breaded chicken nuggets. An excellent companion to any meal and a favourite with kids.",
+            "price": "3.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                2,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 46,
+        "fields": {
+            "category": 7,
+            "name": "Battered Sausage",
+            "description": "It's all in the name. What could be tastier than a 100% pork sausage in a crispy, cruchy batter? An Irish favourite.",
+            "price": "2.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                2,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 47,
+        "fields": {
+            "category": 7,
+            "name": "Garlic Sauce",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 48,
+        "fields": {
+            "category": 7,
+            "name": "Curry Sauce",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 49,
+        "fields": {
+            "category": 7,
+            "name": "Ketchup",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": []
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 50,
+        "fields": {
+            "category": 7,
+            "name": "Mayo",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 51,
+        "fields": {
+            "category": 7,
+            "name": "Tartar Sauce",
+            "description": "",
+            "price": "1.00",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 52,
+        "fields": {
+            "category": 1,
+            "name": "Classic Burger Meal",
+            "description": "Our Classic Burger with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 53,
+        "fields": {
+            "category": 1,
+            "name": "Cheeseburger Meal",
+            "description": "Our Cheeseburger with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 54,
+        "fields": {
+            "category": 1,
+            "name": "Burgersaurus Rex Burger Meal",
+            "description": "Our Burgersaurus Rex Burger with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "9.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 55,
+        "fields": {
+            "category": 1,
+            "name": "Bacon & Guacamole Burger Meal",
+            "description": "Our Bacon & Guacamole Burger with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "9.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 56,
+        "fields": {
+            "category": 1,
+            "name": "Bacon, Egg & Cheese Burger Meal",
+            "description": "Our Bacon, Egg & Cheese Burger with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "9.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                2,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 57,
+        "fields": {
+            "category": 1,
+            "name": "Bacon & Blue Cheese Burger Meal",
+            "description": "Our Bacon & Blue Cheese Burger with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "9.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 58,
+        "fields": {
+            "category": 1,
+            "name": "Chicken Fillet Burger Meal",
+            "description": "Our Chicken Fillet Burger with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                2,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 59,
+        "fields": {
+            "category": 1,
+            "name": "Something's Fishy Burger Meal",
+            "description": "Our Something's Fishy Burger with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                3,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 60,
+        "fields": {
+            "category": 1,
+            "name": "Very Vegeratian Burger Meal",
+            "description": "Our Very Vegeratian Burger with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "7.50",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                7,
+                8
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 61,
+        "fields": {
+            "category": 1,
+            "name": "Classic Hotdog Meal",
+            "description": "Our Classic Hotdog with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "7.50",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 62,
+        "fields": {
+            "category": 1,
+            "name": "Burgersaurus Rex Hotdog Meal",
+            "description": "Our Burgersaurus Rex Hotdog with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "9.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 63,
+        "fields": {
+            "category": 1,
+            "name": "Breakfast Hotdog Meal",
+            "description": "Our Breakfast Hotdog with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                2,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 64,
+        "fields": {
+            "category": 1,
+            "name": "Veggiedog Meal",
+            "description": "Our Veggiedog with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.00",
+            "is_vegetarian": true,
+            "allergens": [
+                1,
+                7,
+                8
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 65,
+        "fields": {
+            "category": 1,
+            "name": "Battered Cod Meal",
+            "description": "Our Battered Cod with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.30",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                3,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 66,
+        "fields": {
+            "category": 1,
+            "name": "Battered Hake Meal",
+            "description": "Our Battered Hake with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                3,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 67,
+        "fields": {
+            "category": 1,
+            "name": "Breaded Scapi Meal",
+            "description": "Our Breaded Scampi with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.30",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                3,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 68,
+        "fields": {
+            "category": 1,
+            "name": "Beef Kebab Meal",
+            "description": "Our Beef Kebab with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.75",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 69,
+        "fields": {
+            "category": 1,
+            "name": "Lamb Kebab Meal",
+            "description": "Our Lamb Kebab with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.50",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "menu.product",
+        "pk": 69,
+        "fields": {
+            "category": 1,
+            "name": "Chicken Kebab Meal",
+            "description": "Our Chicken Kebab with a side of Thick-cut Chips and a 0.5L drink",
+            "price": "8.00",
+            "is_vegetarian": false,
+            "allergens": [
+                1,
+                7
+            ]
+        }
+    }
+]

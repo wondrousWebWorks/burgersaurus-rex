@@ -1,0 +1,66 @@
+[
+  {
+    "model": "menu.allergen",
+    "pk": 1,
+    "fields": {
+      "name": "Milk",
+      "friendly_name": null
+    }
+  },
+  {
+    "model": "menu.allergen",
+    "pk": 2,
+    "fields": {
+      "name": "Eggs",
+      "friendly_name": null
+    }
+  },
+  {
+    "model": "menu.allergen",
+    "pk": 3,
+    "fields": {
+      "name": "Fish",
+      "friendly_name": null
+    }
+  },
+  {
+    "model": "menu.allergen",
+    "pk": 4,
+    "fields": {
+      "name": "Crustacean shellfish",
+      "friendly_name": null
+    }
+  },
+  {
+    "model": "menu.allergen",
+    "pk": 5,
+    "fields": {
+      "name": "Tree nuts",
+      "friendly_name": null
+    }
+  },
+  {
+    "model": "menu.allergen",
+    "pk": 6,
+    "fields": {
+      "name": "Peanuts",
+      "friendly_name": null
+    }
+  },
+  {
+    "model": "menu.allergen",
+    "pk": 7,
+    "fields": {
+      "name": "Wheat",
+      "friendly_name": null
+    }
+  },
+  {
+    "model": "menu.allergen",
+    "pk": 8,
+    "fields": {
+      "name": "Soybeans",
+      "friendly_name": null
+    }
+  }
+]
