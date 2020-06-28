@@ -1,60 +1,43 @@
 {% extends 'base.html' %}
 
 {% block header %}
-<section id="header" class="container-fluid">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item image-wrapper image-wrapper-1 active">
-                <div class="call-to-action">
-                    <h1 class="text-center p-xs-3 mb-xs-3 mb-lg-5">Get a-clickin' and those fingers a-lickin'</h1>
-                    <a href="#" class="btn call-to-action-btn pt-2 pb-4 text-center">Order Now!</a>
-                </div>
-            </div>
-            <div class="carousel-item image-wrapper image-wrapper-2">
-                <div class="call-to-action">
-                    <h1 class="text-center p-xs-3 mb-xs-3 mb-lg-5">Speed <i class="fas fa-arrow-up"></i> the ordering process</h1>
-                    <a href="#" class="btn call-to-action-btn pt-2 pb-4 text-center">Sign Up</a>
-                </div>
-            </div>
-            <div class="carousel-item image-wrapper image-wrapper-3">
-                <div class="call-to-action">
-                    <h1 class="text-center p-xs-3 mb-xs-3 mb-lg-5">Go on. You deserve the best ingredients!</h1>
-                    <a href="#" class="btn call-to-action-btn pt-2 pb-4 text-center">Read More</a>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <i class="fas fa-arrow-left"></i>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <i class="fas fa-arrow-right"></i>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</section> 
+    {% for category in categories %}
+        {% if category.name == 'burgers' %}
+            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/burger-close-up.jpg');"></section>
+        {% elif  category.name == 'hotdogs' %}
+            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592432817/burgersaurus/hotdog.jpg');"></section>
+        {% elif  category.name == 'kebabs' %}
+            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593296709/burgersaurus/kebab.png');"></section>
+        {% elif  category.name == 'chips' %}
+            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593297257/burgersaurus/chips.jpg');"></section>
+        {% elif  category.name == 'drinks' %}
+            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593297478/burgersaurus/drinks.jpg');"></section>
+        {% elif  category.name == 'fish' %}
+            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593298856/burgersaurus/fish.png');"></section>
+        {% endif %}
+    {% endfor %}
 {% endblock %}
 
 {% block content %}
 <article id="menu" class="container">
+    {% for category in categories %}
+        <h1 class="mt-5 d-inline-block" id="category">{{ category.friendly_name }}</h1>
+    {% endfor %}
     {% for menu_item in menu %}
-        <div class="row border-bottom pb-1 mb-2">
-            <div class="col-sm-10">
+        <div class="row menu-item py-4 mb-2">
+            <div class="col-sm-9">
                 <h3>{{ menu_item.name }}</h3>
                 <p>{{ menu_item.description }}</p>
-                <h4>Allergens:</h4>
-                {% for allergen in menu_item.allergens.all%}
-                    <span class="btn btn-warning">{{ allergen }}</span>
-                {% endfor %}
+                {% if menu_item.allergens.all %}
+                    <h4>Allergens:</h4>
+                    {% for allergen in menu_item.allergens.all %}
+                        <span class="btn btn-info">{{ allergen }}</span>
+                    {% endfor %}
+                {% endif %}
             </div>
-            <div class="col-sm-2">
-                <p>{{ menu_item.price }}</p>
-                <a href=""><i class="fas fa-cart-plus"></i></a>
+            <div class="col-sm-3 price-and-add-button text-right">
+                <p class="text-right"><strong>€{{ menu_item.price }}</strong></p>
+                <a href="" class="btn"><i class="fas fa-cart-plus"></i>  ADD TO ORDER</a>
             </div>
         </div>
     {% endfor %}

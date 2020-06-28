@@ -78,7 +78,7 @@ p {
         transition: all .5s ease-in-out;
 
         &:hover {
-            transform: rotateZ(360deg);
+            color: var(--tertiary-color) !important;
         }
     }
 
@@ -321,6 +321,56 @@ footer {
             }
         }
     }
+}
+
+#menu {
+    position: relative;
+    top: 10vh;
+
+    #category {
+        transform: rotateZ(-7deg);
+        font-size: 2.5rem;
+        text-decoration: underline;
+    }
+
+    .menu-item:nth-child(odd) {
+        background-color: var(--tertiary-color);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.15rem;
+        text-decoration: underline;
+    }
+    span {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+    }
+
+    .price-and-add-button {
+        p {
+            font-size: 1.3rem;
+        }
+
+        a {
+            font-size: 1rem;
+            font-family: "Open Sans", sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--body-color);
+        }
+    }
+}
+
+#menu-header {
+    height: 50vh;
+    position: relative;
+    top: 10vh;
+    left: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 92% 98%, 85% 100%, 79% 98%, 69% 100%, 56% 98%, 52% 100%, 45% 98%, 35% 100%, 25% 98%, 19% 100%, 10% 97%, 0% 100%);
 }
 
 @import 'media-queries';
