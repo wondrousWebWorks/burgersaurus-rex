@@ -2,19 +2,7 @@
 
 {% block header %}
     {% for category in categories %}
-        {% if category.name == 'burgers' %}
-            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/burger-close-up.jpg');"></section>
-        {% elif  category.name == 'hotdogs' %}
-            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592432817/burgersaurus/hotdog.jpg');"></section>
-        {% elif  category.name == 'kebabs' %}
-            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593296709/burgersaurus/kebab.png');"></section>
-        {% elif  category.name == 'chips' %}
-            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593297257/burgersaurus/chips.jpg');"></section>
-        {% elif  category.name == 'drinks' %}
-            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593297478/burgersaurus/drinks.jpg');"></section>
-        {% elif  category.name == 'fish' %}
-            <section id="menu-header" class="container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593298856/burgersaurus/fish.png');"></section>
-        {% endif %}
+        <section id="menu-header" class="container-fluid" style="background: url('{{ category.menu_header_url }}');"></section>
     {% endfor %}
 {% endblock %}
 

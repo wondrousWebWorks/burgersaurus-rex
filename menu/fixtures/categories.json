@@ -4,7 +4,8 @@
       "pk": 1,
       "fields": {
         "name": "meal_deals",
-        "friendly_name": "Meal Deals"
+        "friendly_name": "Meal Deals",
+        "menu_header_url": ""
       }
     },
     {
@@ -12,7 +13,8 @@
       "pk": 2,
       "fields": {
         "name": "hotdogs",
-        "friendly_name": "Hotdogs"
+        "friendly_name": "Hotdogs",
+        "menu_header_url": "https://res.cloudinary.com/wondrouswebworks/image/upload/v1592432817/burgersaurus/hotdog.jpg"
       }
     },
     {
@@ -20,7 +22,8 @@
       "pk": 3,
       "fields": {
         "name": "fish",
-        "friendly_name": "Fish"
+        "friendly_name": "Fish",
+        "menu_header_url": "https://res.cloudinary.com/wondrouswebworks/image/upload/v1593298856/burgersaurus/fish.png"
       }
     },
     {
@@ -28,7 +31,8 @@
       "pk": 4,
       "fields": {
         "name": "kebabs",
-        "friendly_name": "Kebabs"
+        "friendly_name": "Kebabs",
+        "menu_header_url": "https://res.cloudinary.com/wondrouswebworks/image/upload/v1593296709/burgersaurus/kebab.png"
       }
     },
     {
@@ -36,7 +40,8 @@
       "pk": 5,
       "fields": {
         "name": "chips",
-        "friendly_name": "Chips"
+        "friendly_name": "Chips",
+        "menu_header_url": "https://res.cloudinary.com/wondrouswebworks/image/upload/v1593297257/burgersaurus/chips.jpg"
       }
     },
     {
@@ -44,7 +49,8 @@
       "pk": 6,
       "fields": {
         "name": "drinks",
-        "friendly_name": "Drinks"
+        "friendly_name": "Drinks",
+        "menu_header_url": "https://res.cloudinary.com/wondrouswebworks/image/upload/v1593297478/burgersaurus/drinks.jpg"
       }
     },
     {
@@ -52,7 +58,8 @@
       "pk": 7,
       "fields": {
         "name": "extras",
-        "friendly_name": "Extras"
+        "friendly_name": "Extras",
+        "menu_header_url": "https://res.cloudinary.com/wondrouswebworks/image/upload/v1593359621/burgersaurus/sauces.jpg"
       }
     },
     {
@@ -60,7 +67,8 @@
       "pk": 8,
       "fields": {
         "name": "burgers",
-        "friendly_name": "Burgers"
+        "friendly_name": "Burgers",
+        "menu_header_url": "https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/burger-close-up.jpg"
       }
     }
   ]

@@ -324,8 +324,6 @@ footer {
 }
 
 #menu {
-    position: relative;
-    top: 10vh;
 
     #category {
         transform: rotateZ(-7deg);
@@ -366,9 +364,8 @@ footer {
 }
 
 #menu-header {
-    height: 50vh;
-    position: relative;
-    top: 10vh;
+    height: 65vh;
+    margin-top: 10vh;
     left: 0;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 92% 98%, 85% 100%, 79% 98%, 69% 100%, 56% 98%, 52% 100%, 45% 98%, 35% 100%, 25% 98%, 19% 100%, 10% 97%, 0% 100%);
 }
