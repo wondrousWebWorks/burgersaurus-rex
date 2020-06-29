@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # allauth needs this
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.contexts.cart_content',
             ],
         },
     },
@@ -150,3 +151,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+DELIVERY_THRESHOLD = 7.00
+DELIVERY_CHARGE = 2.00
