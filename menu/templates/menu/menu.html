@@ -2,14 +2,44 @@
 
 {% block header %}
     {% for category in categories %}
-        <section id="menu-header" class="container-fluid" style="background: url('{{ category.menu_header_url }}');"></section>
+        <section id="menu-header" class="container-fluid" style="background: url('{{ category.menu_header_url }}');background-attachment: fixed;"></section>
     {% endfor %}
 {% endblock %}
 
 {% block content %}
 <article id="menu" class="container">
+    <h2 class="mt-5">Menu Categories</h2>
+    <ul id="menu-nav" class="nav">
+        <li class="nav-item">
+            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=full_menu">Full Menu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=meal_deals">Meal Deals</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=burgers">Burgers</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=hotdogs">Hotdogs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=kebabs">Kebabs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=fish">Fish</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=chips">Chips</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=extras">Extras</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn btn-info mb-2" href="{% url 'menu' %}?category=drinks">Drinks</a>
+        </li>
+      </ul>
     {% for category in categories %}
-        <h1 class="mt-5 d-inline-block" id="category">{{ category.friendly_name }}</h1>
+        <h1 class="mt-5 mb-3 d-inline-block" id="category">{{ category.friendly_name }}</h1>
     {% endfor %}
     {% for menu_item in menu %}
         <div class="row menu-item py-4 mb-2">
@@ -17,9 +47,9 @@
                 <h3>{{ menu_item.name }}</h3>
                 <p>{{ menu_item.description }}</p>
                 {% if menu_item.allergens.all %}
-                    <h4>Allergens:</h4>
+                    <h4><a class="text-dark" href="https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/" target="blank"><strong>Allergens:</strong></a><span class="badge badge-secondary ml-2">Click allergen for info</span></h4>
                     {% for allergen in menu_item.allergens.all %}
-                        <span class="btn btn-info">{{ allergen }}</span>
+                        <a href="{{ allergen.info_url }}" target="_blank" class="allergen btn btn-info">{{ allergen.friendly_name }}</a>
                     {% endfor %}
                 {% endif %}
             </div>

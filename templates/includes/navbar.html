@@ -8,7 +8,7 @@
             class="my-auto ml-5 mr-2"
         >
     </a>
-    <a class="navbar-brand d-none d-sm-block text-white" href="#"> Burgersaurus <strong>Rex</strong></a>
+    <a class="navbar-brand d-none d-sm-block text-white" href="{% url 'home' %}"> Burgersaurus <strong>Rex</strong></a>
     <button class="navbar-toggler h-100" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon my-auto"><i class="fas fa-bars pink my-auto"></i></span>
@@ -31,7 +31,7 @@
             Menu
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'menu' %}">Full Menu</a>
+                <a class="dropdown-item" href="{% url 'menu' %}?category=full_menu">Full Menu</a>
             <a class="dropdown-item" href="{% url 'menu' %}?category=meal_deals">Meal Deals</a>
             <a class="dropdown-item" href="{% url 'menu' %}?category=burgers">Burgers</a>
             <a class="dropdown-item" href="{% url 'menu' %}?category=hotdogs">Hotdogs</a>

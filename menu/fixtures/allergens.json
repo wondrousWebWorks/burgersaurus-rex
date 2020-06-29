@@ -1,66 +1,128 @@
 [
-  {
-    "model": "menu.allergen",
-    "pk": 1,
-    "fields": {
-      "name": "Milk",
-      "friendly_name": null
+    {
+        "model": "menu.allergen",
+        "pk": 1,
+        "fields": {
+            "name": "milk",
+            "friendly_name": "Milk",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#milk"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 2,
+        "fields": {
+            "name": "eggs",
+            "friendly_name": "Eggs",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#eggs"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 3,
+        "fields": {
+            "name": "fish",
+            "friendly_name": "Fish",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#fish"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 4,
+        "fields": {
+            "name": "crustacean",
+            "friendly_name": "Crustacean",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#crustaceans"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 5,
+        "fields": {
+            "name": "tree_nuts",
+            "friendly_name": "Tree Nuts",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#nuts"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 6,
+        "fields": {
+            "name": "peanuts",
+            "friendly_name": "Peanuts",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#peanuts"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 7,
+        "fields": {
+            "name": "cereals_containing_gluten",
+            "friendly_name": "Gluten",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#cereals"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 8,
+        "fields": {
+            "name": "soya",
+            "friendly_name": "Soya",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#soya"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 9,
+        "fields": {
+            "name": "celery",
+            "friendly_name": "Celery",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#celery"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 10,
+        "fields": {
+            "name": "mustard",
+            "friendly_name": "Mustard",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#mustard"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 11,
+        "fields": {
+            "name": "sesame",
+            "friendly_name": "Sesame",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#sesame"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 12,
+        "fields": {
+            "name": "sulphites",
+            "friendly_name": "Sulphites",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#sulphurdioxide"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 13,
+        "fields": {
+            "name": "lupin",
+            "friendly_name": "Lupin",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#lupin"
+        }
+    },
+    {
+        "model": "menu.allergen",
+        "pk": 14,
+        "fields": {
+            "name": "molluscs",
+            "friendly_name": "Molluscs",
+            "info_url": "https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/#molluscs"
+        }
     }
-  },
-  {
-    "model": "menu.allergen",
-    "pk": 2,
-    "fields": {
-      "name": "Eggs",
-      "friendly_name": null
-    }
-  },
-  {
-    "model": "menu.allergen",
-    "pk": 3,
-    "fields": {
-      "name": "Fish",
-      "friendly_name": null
-    }
-  },
-  {
-    "model": "menu.allergen",
-    "pk": 4,
-    "fields": {
-      "name": "Crustacean shellfish",
-      "friendly_name": null
-    }
-  },
-  {
-    "model": "menu.allergen",
-    "pk": 5,
-    "fields": {
-      "name": "Tree nuts",
-      "friendly_name": null
-    }
-  },
-  {
-    "model": "menu.allergen",
-    "pk": 6,
-    "fields": {
-      "name": "Peanuts",
-      "friendly_name": null
-    }
-  },
-  {
-    "model": "menu.allergen",
-    "pk": 7,
-    "fields": {
-      "name": "Wheat",
-      "friendly_name": null
-    }
-  },
-  {
-    "model": "menu.allergen",
-    "pk": 8,
-    "fields": {
-      "name": "Soybeans",
-      "friendly_name": null
-    }
-  }
 ]

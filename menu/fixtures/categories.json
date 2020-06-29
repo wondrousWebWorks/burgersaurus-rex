@@ -70,5 +70,14 @@
         "friendly_name": "Burgers",
         "menu_header_url": "https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/burger-close-up.jpg"
       }
-    }
+    },
+    {
+        "model": "menu.category",
+        "pk": 9,
+        "fields": {
+          "name": "full_menu",
+          "friendly_name": "Full Menu",
+          "menu_header_url": "https://res.cloudinary.com/wondrouswebworks/image/upload/v1592431649/burgersaurus/burger.jpg"
+        }
+      }
   ]
