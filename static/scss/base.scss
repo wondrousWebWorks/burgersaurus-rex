@@ -90,6 +90,15 @@ p {
         left: 0;
         background-color: var(--tertiary-color);
     }
+
+    #view-cart {
+        height: 100%;
+
+        i {
+            font-size: 1.6rem;
+            color: var(--secondary-color);
+        }
+    }
 }
 
 #header {
@@ -353,7 +362,7 @@ footer {
             font-size: 1.3rem;
         }
 
-        a {
+        button {
             font-size: 1rem;
             font-family: "Open Sans", sans-serif;
             background-color: var(--secondary-color);
@@ -362,7 +371,7 @@ footer {
     }
 }
 
-#menu-header {
+.header-container {
     height: 65vh;
     margin-top: 10vh;
     left: 0;

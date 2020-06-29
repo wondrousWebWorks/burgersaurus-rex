@@ -15,47 +15,50 @@
     </button>
     <div class="d-none d-xl-block my-auto ml-5"><p class="m-0 text-white nav-para"><strong>Home of the TASTIEST food!</strong></p></div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mr-5">
-        <li class="nav-item mr-5">
-            <form id="search-input" class="form-inline my-2 my-lg-0">
-                <input class="form-control rounded-0" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn my-2 my-sm-0 rounded-0" type="submit"><i class="fas fa-search"></i></button>
-            </form>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Menu
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'menu' %}?category=full_menu">Full Menu</a>
-            <a class="dropdown-item" href="{% url 'menu' %}?category=meal_deals">Meal Deals</a>
-            <a class="dropdown-item" href="{% url 'menu' %}?category=burgers">Burgers</a>
-            <a class="dropdown-item" href="{% url 'menu' %}?category=hotdogs">Hotdogs</a>
-            <a class="dropdown-item" href="{% url 'menu' %}?category=kebabs">Kebabs</a>
-            <a class="dropdown-item" href="{% url 'menu' %}?category=fish">Fish</a>
-            <a class="dropdown-item" href="{% url 'menu' %}?category=chips">Chips</a>
-            <a class="dropdown-item" href="{% url 'menu' %}?category=extras">Extras</a>
-            <a class="dropdown-item" href="{% url 'menu' %}?category=drinks">Drinks</a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white" href="#">About</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Account
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Sign Up</a>
-            <a class="dropdown-item" href="#">Login</a>
-            </div>
-        </li>
+        <ul class="navbar-nav ml-auto mr-2">
+            <li class="nav-item mr-5">
+                <form id="search-input" class="form-inline my-2 my-lg-0">
+                    <input class="form-control rounded-0" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn my-2 my-sm-0 rounded-0" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'menu' %}?category=full_menu">Full Menu</a>
+                    <a class="dropdown-item" href="{% url 'menu' %}?category=meal_deals">Meal Deals</a>
+                    <a class="dropdown-item" href="{% url 'menu' %}?category=burgers">Burgers</a>
+                    <a class="dropdown-item" href="{% url 'menu' %}?category=hotdogs">Hotdogs</a>
+                    <a class="dropdown-item" href="{% url 'menu' %}?category=kebabs">Kebabs</a>
+                    <a class="dropdown-item" href="{% url 'menu' %}?category=fish">Fish</a>
+                    <a class="dropdown-item" href="{% url 'menu' %}?category=chips">Chips</a>
+                    <a class="dropdown-item" href="{% url 'menu' %}?category=extras">Extras</a>
+                    <a class="dropdown-item" href="{% url 'menu' %}?category=drinks">Drinks</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Sign Up</a>
+                    <a class="dropdown-item" href="#">Login</a>
+                </div>
+            </li>
         </ul>
+        <div id="view-cart" class="mr-5">
+            <a href="{% url 'view_cart' %}" class="m-0"><i class="fas fa-shopping-cart"></i></a>
+        </div>
     </div>
     <h4 id="delivery-banner" class="text-center text-dark py-1 m-0">Spend a minimum of €7.00 to qualify for delivery.</h4>
 </nav>

@@ -2,7 +2,7 @@
 
 {% block header %}
     {% for category in categories %}
-        <section id="menu-header" class="container-fluid" style="background: url('{{ category.menu_header_url }}');background-attachment: fixed;"></section>
+        <section id="menu-header" class="header-container container-fluid" style="background: url('{{ category.menu_header_url }}');background-attachment: fixed;"></section>
     {% endfor %}
 {% endblock %}
 
@@ -55,7 +55,7 @@
             </div>
             <div class="col-sm-3 price-and-add-button text-right">
                 <p class="text-right"><strong>€{{ menu_item.price }}</strong></p>
-                <form class="form" action="{% url 'add_to_cart' menu_item.id %}" method="POST">
+                <form class="form" action="" method="POST">
                     {% csrf_token %}
                     <button class="btn"><i class="fas fa-cart-plus"></i>  ADD TO ORDER</button>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
