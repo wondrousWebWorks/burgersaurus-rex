@@ -6,7 +6,17 @@
 
 {% block content %}
 <div class="container">
-    <h1 class="mt-5 mb-3 d-inline-block page-heading">Your Order</h1>
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mt-5 mb-3 d-inline-block page-heading">Your Order</h1>
+        </div>
+        <div class="col-12">
+            {% if cart_items %}
+                {{ cart_items }}
+            {% endif %}
+        </div>
+    </div>
     
+
 </div>
 {% endblock %}
