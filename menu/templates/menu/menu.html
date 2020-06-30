@@ -55,10 +55,12 @@
             </div>
             <div class="col-sm-3 price-and-add-button text-right">
                 <p class="text-right"><strong>€{{ menu_item.price }}</strong></p>
-                <form class="form" action="" method="POST">
+                <form class="form" action="{% url 'add_to_cart' menu_item.id %}" method="POST">
                     {% csrf_token %}
+                    <label for="id_qty_{{ menu_item.id }}">Quantity</label>
+                    <input type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ menu_item.id }}" id="id_qty_{{ menu_item.id }}">
                     <button class="btn"><i class="fas fa-cart-plus"></i>  ADD TO ORDER</button>
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
                 </form>
             </div>
         </div>
