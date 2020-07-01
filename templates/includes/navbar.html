@@ -26,11 +26,11 @@
                 <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle text-white" href="#" id="menuDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Menu
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu" aria-labelledby="menuDropdown">
                     <a class="dropdown-item" href="{% url 'menu' %}?category=full_menu">Full Menu</a>
                     <a class="dropdown-item" href="{% url 'menu' %}?category=meal_deals">Meal Deals</a>
                     <a class="dropdown-item" href="{% url 'menu' %}?category=burgers">Burgers</a>
@@ -46,19 +46,20 @@
                 <a class="nav-link text-white" href="#">About</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle text-white" href="#" id="accountDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Account
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu" aria-labelledby="accountDropdown">
                     <a class="dropdown-item" href="#">Sign Up</a>
                     <a class="dropdown-item" href="#">Login</a>
                 </div>
             </li>
         </ul>
-        <div id="view-cart" class="mr-5">
-            <a href="{% url 'view_cart' %}" class="m-0"><i class="fas fa-shopping-cart"></i></a>
+        <div id="view-cart" class="mr-5 text-center">
+            <a href="{% url 'view_cart' %}" class="m-0 d-block"><i class="fas fa-shopping-cart"></i></a>
+            <a href="{% url 'view_cart' %}" class="text-white d-block">€{{ order_total|floatformat:2 }}</a>
         </div>
     </div>
-    <h4 id="delivery-banner" class="text-center text-dark py-1 m-0">Spend a minimum of €{{ delivery_threshold }} to qualify for delivery.</h4>
+    <h4 id="delivery-banner" class="text-center text-dark py-1 m-0">Spend a minimum of €{{ delivery_threshold|floatformat:2 }} to qualify for delivery.</h4>
 </nav>
