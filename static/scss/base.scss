@@ -383,4 +383,8 @@ footer {
                 inset -5rem -5rem 16rem #000;
 }
 
+tr:nth-child(even) {
+    background-color: var(--tertiary-color);
+}
+
 @import 'media-queries';

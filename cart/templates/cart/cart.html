@@ -12,11 +12,40 @@
         </div>
         <div class="col-12">
             {% if cart_items %}
-                {{ cart_items }}
+                <div class="table-responsive rounded">
+                    <table class="table table-borderless table-sm">
+                        <thead class="text-dark">
+                            <tr>
+                                <th scope="col">Product Info</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+
+                        {% for cart_item in cart_items %}
+                            <tr>
+                                <td class="py-3">
+                                    <p class="my-0"><strong>{{ cart_item.product.name }}</strong></p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">€{{ cart_item.product.price }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">{{ cart_item.quantity }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0"><strong>€{{ cart_item.product.price }}</strong></p>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            {% else %}
+                <h2>Your shopping cart is empty &#x1F625;</h2>
+                <a href="{% url 'menu' %}">Go To Menu</a>
             {% endif %}
         </div>
     </div>
-    
-
 </div>
 {% endblock %}
