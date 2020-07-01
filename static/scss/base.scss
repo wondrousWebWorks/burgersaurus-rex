@@ -35,12 +35,11 @@ p {
 }
 
 #navbar {
-    background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
-    background-repeat: repeat;
     height: 10vh;
+    transition: 1s;
 
     .logo-img {
-        height: 70%;
+        height: 100%;
 
         img {
             height: 100%;
@@ -88,7 +87,15 @@ p {
         margin: 0;
         top: 10vh;
         left: 0;
-        background-color: var(--tertiary-color);
+        color: #f7f7f7;
+        transition: .8s
+    }
+
+    .add-delivery-banner-background {
+        // background-color: var(--tertiary-color);
+        background-color: rgba(255, 209, 102, .8);
+        color: #222 !important;
+        top: 8vh !important;
     }
 
     #view-cart {
@@ -99,6 +106,12 @@ p {
             color: var(--secondary-color);
         }
     }
+}
+
+.add-navbar-background {
+    // background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color)) !important;
+    background: rgba(6, 214, 160, .75) !important;
+    height: 8vh !important;
 }
 
 #header {
@@ -372,9 +385,7 @@ footer {
 }
 
 .header-container {
-    height: 65vh;
-    margin-top: 10vh;
-    left: 0;
+    height: 70vh;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;

@@ -13,7 +13,7 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon my-auto"><i class="fas fa-bars pink my-auto"></i></span>
     </button>
-    <div class="d-none d-xl-block my-auto ml-5"><p class="m-0 text-white nav-para"><strong>Home of the TASTIEST food!</strong></p></div>
+    <div class="d-none d-xl-block my-auto ml-5"><p class="m-0 text-white nav-para"><strong>The undisputed KING of burgers</strong></p></div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mr-2">
             <li class="nav-item mr-5">
@@ -61,5 +61,5 @@
             <a href="{% url 'view_cart' %}" class="text-white d-block">€{{ order_total|floatformat:2 }}</a>
         </div>
     </div>
-    <h4 id="delivery-banner" class="text-center text-dark py-1 m-0">Spend a minimum of €{{ delivery_threshold|floatformat:2 }} to qualify for delivery.</h4>
+    <h4 id="delivery-banner" class="text-center py-0 m-0">Spend a minimum of €{{ delivery_threshold|floatformat:2 }} to qualify for delivery.</h4>
 </nav>
