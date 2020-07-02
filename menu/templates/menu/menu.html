@@ -63,7 +63,7 @@
                     {% csrf_token %}
                     <label for="id_qty_{{ menu_item.id }}">Quantity</label>
                     <input type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ menu_item.id }}" id="id_qty_{{ menu_item.id }}">
-                    <button class="btn"><i class="fas fa-cart-plus"></i>  ADD TO ORDER</button>
+                    <button class="btn add-or-update-button"><i class="fas fa-cart-plus"></i>  ADD TO ORDER</button>
                     <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
                 </form>
             </div>

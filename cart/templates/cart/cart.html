@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1 class="mt-5 mb-3 d-inline-block page-heading">Your Order</h1>
+            <h1 class="my-5 d-inline-block page-heading">Your Order</h1>
         </div>
         <div class="col-12">
             {% if cart_items %}
@@ -25,16 +25,21 @@
 
                         {% for cart_item in cart_items %}
                             <tr>
-                                <td class="py-3">
+                                <td class="py-3 align-middle">
                                     <p class="my-0 pl-2"><strong>{{ cart_item.product.name }}</strong></p>
                                 </td>
-                                <td class="py-3">
+                                <td class="py-3 align-middle">
                                     <p class="my-0">€{{ cart_item.product.price }}</p>
                                 </td>
-                                <td class="py-3">
-                                    <p class="my-0">{{ cart_item.quantity }}</p>
+                                <td class="py-3 align-middle">
+                                    <form class="form" action="{% url 'update_cart' cart_item.item_id %}" method="POST">
+                                        {% csrf_token %}
+                                        <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1" max="99" data-item_id="{{ menu_item.id }}" id="id_qty_{{ menu_item.id }}">
+                                        <button class="btn add-or-update-button"><i class="fas fa-edit"></i>  Update</button>
+                                        <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
+                                    </form>
                                 </td>
-                                <td class="py-3">
+                                <td class="py-3 align-middle">
                                     <p class="my-0"><strong>€{{ cart_item.product.price }}</strong></p>
                                 </td>
                             </tr>
@@ -55,13 +60,13 @@
                 </div>
                 <div class="row m-0">
                     <div class="col-12 text-right px-0">
-                        <a href="{% url 'menu' %}" class="btn btn-lg keep-shopping-button"><i class="fas fa-shopping-basket"></i>&nbsp;&nbsp;Keep Shopping</a>
+                        <a href="{% url 'menu' %}" class="btn btn-lg keep-shopping-button"><i class="fas fa-shopping-basket"></i>&nbsp;&nbsp;Go To Menu</a>
                         <a href="" class="btn btn-lg checkout-button"><i class="fab fa-cc-stripe"></i>&nbsp;&nbsp;Secure Checkout</a>
                     </div>
                 </div>
             {% else %}
-                <h2>Your shopping cart is empty &#x1F625;</h2>
-                <a href="{% url 'menu' %}">Go To Menu</a>
+                <h4 class="mt-5">Your shopping cart is empty &#x1F625;</h4>
+                <a class="btn keep-shopping-button text-white" href="{% url 'menu' %}"><i class="fas fa-list-alt"></i> Go To Menu</a>
             {% endif %}
         </div>
     </div>

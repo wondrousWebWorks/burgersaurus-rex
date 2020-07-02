@@ -58,7 +58,7 @@
         </ul>
         <div id="view-cart" class="mr-5 text-center">
             <a href="{% url 'view_cart' %}" class="m-0 d-block"><i class="fas fa-shopping-cart"></i></a>
-            <a href="{% url 'view_cart' %}" class="text-white d-block">€{% if order_total %}{{ order_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
+            <a href="{% url 'view_cart' %}" class="text-white d-block">€{% if order_total > 2 %}{{ order_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
         </div>
     </div>
 </nav>
