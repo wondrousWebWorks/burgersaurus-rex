@@ -22,12 +22,11 @@
     <title>Burgersaurus Rex | The home of the juiciest takeway</title>
   </head>
   <body>
+    {% include 'includes/navbar.html' %}
     <header>
-        {% include 'includes/navbar.html' %}
+        {% block header %}
+        {% endblock %}
     </header>
-
-    {% block header %}
-    {% endblock %}
 
     {% block content %}
     {% endblock %}
