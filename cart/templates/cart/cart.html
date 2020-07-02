@@ -53,6 +53,12 @@
                         </tr>
                     </table>
                 </div>
+                <div class="row m-0">
+                    <div class="col-12 text-right px-0">
+                        <a href="{% url 'menu' %}" class="btn btn-lg keep-shopping-button">Keep Shopping</a>
+                        <a href="" class="btn btn-lg checkout-button">Secure Checkout</a>
+                    </div>
+                </div>
             {% else %}
                 <h2>Your shopping cart is empty &#x1F625;</h2>
                 <a href="{% url 'menu' %}">Go To Menu</a>
