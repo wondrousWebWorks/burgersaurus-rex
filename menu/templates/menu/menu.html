@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    {% for category in categories %}
-        <section id="menu-header" class="header-container container-fluid" style="background: url('{{ category.menu_header_url }}');background-attachment: fixed;"></section>
-    {% endfor %}
+    {% if categories %}
+        {% for category in categories %}
+            <section id="menu-header" class="header-container container-fluid" style="background: url('{{ category.menu_header_url }}');background-attachment: fixed;"></section>
+        {% endfor %}
+    {% else %}
+            <section id="menu-header" class="header-container container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/burger-close-up.jpg');background-attachment: fixed;"></section>
+    {% endif %}
 {% endblock %}
 
 {% block content %}

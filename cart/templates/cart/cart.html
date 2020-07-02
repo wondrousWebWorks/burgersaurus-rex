@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    <section id="cart-header" class="header-container container-fluid"></section>
+    <section id="cart-header" class="header-container container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593784299/burgersaurus/hamburger-1214465_1920_z4j1lf.jpg');"></section>
 {% endblock %}
 
 {% block content %}
@@ -55,8 +55,8 @@
                 </div>
                 <div class="row m-0">
                     <div class="col-12 text-right px-0">
-                        <a href="{% url 'menu' %}" class="btn btn-lg keep-shopping-button">Keep Shopping</a>
-                        <a href="" class="btn btn-lg checkout-button">Secure Checkout</a>
+                        <a href="{% url 'menu' %}" class="btn btn-lg keep-shopping-button"><i class="fas fa-shopping-basket"></i>&nbsp;&nbsp;Keep Shopping</a>
+                        <a href="" class="btn btn-lg checkout-button"><i class="fab fa-cc-stripe"></i>&nbsp;&nbsp;Secure Checkout</a>
                     </div>
                 </div>
             {% else %}

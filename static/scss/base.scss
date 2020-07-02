@@ -133,7 +133,17 @@ p {
     padding: 0;
     position: relative;
     display: block;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 88% 91%, 76% 91%, 64% 94%, 52% 94%, 40% 96%, 29% 95%, 18% 98%, 9% 97%, 0% 100%);
+    animation: 6s ease-in-out 0s infinite alternate move-clip-path;
+    // clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 88% 91%, 76% 91%, 64% 94%, 52% 94%, 40% 96%, 29% 95%, 18% 98%, 9% 97%, 0% 100%);
+
+    @keyframes move-clip-path { 
+        from { 
+            clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 88% 91%, 76% 91%, 64% 94%, 52% 94%, 40% 96%, 29% 95%, 18% 98%, 9% 97%, 0% 100%); 
+        } 
+        to { 
+            clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 88% 85%, 76% 94%, 64% 85%, 52% 88%, 40% 86%, 29% 99%, 18% 93%, 9% 100%, 0% 93%); 
+        }  
+    }
 
     .carousel-indicators {
         position: absolute;
@@ -416,10 +426,12 @@ footer {
 
 .keep-shopping-button {
     background-color: var(--secondary-color);
+    font-family: "Open Sans", sans-serif;
 }
 
 .checkout-button {
     background-color: var(--primary-color);
+    font-family: "Open Sans", sans-serif;
 }
 
 @import 'media-queries';
