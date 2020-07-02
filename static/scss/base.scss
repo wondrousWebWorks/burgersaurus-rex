@@ -408,8 +408,18 @@ footer {
                 inset -5rem -5rem 16rem #000;
 }
 
-tr:nth-child(even) {
-    background-color: var(--tertiary-color);
+#cart-table {
+    tr:nth-child(even) {
+        background-color: var(--tertiary-color);
+    }
+}
+
+.keep-shopping-button {
+    background-color: var(--secondary-color);
+}
+
+.checkout-button {
+    background-color: var(--primary-color);
 }
 
 @import 'media-queries';
