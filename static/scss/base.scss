@@ -431,6 +431,10 @@ footer {
     }
 }
 
+.cart-quantity-link {
+    cursor: pointer !important;
+}
+
 .keep-shopping-button {
     background-color: var(--secondary-color);
     font-family: "Open Sans", sans-serif;

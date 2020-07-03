@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 def view_cart(request):
     """ Renders the shopping cart page """
@@ -35,5 +35,5 @@ def update_cart(request, item_id):
         cart.pop(item_id)
 
     request.session['cart'] = cart
-    
+
     return redirect(reverse('view_cart'))

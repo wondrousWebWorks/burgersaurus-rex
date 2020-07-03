@@ -35,8 +35,10 @@
                                     <form class="form" action="{% url 'update_cart' cart_item.item_id %}" method="POST">
                                         {% csrf_token %}
                                         <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1" max="99" data-item_id="{{ menu_item.id }}" id="id_qty_{{ menu_item.id }}">
-                                        <button class="btn add-or-update-button"><i class="fas fa-edit"></i>  Update</button>
+                                        <!-- <button class="btn add-or-update-button"><i class="fas fa-edit"></i>  Update</button> -->
                                         <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
+                                        <a class="update-quantity-link cart-quantity-link"><small>Update</small></a>
+                                        <a class="remove-item-link cart-quantity-link" id="{{ item.item_id }}"><small>Remove</small></a>
                                     </form>
                                 </td>
                                 <td class="py-3 align-middle">
@@ -71,4 +73,24 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+    const updateQuantity = link => {
+        updateForm = link.parentNode;
+        updateForm.submit();
+    }
+
+    const updateQuantityLinks = document.querySelectorAll('.update-quantity-link');
+    updateQuantityLinks.forEach(updateQuantityLink => {
+        updateQuantityLink.addEventListener('click', () => {
+            updateQuantity(updateQuantityLink);
+        });
+    });
+    
+});
+</script>
 {% endblock %}
