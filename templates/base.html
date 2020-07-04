@@ -13,6 +13,7 @@
 
     {% block core_css %}
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -34,13 +35,18 @@
     {% include 'includes/footer.html' %}
 
     {% block core_js %}
-      <!-- Bootstrap -->
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-      <!-- Font Awesome -->
-      <script src="https://kit.fontawesome.com/90fba2838e.js" crossorigin="anonymous"></script>
-      <script src="{% static 'js/app.js' %}"></script>
+        <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/90fba2838e.js" crossorigin="anonymous"></script>
+        <script src="{% static 'js/app.js' %}"></script>
+        <!-- Animate On Scroll (AOS) -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     {% endblock %}
 
     {% block extra_js %}
