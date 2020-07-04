@@ -19,6 +19,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
     - [Languages](#languages)
     - [Libraries & Frameworks](#libraries--frameworks)
     - [Tools](#tools)
+    - [Credits](#credits)
   - [Disclaimer](#disclaimer)
 
 ## User Experience
@@ -90,7 +91,11 @@ All wireframes were created using [Balsamiq](https://balsamiq.com/) and can be v
 - [mockDrop](https://mockdrop.io/)
 - [Git](https://git-scm.com/about)
 - [GitHub](https://github.com/)
-  
+
+### Credits
+
+- [AOS](https://github.com/michalsnik/aos) (Animate On Scroll)
+
 ## Disclaimer
 
 This site is intended for **educational purposes** only, and is not intended for use in any other capacity.
