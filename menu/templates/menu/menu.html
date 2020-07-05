@@ -46,7 +46,7 @@
         <h1 class="mt-5 mb-3 d-inline-block page-heading">{{ category.friendly_name }}</h1>
     {% endfor %}
     {% for menu_item in menu %}
-        <div class="row menu-item py-4 mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div class="row menu-item py-4 mb-2 mx-auto" {% if not forloop.first %}data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"{% endif %}>
             <div class="col-sm-9">
                 <h3>{{ menu_item.name }}</h3>
                 <p>{{ menu_item.description }}</p>

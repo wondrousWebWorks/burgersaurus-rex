@@ -725,7 +725,9 @@
             "description": "",
             "price": "1.00",
             "is_vegetarian": true,
-            "allergens": []
+            "allergens": [
+                12
+            ]
         }
     },
     {
