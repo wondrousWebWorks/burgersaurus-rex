@@ -62,13 +62,13 @@
                 </div>
                 <div class="row m-0">
                     <div class="col-12 text-right px-0">
-                        <a href="{% url 'menu' %}" class="btn btn-lg keep-shopping-button"><i class="fas fa-shopping-basket"></i>&nbsp;&nbsp;Go To Menu</a>
+                        <a href="{% url 'menu' %}" class="btn btn-lg custom-button-1"><i class="fas fa-shopping-basket"></i>&nbsp;&nbsp;Go To Menu</a>
                         <a href="" class="btn btn-lg checkout-button"><i class="fab fa-cc-stripe"></i>&nbsp;&nbsp;Secure Checkout</a>
                     </div>
                 </div>
             {% else %}
                 <h4 class="mt-5">Your shopping cart is empty &#x1F625;</h4>
-                <a class="btn keep-shopping-button text-white" href="{% url 'menu' %}"><i class="fas fa-list-alt"></i> Go To Menu</a>
+                <a class="btn custom-button-1 text-white" href="{% url 'menu' %}"><i class="fas fa-list-alt"></i> Go To Menu</a>
             {% endif %}
         </div>
     </div>

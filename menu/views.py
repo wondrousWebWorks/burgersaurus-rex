@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from .models import Product, Category
+from .forms import ProductForm
 
 def menu(request):
 
@@ -19,3 +20,14 @@ def menu(request):
     }
 
     return render(request, 'menu/menu.html', context)
+
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'menu/add-product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

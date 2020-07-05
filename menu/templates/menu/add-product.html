@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <section id="admin-header" class="header-container container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/burger-close-up.jpg');background-attachment: fixed;"></section>
+{% endblock %}
+
+{% block content %}
+<article id="add-product-form" class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mt-5 mb-5 d-inline-block page-heading">Add Product</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <form action="" method="POST">
+                {{ form | crispy }}
+                <button class="btn btn-large custom-button-1 d-inline-block ml-auto">Add Product</button>
+            </form>
+        </div>
+    </div>
+</article>
+{% endblock %}
