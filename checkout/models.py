@@ -1,5 +1,7 @@
 import uuid
 from django.db import models
+from django.conf import settings
+from django.db.models import Sum
 
 from menu.models import Product
 
@@ -24,6 +26,15 @@ class Order(models.Model):
         Use UUID to generate a unique order number
         """
         return uuid.uuid4().hex.upper()
+
+    def update_order_total(self):
+        """
+        Update order total with delivery cost each time an item is added
+        """
+        self.order_sub_total = self.orderitems.aggregate(Sum('order_item_total'))['order_item_total__sum']
+        self.delivery_cost = settings.DELIVERY_CHARGE
+        self.order_total = self.order_sub_total + self.delivery_cost
+        self.save()
 
     def save(self, *args, **kwargs):
         """
