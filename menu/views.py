@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -24,10 +25,20 @@ def menu(request):
 
 def add_product(request):
     """ Add a product to the store """
-    form = ProductForm()
-    template = 'menu/add-product.html'
-    context = {
-        'form': form,
-    }
 
-    return render(request, template, context)
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('menu'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = ProductForm()
+        template = 'menu/add-product.html'
+        context = {
+            'form': form,
+        }
+
+        return render(request, template, context)
