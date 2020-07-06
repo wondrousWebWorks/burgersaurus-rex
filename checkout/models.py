@@ -22,3 +22,14 @@ class Order(models.Model):
         Use UUID to generate a unique order number
         """
         return uuid.uuid4().hex.upper()
+
+    def save(self, *args, **kwargs):
+        """
+        Set the order number if it hasn't been set already.
+        """
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.order_number
