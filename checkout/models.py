@@ -1,6 +1,8 @@
 import uuid
 from django.db import models
 
+from menu.models import Product
+
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -33,3 +35,10 @@ class Order(models.Model):
 
     def __str__(self):
         return self.order_number
+
+
+class OrderItem(models.Model):
+    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='orderitems')
+    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+    order_item_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
