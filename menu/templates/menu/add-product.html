@@ -11,8 +11,8 @@
             <h1 class="mt-5 mb-5 d-inline-block page-heading">Add Product</h1>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 col-md-8">
+    <div class="row mx-auto">
+        <div class="col-12 col-md-8 mx-auto">
             <form action="{% url 'add-product' %}" method="POST">
                 {% csrf_token %}
                 {{ form | crispy }}
