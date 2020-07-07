@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <section id="cart-header" class="header-container container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593784299/burgersaurus/hamburger-1214465_1920_z4j1lf.jpg');"></section>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="my-5 d-inline-block page-heading">Checkout</h1>
+        </div>
+        <div class="col-8">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ order_form | crispy }}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
