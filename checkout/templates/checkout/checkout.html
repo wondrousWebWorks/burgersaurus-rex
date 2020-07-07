@@ -30,7 +30,12 @@
                     {{ order_form.town_or_city | as_crispy_field }}
                     {{ order_form.postcode | as_crispy_field }}
                 </fieldset>
-                
+                <div class="row m-0 mt-3">
+                    <div class="col-12 text-right px-0">
+                        <a href="{% url 'menu' %}" class="btn btn-lg custom-button-1"><i class="fas fa-shopping-basket"></i>&nbsp;&nbsp;Go To Menu</a>
+                        <a href="{% url 'view_cart' %}" class="btn btn-lg checkout-button"><i class="fab fa-cc-stripe"></i>&nbsp;&nbsp;Secure Checkout</a>
+                    </div>
+                </div>
             </form>
         </div>
         <div class="col-12 col-lg-6">
