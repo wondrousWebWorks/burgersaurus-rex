@@ -428,9 +428,13 @@ footer {
 #cart-table {
     overflow: hidden !important;
 
-    tr:nth-child(even) {
+    .table-row:nth-child(even) {
         background-color: var(--tertiary-color);
     }
+}
+
+.order-charges {
+    border-top: 2px solid #222;
 }
 
 .cart-quantity-link {
@@ -445,6 +449,22 @@ footer {
 .checkout-button {
     background-color: var(--primary-color);
     font-family: "Open Sans", sans-serif;
+}
+
+fieldset {
+    background-color: var(--tertiary-color);
+
+    legend {
+        font-size: 1.2rem;
+        background-color: #343a40;
+        color: white;
+        // border-radius: .5rem;
+        font-weight: bold;
+    }
+
+    input, select {
+        font-family: "Open Sans", sans-serif;
+    }
 }
 
 @import 'media-queries';

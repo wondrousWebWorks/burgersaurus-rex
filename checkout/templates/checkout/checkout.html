@@ -10,11 +10,71 @@
         <div class="col-12">
             <h1 class="my-5 d-inline-block page-heading">Checkout</h1>
         </div>
-        <div class="col-8">
+        <div class="col-12 col-lg-6">
+            <h5 class="text-muted">If you'd be so kind, fill out the form below to complete your order</h5>
             <form action="" method="POST">
                 {% csrf_token %}
-                {{ order_form | crispy }}
+                <fieldset class="p-2 mb-5">
+                    <legend class="d-inline w-auto p-2">Details</legend>
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                    {{ order_form.phone_number | as_crispy_field }}
+                </fieldset>
+                <fieldset class="p-2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <legend class="d-inline w-auto p-2">Delivery</legend>
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                </fieldset>
+                
             </form>
+        </div>
+        <div class="col-12 col-lg-6">
+            {% if cart_items %}
+            <h5 class="text-muted">Order Summary</h5>
+                <div class="table-responsive">
+                    <table id="cart-table" class="table table-borderless table-sm">
+                        <thead class="text-dark thead-dark">
+                            <tr>
+                                <th scope="col" class="pl-2 py-3">Product Info</th>
+                                <th scope="col" class="py-3">Price</th>
+                                <th scope="col" class="py-3">Qty</th>
+                                <th scope="col" class="py-3">Subtotal</th>
+                            </tr>
+                        </thead>
+
+                        {% for cart_item in cart_items %}
+                            <tr class="table-row" {% if not forloop.first %}data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"{% endif %}>
+                                <td class="py-3 align-middle">
+                                    <p class="my-0 pl-2"><strong>{{ cart_item.product.name }}</strong></p>
+                                </td>
+                                <td class="py-3 align-middle">
+                                    <p class="my-0">€{{ cart_item.product.price }}</p>
+                                </td>
+                                <td class="py-3 align-middle">
+                                    <p class="my-0">{{ cart_item.quantity }}</p>
+                                </td>
+                                <td class="py-3 align-middle">
+                                    <p class="my-0"><strong>€{{ cart_item.product.price }}</strong></p>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        <tr class="order-charges" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                            <td colspan="5" class="pt-5 text-right">
+                                <h6><strong>Order Sub-Total: €{{ sub_total|floatformat:2 }}</strong></h6>
+                                <h6><strong>Delivery: €{{ delivery_charge|floatformat:2 }}</strong></h6>
+                                <h4 class="mt-4"><strong>Order Total: €{{ order_total|floatformat:2 }}</strong></h4>
+                                {% if sub_total < delivery_threshold %}
+                                    <p class="mb-1 text-danger">
+                                        You could get free delivery by spending just <strong>€a bit</strong> more!
+                                    </p>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                {% endif %}
         </div>
     </div>
 </div>
