@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
+{% load static %}
+{% load calculate_item_subtotal %}
+
 {% block header %}
     <section id="cart-header" class="header-container container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593784299/burgersaurus/hamburger-1214465_1920_z4j1lf.jpg');"></section>
 {% endblock %}
@@ -42,7 +45,7 @@
                                     </form>
                                 </td>
                                 <td class="py-3 align-middle">
-                                    <p class="my-0"><strong>€{{ cart_item.product.price }}</strong></p>
+                                    <p class="my-0"><strong>€{{ cart_item.product.price | calculate_item_subtotal:cart_item.quantity }}</strong></p>
                                 </td>
                             </tr>
                         {% endfor %}
