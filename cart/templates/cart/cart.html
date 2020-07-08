@@ -78,84 +78,79 @@
 {% endblock %}
 
 {% block extra_js %}
-{{ block.super }}
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-    // const updateQuantity = link => {
-    //     updateForm = link.parentNode;
-    //     updateForm.submit();
-    // }
+    {{ block.super }}
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
 
-    const updateQuantity = link => {
-        const updateForm = link.parentNode;
-        const itemId = link.getAttribute('data-id');
-        const itemQuantity = document.querySelector(`#item-id-${itemId}`).value;
-        const requestBody = {
-            quantity: itemQuantity
+        const updateQuantity = link => {
+            const updateForm = link.parentNode;
+            const itemId = link.getAttribute('data-id');
+            const itemQuantity = document.querySelector(`#item-id-${itemId}`).value;
+            const requestBody = {
+                quantity: itemQuantity
+            }
+            const targetUrl = `/cart/update/${itemId}/`;
+            const csrfToken = "{{ csrf_token }}";
+
+            fetch(targetUrl, {
+                method: "POST",
+                credentials: "same-origin",
+                body: JSON.stringify(requestBody),
+                headers: {
+                    "X-CSRFToken": csrfToken,
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    'X-Requested-With':'XMLHttpRequest'
+                },
+            }).then(response => {
+                return response;
+            }).then(data => {
+                console.log("Data is ok", data);
+            }).catch(error => {
+                console.log("Something went wrong!", error);
+            }).finally(() => {
+                location.reload();
+            }); 
         }
-        const targetUrl = `/cart/update/${itemId}/`;
-        const csrfToken = "{{ csrf_token }}";
 
-        fetch(targetUrl, {
-            method: "POST",
-            credentials: "same-origin",
-            body: JSON.stringify(requestBody),
-            headers: {
-                "X-CSRFToken": csrfToken,
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-                'X-Requested-With':'XMLHttpRequest'
-            },
-        }).then(response => {
-            return response;
-        }).then(data => {
-            console.log("Data is ok", data);
-        }).catch(error => {
-            console.log("Something went wrong!", error);
-        }).finally(() => {
-            console.log('blah');
-            location.reload();
-        }); 
-    }
+        const updateQuantityLinks = document.querySelectorAll('.update-quantity-link');
+        updateQuantityLinks.forEach(updateQuantityLink => {
+            updateQuantityLink.addEventListener('click', () => {
+                updateQuantity(updateQuantityLink);
+            });
+        });
 
-    const updateQuantityLinks = document.querySelectorAll('.update-quantity-link');
-    updateQuantityLinks.forEach(updateQuantityLink => {
-        updateQuantityLink.addEventListener('click', () => {
-            updateQuantity(updateQuantityLink);
+        const removeItem = link => {
+            const itemId = link.getAttribute('data-id');
+            const targetUrl = `/cart/remove/${itemId}/`;
+            const csrfToken = "{{ csrf_token }}";
+            // const data = {'csrfmiddlewaretoken': csrfToken};
+
+            fetch(targetUrl, {
+                method: "post",
+                credentials: "same-origin",
+                headers: {
+                    "X-CSRFToken": csrfToken,
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+            }).then(response => {
+                return response;
+            }).then(data => {
+                console.log("Data is ok", data);
+            }).catch(error => {
+                console.log("Something went wrong!", error);
+            }).finally(() => {
+                location.reload();
+            });
+        };
+
+        const removeItemLinks = document.querySelectorAll('.remove-item-link');
+        removeItemLinks.forEach(removeItemLink => {
+            removeItemLink.addEventListener('click', () => {
+                removeItem(removeItemLink);
+            });
         });
     });
-
-    const removeItem = link => {
-        const itemId = link.getAttribute('data-id');
-        const targetUrl = `/cart/remove/${itemId}/`;
-        const csrfToken = "{{ csrf_token }}";
-        // const data = {'csrfmiddlewaretoken': csrfToken};
-
-        fetch(targetUrl, {
-            method: "post",
-            credentials: "same-origin",
-            headers: {
-                "X-CSRFToken": csrfToken,
-                "Accept": "application/json",
-                "Content-Type": "application/json"
-            },
-        }).then(response => {
-            return response;
-        }).then(data => {
-            console.log("Data is ok", data);
-        }).catch(error => {
-            console.log("Something went wrong!", error);
-        }).finally(() => {
-            location.reload();
-        });
-    };
-
-    const removeItemLinks = document.querySelectorAll('.remove-item-link');
-    removeItemLinks.forEach(removeItemLink => {
-        removeItemLink.addEventListener('click', () => {
-            removeItem(removeItemLink);
-        });
-    });
-});
-</script>
+    </script>
 {% endblock %}

@@ -405,13 +405,13 @@ footer {
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
     background-color: var(--secondary-color);
-    color: var(--body-color);
+    color: #f7f7f7 !important;
     border: 2px solid transparent;
 
     &:hover {
         border: 2px solid var(--secondary-color);
         background: white;
-        color: var(--secondary-color);
+        color: #222 !important;
     }
 }
 
