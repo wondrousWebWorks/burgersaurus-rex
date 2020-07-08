@@ -467,4 +467,11 @@ fieldset {
     }
 }
 
+.message-container {
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    z-index: 100;
+}
+
 @import 'media-queries';

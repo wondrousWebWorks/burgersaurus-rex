@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
 
 def view_cart(request):
     """ Renders the shopping cart page """
@@ -17,6 +18,7 @@ def add_to_cart(request, item_id):
         cart[item_id] += quantity
     else:
         cart[item_id] = quantity
+        messages.success(request, 'Successfully added product to cart!')
 
     request.session['cart'] = cart
 
@@ -31,8 +33,10 @@ def update_cart(request, item_id):
 
     if quantity > 0:
         cart[item_id] = quantity
+        messages.success(request, 'Successfully updated cart!')
     else:
         cart.pop(item_id)
+        messages.success(request, 'Successfully updated cart!')
 
     request.session['cart'] = cart
 
@@ -45,6 +49,7 @@ def remove_item_from_cart(request, item_id):
     try:
         cart = request.session.get('cart', {})
         cart.pop(item_id)
+        messages.success(request, 'Successfully removed item from cart!')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
