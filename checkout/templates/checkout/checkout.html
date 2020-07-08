@@ -23,7 +23,7 @@
                     {{ order_form.email | as_crispy_field }}
                     {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
-                <fieldset class="p-2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <fieldset class="p-2">
                     <legend class="d-inline w-auto p-2">Delivery</legend>
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
@@ -53,7 +53,7 @@
                         </thead>
 
                         {% for cart_item in cart_items %}
-                            <tr class="table-row" {% if not forloop.first %}data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"{% endif %}>
+                            <tr class="table-row">
                                 <td class="py-3 align-middle">
                                     <p class="my-0 pl-2"><strong>{{ cart_item.product.name }}</strong></p>
                                 </td>
@@ -68,7 +68,7 @@
                                 </td>
                             </tr>
                         {% endfor %}
-                        <tr class="order-charges" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                        <tr class="order-charges">
                             <td colspan="5" class="pt-5 text-right">
                                 <h6><strong>Order Sub-Total: €{{ sub_total|floatformat:2 }}</strong></h6>
                                 <h6><strong>Delivery: €{{ delivery_charge|floatformat:2 }}</strong></h6>
