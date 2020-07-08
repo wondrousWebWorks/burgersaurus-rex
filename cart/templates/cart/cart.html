@@ -37,11 +37,10 @@
                                 <td class="py-3 align-middle">
                                     <form class="form" action="{% url 'update_cart' cart_item.item_id %}" method="POST">
                                         {% csrf_token %}
-                                        <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1" max="99" data-item_id="{{ menu_item.id }}" id="id_qty_{{ menu_item.id }}">
-                                        <!-- <button class="btn add-or-update-button"><i class="fas fa-edit"></i>  Update</button> -->
-                                        <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
-                                        <a class="update-quantity-link cart-quantity-link mr-2"><small><i class="fas fa-edit text-success"></i> Update</small></a>
-                                        <a class="remove-item-link cart-quantity-link" id="{{ cart_item.item_id }}"><small><i class="fas fa-trash-alt text-danger"></i> Remove</small></a>
+                                        <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1" max="99" data-id="{{ cart_item.item_id }}" id="item-id-{{ cart_item.item_id }}">
+                                        <!-- <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}"> -->
+                                        <a class="update-quantity-link cart-quantity-link mr-2" data-id="{{ cart_item.item_id }}"><small><i class="fas fa-edit text-success"></i> Update</small></a>
+                                        <a class="remove-item-link cart-quantity-link" data-id="{{ cart_item.item_id }}"><small><i class="fas fa-trash-alt text-danger"></i> Remove</small></a>
                                     </form>
                                 </td>
                                 <td class="py-3 align-middle">
@@ -82,9 +81,41 @@
 {{ block.super }}
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function () {
+    // const updateQuantity = link => {
+    //     updateForm = link.parentNode;
+    //     updateForm.submit();
+    // }
+
     const updateQuantity = link => {
-        updateForm = link.parentNode;
-        updateForm.submit();
+        const updateForm = link.parentNode;
+        const itemId = link.getAttribute('data-id');
+        const itemQuantity = document.querySelector(`#item-id-${itemId}`).value;
+        const requestBody = {
+            quantity: itemQuantity
+        }
+        const targetUrl = `/cart/update/${itemId}/`;
+        const csrfToken = "{{ csrf_token }}";
+
+        fetch(targetUrl, {
+            method: "POST",
+            credentials: "same-origin",
+            body: JSON.stringify(requestBody),
+            headers: {
+                "X-CSRFToken": csrfToken,
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                'X-Requested-With':'XMLHttpRequest'
+            },
+        }).then(response => {
+            return response;
+        }).then(data => {
+            console.log("Data is ok", data);
+        }).catch(error => {
+            console.log("Something went wrong!", error);
+        }).finally(() => {
+            console.log('blah');
+            location.reload();
+        }); 
     }
 
     const updateQuantityLinks = document.querySelectorAll('.update-quantity-link');
@@ -95,10 +126,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const removeItem = link => {
-        const itemId = link.getAttribute('id');
+        const itemId = link.getAttribute('data-id');
         const targetUrl = `/cart/remove/${itemId}/`;
         const csrfToken = "{{ csrf_token }}";
-        const data = {'csrfmiddlewaretoken': csrfToken};
+        // const data = {'csrfmiddlewaretoken': csrfToken};
 
         fetch(targetUrl, {
             method: "post",

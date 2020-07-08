@@ -1,5 +1,8 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
+
+from menu.models import Product
+import json
 
 def view_cart(request):
     """ Renders the shopping cart page """
@@ -28,19 +31,25 @@ def add_to_cart(request, item_id):
 def update_cart(request, item_id):
     """Adjust the quantity of the specified item to what is specified"""
 
-    quantity = int(request.POST.get('quantity'))
-    cart = request.session.get('cart', {})
+    if request.method == 'POST':
+        try:
+            request_body = json.loads(request.body)
+            quantity = int(request_body['quantity'])
+            product = get_object_or_404(Product, pk=item_id)
+            cart = request.session.get('cart', {})
 
-    if quantity > 0:
-        cart[item_id] = quantity
-        messages.success(request, 'Successfully updated cart!')
-    else:
-        cart.pop(item_id)
-        messages.success(request, 'Successfully updated cart!')
+            if quantity > 0:
+                cart[item_id] = quantity
+                messages.success(request, f'Updated {product.name} quantity to {cart[item_id]}!')
+            else:
+                cart.pop(item_id)
+                messages.success(request, f'Removed {product.name} from cart!')
 
-    request.session['cart'] = cart
+            request.session['cart'] = cart
+            return HttpResponse(status=200)
 
-    return redirect(reverse('view_cart'))
+        except Exception as e:
+            return HttpResponse(status=500)
 
 
 def remove_item_from_cart(request, item_id):
