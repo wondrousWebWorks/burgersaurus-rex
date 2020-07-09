@@ -3,25 +3,24 @@
 {% load static %}
 
 <html lang="en">
-  <head>
+    <head>
+        {% block meta %}
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% endblock %}
 
-    {% block meta %}
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
+        {% block core_css %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+            <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% endblock %}
 
-    {% block core_css %}
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
+        {% block extra_css %}
+        {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
-
-    <title>Burgersaurus Rex | The home of the juiciest takeway</title>
-  </head>
+        <title>Burgersaurus Rex | The home of the juiciest takeway</title>
+    </head>
   <body>
     {% include 'includes/navbar.html' %}
     <header>
@@ -32,7 +31,17 @@
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
-                {% include 'includes/toasts/success-toast.html' %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/error-toast.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/warning-toast.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/success-toast.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/info-toast.html' %}
+                    {% endif %}
+                {% endwith %}
             {% endfor %}
         </div>
     {% endif %}
