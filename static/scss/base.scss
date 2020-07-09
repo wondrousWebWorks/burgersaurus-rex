@@ -474,4 +474,28 @@ fieldset {
     z-index: 100;
 }
 
+.success-toast-header {
+    background-color: rgba(var(--success-toast-bg), 1);
+    color: rgba(var(--success-toast-color), 1);
+}
+
+.error-toast-header {
+    background-color: rgba(var(--error-toast-bg), 1);
+    color: rgba(var(--error-toast-color), 1);
+}
+
+.info-toast-header {
+    background-color: rgba(var(--info-toast-bg), 1);
+    color: rgba(var(--info-toast-color), 1);
+}
+
+.warning-toast-header {
+    background-color: rgba(var(--warning-toast-bg), 1);
+    color: rgba(var(--warning-toast-color), 1);
+}
+
+.toast-body {
+    font-family: "Open Sans", sans-serif;
+}
+
 @import 'media-queries';

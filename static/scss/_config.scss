@@ -7,6 +7,15 @@
     --quarternary-color: #118AB2;
     --quanary-color: #073B4C;
     --body-color: #f7f7f7;
+
+    --success-toast-bg: 204, 255, 153;
+    --success-toast-color: 53, 102, 0;
+    --error-toast-bg: 255, 153, 153;
+    --error-toast-color: 128, 0, 0;
+    --info-toast-bg: 153, 204, 255;
+    --info-toast-color: 0, 51, 102;
+    --warning-toast-bg: 255, 214, 153;
+    --warning-toast-color: 153, 92, 0;
 }
 
 $section-margin-top: 10vh;
