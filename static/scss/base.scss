@@ -7,8 +7,7 @@ html {
 body {
     font-size: 16px;
     font-family: 'Miltonian Tattoo', sans-serif;
-    background-color: var(--body-color);
-    // background: var(--body-color) url("https://www.transparenttextures.com/patterns/food.png") repeat;
+    background-color: rgba(var(--body-color), 1);
 }
 
 p {
@@ -17,7 +16,7 @@ p {
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--tertiary-color) #111;
+    scrollbar-color: rgba(var(--tertiary-color), 1) #111;
 }
 
 .row {
@@ -33,7 +32,7 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, var(--primary-color), var(--tertiary-color));
+    background: linear-gradient(to bottom, rgba(var(--primary-color), 1), rgba(var(--tertiary-color), 1));
     outline: 1px solid slategrey;
     border-radius: 4px;
 }
@@ -83,14 +82,14 @@ p {
     }
 
     #search-input button {
-        background-color: var(--secondary-color);
+        background-color: rgba(var(--secondary-color), 1);
     }
 
     a.nav-link {
         transition: all .5s ease-in-out;
 
         &:hover {
-            color: var(--tertiary-color) !important;
+            color: rgba(var(--tertiary-color), 1) !important;
         }
     }
 
@@ -99,14 +98,13 @@ p {
 
         i {
             font-size: 1.6rem;
-            color: var(--secondary-color);
+            color: rgba(var(--secondary-color), 1);
         }
     }
 }
 
 .add-navbar-background {
-    // background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color)) !important;
-    background: rgba(6, 214, 160, .75) !important;
+    background: rgba(var(--primary-color), .75) !important;
     height: 8vh !important;
 }
 
@@ -122,8 +120,7 @@ p {
 }
 
 .add-delivery-banner-background {
-    // background-color: var(--tertiary-color);
-    background-color: rgba(255, 209, 102, .8);
+    background-color: rgba(var(--tertiary-color), .8);
     color: #222 !important;
     top: 8vh !important;
 }
@@ -134,7 +131,6 @@ p {
     position: relative;
     display: block;
     animation: 6s ease-in-out 0s infinite alternate move-clip-path;
-    // clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 88% 91%, 76% 91%, 64% 94%, 52% 94%, 40% 96%, 29% 95%, 18% 98%, 9% 97%, 0% 100%);
 
     @keyframes move-clip-path { 
         from { 
@@ -151,13 +147,13 @@ p {
 
         li {
             height: .8rem;
-            background-color: var(--primary-color);
+            background-color: rgba(var(--primary-color), 1);
         }
     }
 
     a.carousel-control {
         font-size: 3rem;
-        color: var(--secondary-color);
+        color: rgba(var(--secondary-color), 1);
         z-index: 30;
     }
 
@@ -185,7 +181,7 @@ p {
                 font-size: 2rem;
                 font-family: "Metal Mania", sans-serif;
                 background-color: var(--quarternary-color);
-                color: white;
+                color: #f7f7f7;
                 clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
                 transition: all .5s ease-in-out;
 
@@ -252,9 +248,8 @@ p {
 }
 
 #landing-page-info-boxes {
-    // clip-path: polygon(80% 0, 100% 10%, 100% 90%, 20% 100%, 0 90%, 0 10%);
     clip-path: polygon(0 10%, 8% 8%, 15% 9%, 22% 7%, 37% 8%, 49% 6%, 54% 7%, 62% 5%, 71% 6%, 79% 4%, 87% 5%, 92% 4%, 96% 6%, 100% 1%, 100% 90%, 94% 91%, 86% 89%, 78% 92%, 68% 90%, 58% 93%, 46% 92%, 33% 95%, 25% 94%, 15% 97%, 7% 96%, 0 100%);
-    background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
+    background: linear-gradient(to right, rgba(var(--quarternary-color), 1), rgba(var(--primary-color), 1), rgba(var(--quanary-color), 1));
     transition: all .5s ease-in-out;
     margin-top: $section-margin-top;
     margin-left: 0;
@@ -327,7 +322,7 @@ p {
 
 footer {
     margin-top: $section-margin-top;
-    background: linear-gradient(to right, var(--quarternary-color), var(--primary-color), var(--quanary-color));
+    background: linear-gradient(to right, rgba(var(--quarternary-color), 1), rgba(var(--primary-color), 1), rgba(var(--quanary-color), 1));
     clip-path: polygon(0 10%, 6% 8%, 15% 9%, 25% 7%, 31% 9%, 44% 7%, 54% 7%, 62% 5%, 67% 7%, 74% 4%, 83% 6%, 88% 4%, 95% 4%, 100% 1%, 100% 100%, 0 100%);
 
     .footer-col {
@@ -341,19 +336,19 @@ footer {
 
         & a {
             text-decoration: none;
-            color: white;
+            color: #f7f7f7;
             font-family: "Metal Mania", sans-serif;
             font-size: 1.3rem;
             transition: all .5s ease-in-out;
 
             &:hover {
-                color: var(--secondary-color);
+                color: rgba(var(--secondary-color), 1);
             }
         }
     }
 
     .social-and-copyright {
-        color: white;
+        color: #f7f7f7;
 
         & i {
             color: white;
@@ -362,7 +357,7 @@ footer {
             transition: all .5s ease-in-out;
             
             &:hover {
-                color: var(--secondary-color);
+                color: rgba(var(--secondary-color), 1);
             }
         }
     }
@@ -376,7 +371,7 @@ footer {
 
 #menu {
     .menu-item:nth-child(even) {
-        background-color: var(--tertiary-color);
+        background-color: rgba(var(--tertiary-color), 1);
         border-radius: .5rem;
     }
 
@@ -404,12 +399,12 @@ footer {
 .add-or-update-button {
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
-    background-color: var(--secondary-color);
+    background-color: rgba(var(--secondary-color),1 );
     color: #f7f7f7 !important;
     border: 2px solid transparent;
 
     &:hover {
-        border: 2px solid var(--secondary-color);
+        border: 2px solid rgba(var(--secondary-color),1 );
         background: white;
         color: #222 !important;
     }
@@ -429,7 +424,7 @@ footer {
     overflow: hidden !important;
 
     .table-row:nth-child(even) {
-        background-color: var(--tertiary-color);
+        background-color: rgba(var(--tertiary-color), 1);
     }
 }
 
@@ -442,23 +437,22 @@ footer {
 }
 
 .custom-button-1 {
-    background-color: var(--secondary-color);
+    background-color: rgba(var(--secondary-color), 1);
     font-family: "Open Sans", sans-serif;
 }
 
 .checkout-button {
-    background-color: var(--primary-color);
+    background-color: rgba(var(--primary-color), 1);
     font-family: "Open Sans", sans-serif;
 }
 
 fieldset {
-    background-color: var(--tertiary-color);
+    background-color: rgba(var(--tertiary-color), 1);
 
     legend {
         font-size: 1.2rem;
         background-color: #343a40;
         color: white;
-        // border-radius: .5rem;
         font-weight: bold;
     }
 
@@ -496,6 +490,18 @@ fieldset {
 
 .toast-body {
     font-family: "Open Sans", sans-serif;
+}
+
+
+
+input[type=checkbox]
+{
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    padding: 10px;
 }
 
 @import 'media-queries';
