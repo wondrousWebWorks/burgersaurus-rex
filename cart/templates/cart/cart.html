@@ -82,6 +82,12 @@
     <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () {
 
+        /**
+         * Gets the itemId and quantity from the clicked link's
+         * attributes and sends a POST fetch request to the
+         * back end to update the item's quantity in the shopping cart
+         * @param {HTMLElement} link 
+         */
         const updateQuantity = link => {
             const updateForm = link.parentNode;
             const itemId = link.getAttribute('data-id');
@@ -120,11 +126,15 @@
             });
         });
 
+        /**
+         * Gets the itemId and sends a POST fetch request to the
+         * back end to remove the item from the shopping cart
+         * @param {HTMLElement} link 
+         */
         const removeItem = link => {
             const itemId = link.getAttribute('data-id');
             const targetUrl = `/cart/remove/${itemId}/`;
             const csrfToken = "{{ csrf_token }}";
-            // const data = {'csrfmiddlewaretoken': csrfToken};
 
             fetch(targetUrl, {
                 method: "post",

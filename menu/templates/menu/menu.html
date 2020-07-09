@@ -76,13 +76,19 @@
     {{ block.super }}
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
-
+            
+            /**
+             * Gets the itemId and quantity from the clicked link's
+             * attributes and sends a POST fetch request to the
+             * back end to update the shopping cart
+             * @param {HTMLElement} link 
+             */
             const addItemToCart = link => {
                 const itemId = link.getAttribute('data-id');
                 const quantity = link.previousElementSibling.value;
                 const requestBody = {
                     quantity: quantity
-                }
+                };
                 const targetUrl = `/cart/add/${itemId}/`;
                 const csrfToken = "{{ csrf_token }}";
 
@@ -105,7 +111,7 @@
                 }).finally(() => {;
                     location.reload();
                 }); 
-            }
+            };
 
             const addItemToCartLinks = document.querySelectorAll('.add-to-cart-link');
             addItemToCartLinks.forEach(addItemToCartLink => {
