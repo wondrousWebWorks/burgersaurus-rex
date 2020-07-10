@@ -180,7 +180,7 @@ p {
             a {
                 font-size: 2rem;
                 font-family: "Metal Mania", sans-serif;
-                background-color: var(--quarternary-color);
+                background-color: rgba(var(--quarternary-color), 1);
                 color: #f7f7f7;
                 clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
                 transition: all .5s ease-in-out;
