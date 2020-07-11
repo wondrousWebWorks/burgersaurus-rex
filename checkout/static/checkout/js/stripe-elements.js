@@ -24,5 +24,22 @@ const style = {
         iconColor: '#dc3545'
     }
 };
-let card = elements.create('card', {style: style});
+
+const card = elements.create('card', {style: style});
 card.mount('#card-element');
+
+// Realtime card element validation errors
+card.addEventListener('change', event => {
+    const errorDiv = document.querySelector('#card-errors');
+    if (event.error) {
+        const html = `
+            <span class="icon" role="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            </span>
+            <span class="open-sans">${event.error.message}</span>
+        `;
+        errorDiv.innerHTML = html;
+    } else {
+        errorDiv.textContent = '';
+    }
+});
