@@ -164,5 +164,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
+# Delivery
 DELIVERY_THRESHOLD = 7
 DELIVERY_CHARGE = 2
+
+# Stripe
+STRIPE_CURRENCY = 'eur'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET', '')
