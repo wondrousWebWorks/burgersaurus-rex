@@ -19,7 +19,7 @@
         </div>
         <div class="col-12 col-lg-6 mb-5 mx-auto">
             <h5 class="text-muted">If you'd be so kind, fill out the form below to complete your order</h5>
-            <form action="" method="POST">
+            <form id="payment-form" action="" method="POST">
                 {% csrf_token %}
                 <fieldset class="p-2 mb-5">
                     <legend class="d-inline w-auto p-2">Details</legend>
@@ -54,7 +54,7 @@
                 <div class="row m-0 mt-3">
                     <div class="col-12 text-right px-0">
                         <a href="{% url 'view_cart' %}" class="btn custom-button-1 mb-1"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Modify Order</a>
-                        <a href="" class="btn checkout-button mb-1"><i class="far fa-credit-card"></i>&nbsp;&nbsp;Checkout</a>
+                        <button id="submit-button" class="btn checkout-button mb-1"><i class="far fa-credit-card"></i>&nbsp;&nbsp;Checkout</button>
                     </div>
                 </div>
             </form>

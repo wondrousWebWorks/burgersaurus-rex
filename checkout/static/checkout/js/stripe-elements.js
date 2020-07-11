@@ -16,8 +16,6 @@ const style = {
             color: '#aab7c4'
         },
         backgroundColor: 'white',
-        padding: '1rem',
-        border: 'none'
     },
     invalid: {
         color: '#dc3545',
@@ -42,4 +40,35 @@ card.addEventListener('change', event => {
     } else {
         errorDiv.textContent = '';
     }
+});
+
+// Handle payment form submit
+const form = document.querySelector('#payment-form');
+const submitButton = document.querySelector('#submit-button');
+
+form.addEventListener('submit', event => {
+    event.preventDefault();
+    card.update({ 'disabled': true });
+    submitButton.setAttribute('disabled', true);
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(result => {
+        if (result.error) {
+            const errorDiv = document.querySelector('#card-errors');
+            const html = `
+                <span class="icon" role="alert">
+                <i class="fas fa-exclamation-triangle"></i>
+                </span>
+                <span>${result.error.message}</span>`;
+                errorDiv.innerHTML = html;
+            card.update({ 'disabled': false });
+            submitButton.setAttribute('disabled', false);
+        } else {
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit();
+            }
+        }
+    });
 });
