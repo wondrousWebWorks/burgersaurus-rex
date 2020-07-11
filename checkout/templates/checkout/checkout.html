@@ -3,6 +3,10 @@
 {% load static %}
 {% load calculate_item_subtotal %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
 {% block header %}
     <section id="cart-header" class="header-container container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1593784299/burgersaurus/hamburger-1214465_1920_z4j1lf.jpg');"></section>
 {% endblock %}
@@ -23,7 +27,7 @@
                     {{ order_form.email | as_crispy_field }}
                     {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
-                <fieldset class="p-2">
+                <fieldset class="p-2 mb-5">
                     <legend class="d-inline w-auto p-2">Delivery</legend>
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
@@ -41,10 +45,14 @@
                         {% endif %}
                     </div>
                 </fieldset>
+                <fieldset class="pt-2 px-2 pb-4">
+                    <legend class="d-inline w-auto p-2">Payment</legend>
+                    <div id="card-element"></div>
+                </fieldset>
                 <div class="row m-0 mt-3">
                     <div class="col-12 text-right px-0">
                         <a href="{% url 'view_cart' %}" class="btn custom-button-1 mb-1"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Modify Order</a>
-                        <a href="" class="btn checkout-button mb-1"><i class="fab fa-cc-stripe"></i>&nbsp;&nbsp;Checkout</a>
+                        <a href="" class="btn checkout-button mb-1"><i class="far fa-credit-card"></i>&nbsp;&nbsp;Checkout</a>
                     </div>
                 </div>
             </form>
@@ -101,6 +109,7 @@
 
 {% block extra_js %}
     {{ block.super }}
-    {{ stripe_public_key|json_script:"id-stripe-public-key" }}
-    {{ client_secret|json_script:"id-client-secret" }}
+    {{ stripe_public_key|json_script:"stripe-public-key" }}
+    {{ client_secret|json_script:"client-secret" }}
+    <script src="{% static 'checkout/js/stripe-elements.js' %}"></script>
 {% endblock %}

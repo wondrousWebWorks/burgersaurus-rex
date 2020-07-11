@@ -2,6 +2,7 @@ from django import forms
 from .models import Order
 
 CITIES = [
+    ('initial', 'Select a City'),
     ('cork', 'Cork'),
     ('dublin', 'Dublin'),
     ('galway', 'Galway'),
@@ -39,5 +40,6 @@ class OrderForm(forms.ModelForm):
             else:
                 placeholder = placeholders[field]
             self.fields[field].label = False
+
             self.fields[field].widget.attrs['placeholder'] = placeholder
-            
+            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
