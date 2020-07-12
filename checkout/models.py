@@ -30,7 +30,7 @@ class Order(models.Model):
         """
         Update order total with delivery cost each time an item is added
         """
-        self.order_sub_total = self.orderitems.aggregate(Sum('order_item_total'))['order_item_total__sum']
+        self.order_sub_total = self.orderitems.aggregate(Sum('order_item_total'))['order_item_total__sum'] or 0
         self.delivery_cost = settings.DELIVERY_CHARGE
         self.order_total = self.order_sub_total + self.delivery_cost
         self.save()

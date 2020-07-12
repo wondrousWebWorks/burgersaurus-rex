@@ -16,4 +16,4 @@ def update_on_delete(sender, instance, **kwargs):
     """
     Update the order total on deletion of orderitem
     """
-    instance.order.update_total()
+    instance.order.update_order_total()
