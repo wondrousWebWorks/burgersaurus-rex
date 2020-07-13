@@ -45,11 +45,13 @@ card.addEventListener('change', event => {
 // Handle payment form submit
 const form = document.querySelector('#payment-form');
 const submitButton = document.querySelector('#submit-button');
+const loadingWrapper = document.querySelector('#loading-wrapper');
 
 form.addEventListener('submit', event => {
     event.preventDefault();
     card.update({ 'disabled': true });
     submitButton.setAttribute('disabled', true);
+    loadingWrapper.classList.toggle('opacity-full');
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
@@ -62,7 +64,8 @@ form.addEventListener('submit', event => {
                 <i class="fas fa-exclamation-triangle"></i>
                 </span>
                 <span>${result.error.message}</span>`;
-                errorDiv.innerHTML = html;
+            errorDiv.innerHTML = html;
+            loadingWrapper.classList.toggle('opacity-full');
             card.update({ 'disabled': false });
             submitButton.setAttribute('disabled', false);
         } else {
