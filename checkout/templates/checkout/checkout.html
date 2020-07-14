@@ -51,6 +51,7 @@
                 </fieldset>
                 <!-- Form errors displayed here -->
                 <div class="text-danger" id="card-errors" role="alert"></div>
+                <input type="hidden" name="client_secret" value="{{ client_secret }}">
                 <div class="row m-0 mt-3">
                     <div class="col-12 text-right px-0">
                         <a href="{% url 'view_cart' %}" class="btn custom-button-1 mb-1"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Modify Order</a>
