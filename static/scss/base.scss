@@ -456,9 +456,26 @@ fieldset {
         font-weight: bold;
     }
 
-    input, select {
+    select,
+    select option {
         font-family: "Open Sans", sans-serif;
+        color: #000;
     }
+
+    select:invalid,
+    select option[value=""] {
+        color: #aab7c4 !important;
+    }
+
+    input[type=checkbox]
+{
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    padding: 10px;
+}
 }
 
 .message-container {
@@ -490,18 +507,6 @@ fieldset {
 
 .toast-body {
     font-family: "Open Sans", sans-serif;
-}
-
-
-
-input[type=checkbox]
-{
-    -ms-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    transform: scale(1.5);
-    padding: 10px;
 }
 
 @import 'media-queries';
