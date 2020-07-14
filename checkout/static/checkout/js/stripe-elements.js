@@ -52,26 +52,71 @@ form.addEventListener('submit', event => {
     card.update({ 'disabled': true });
     submitButton.setAttribute('disabled', true);
     loadingWrapper.classList.toggle('opacity-full');
-    stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-        }
-    }).then(result => {
-        if (result.error) {
-            const errorDiv = document.querySelector('#card-errors');
-            const html = `
-                <span class="icon" role="alert">
-                <i class="fas fa-exclamation-triangle"></i>
-                </span>
-                <span>${result.error.message}</span>`;
-            errorDiv.innerHTML = html;
-            loadingWrapper.classList.toggle('opacity-full');
-            card.update({ 'disabled': false });
-            submitButton.setAttribute('disabled', false);
-        } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
+    const saveInfoCheckbox = document.querySelector('#id-save-info');
+    const saveInfo = saveInfoCheckbox.hasAttribute('checked');
+    const csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    const postData = {
+        'client_secret': clientSecret,
+        'save_info': saveInfo,
+    };
+    const  targetUrl = '/checkout/cache-checkout-data/';
+
+    fetch(targetUrl, {
+        method: "post",
+        credentials: "same-origin",
+        headers: {
+            "X-CSRFToken": csrfToken,
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postData)
+    }).then(response => {
+        return response;
+    }).then(data => {
+        console.log("Data is ok", data);
+        stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+                billing_details: {
+                    name: form.full_name.value.trim(),
+                    phone: form.phone_number.value.trim(),
+                    email: form.email.value.trim(),
+                    address:{
+                        line1: form.street_address1.value.trim(),
+                        line2: form.street_address2.value.trim(),
+                        city: form.town_or_city.value.trim(),
+                    }
+                }
+            },
+            shipping: {
+                name: form.full_name.value.trim(),
+                phone: form.phone_number.value.trim(),
+                address: {
+                    line1: form.street_address1.value.trim(),
+                    line2: form.street_address2.value.trim(),
+                    city: form.town_or_city.value.trim(),
+                    postal_code: form.postcode.value.trim(),
+                }
             }
-        }
+        }).then(result => {
+            if (result.error) {
+                const errorDiv = document.querySelector('#card-errors');
+                const html = `
+                    <span class="icon" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
+                errorDiv.innerHTML = html;
+                loadingWrapper.classList.toggle('opacity-full');
+                card.update({ 'disabled': false });
+                submitButton.setAttribute('disabled', false);
+            } else {
+                if (result.paymentIntent.status === 'succeeded') {
+                    form.submit();
+                }
+            }
+        });
+    }).catch(error => {
+        console.log("Something went wrong!", error);
     });
 });
