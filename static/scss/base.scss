@@ -436,9 +436,8 @@ footer {
     cursor: pointer !important;
 }
 
-.custom-button-1 {
-    background-color: rgba(var(--secondary-color), 1);
-    font-family: "Open Sans", sans-serif;
+.underline {
+    text-decoration: underline;
 }
 
 .checkout-button {
@@ -507,6 +506,100 @@ fieldset {
 
 .toast-body {
     font-family: "Open Sans", sans-serif;
+}
+
+.auth-container {
+    height: 100vh !important;
+    width: 100vw !important;
+    background-image: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592430542/burgersaurus/header-1.jpg') !important;
+
+    .allauth-form-inner-content {
+        width: 35%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10%;
+
+        h2, p {
+            color: #f7f7f7;
+        }
+
+        h2 {
+            margin-bottom: 5rem;
+        }
+
+        a {
+            color: #ef476f;
+        }
+
+        /* Allauth form formatting */
+
+        p {
+            margin-top: 1.5rem;
+        }
+
+        label {
+            color: #f7f7f7;
+        }
+
+        input,
+        input:-webkit-autofill {
+            border: none !important;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        input:focus,
+        input:active {
+            border: none !important;
+            box-shadow:  inset 2px 2px 3px #888,
+                        inset -2px -2px 3px #888;
+        }
+
+        label:not([for='id_remember']) {
+            display: none;
+        }
+
+        input::placeholder {
+            color: #aab7c4;
+        }
+
+        button,
+        input[type='submit'] {
+            /* btn */
+            display: inline-block;
+            font-weight: 400;
+            color: #f7f7f7;
+            text-align: center;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+
+            /* standard bootstrap btn transitions */
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+    }
+}
+
+.custom-button-1 {
+    background-color: rgba(var(--secondary-color), 1);
+    font-family: "Open Sans", sans-serif;
+}
+
+.custom-button-1:hover {
+    background-color: rgba(var(--secondary-color), .7);
+}
+
+.custom-button-2 {
+    background-color: rgba(var(--quarternary-color), 1);
+    font-family: "Open Sans", sans-serif;
+}
+
+.custom-button-2:hover {
+    background-color: rgba(var(--quarternary-color), .7);
 }
 
 @import 'media-queries';
