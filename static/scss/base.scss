@@ -466,15 +466,14 @@ fieldset {
         color: #aab7c4 !important;
     }
 
-    input[type=checkbox]
-{
-    -ms-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    transform: scale(1.5);
-    padding: 10px;
-}
+    input[type=checkbox] {
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+        padding: 10px;
+    }
 }
 
 .message-container {
@@ -586,6 +585,32 @@ fieldset {
             transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
     }
+}
+
+.profile-form-input {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.profile-form-input:focus,
+.profile-form-input:active {
+    border: none !important;
+    box-shadow:  inset 2px 2px 3px #888,
+                 inset -2px -2px 3px #888;
+}
+
+.profile-form-input::placeholder {
+    color: #aab7c4;
+}
+
+select,
+select option {
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
 }
 
 .custom-button-1 {
