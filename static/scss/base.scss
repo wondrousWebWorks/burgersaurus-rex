@@ -602,17 +602,6 @@ fieldset {
     color: #aab7c4;
 }
 
-select,
-select option {
-    font-family: "Open Sans", sans-serif;
-    color: #000;
-}
-
-select:invalid,
-select option[value=""] {
-    color: #aab7c4 !important;
-}
-
 .custom-button-1 {
     background-color: rgba(var(--secondary-color), 1);
     font-family: "Open Sans", sans-serif;
@@ -629,6 +618,23 @@ select option[value=""] {
 
 .custom-button-2:hover {
     background-color: rgba(var(--quarternary-color), .7);
+}
+
+/* PROFILE APP */
+select,
+select option {
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
+.order-history {
+    max-height: 450px;
+    overflow-y: auto;
 }
 
 @import 'media-queries';
