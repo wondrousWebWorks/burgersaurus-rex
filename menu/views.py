@@ -24,7 +24,7 @@ def menu(request):
 
 
 def add_product(request):
-    """ Add a product to the store """
+    """Add a product to the store"""
 
     if request.method == 'POST':
         form = ProductForm(request.POST)
