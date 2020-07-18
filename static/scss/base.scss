@@ -422,10 +422,14 @@ footer {
 
 #cart-table {
     overflow: hidden !important;
+}
 
-    .table-row:nth-child(even) {
-        background-color: rgba(var(--tertiary-color), 1);
-    }
+.table-row:nth-child(even) {
+    background-color: rgba(var(--tertiary-color), 1);
+}
+
+table tr td {
+    font-family: "Open Sans", sans-serif;
 }
 
 .order-charges {
@@ -453,6 +457,7 @@ fieldset {
         background-color: #343a40;
         color: white;
         font-weight: bold;
+        display: inline;
     }
 
     select,

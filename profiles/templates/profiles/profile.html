@@ -19,10 +19,12 @@
     </div>
     <div class="row">
         <div class="col-12 col-lg-6">
-            <p class="text-muted">Default Delivery Information</p>
             <form id="update-profile-form" action="{% url 'profile' %}" method="POST">
-                {% csrf_token %}
-                {{ form|crispy }}
+                <fieldset class="p-2 mb-3">
+                    <legend class="d-inline w-auto p-2">Default Delivery Information</legend>
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                </fieldset>
                 <button class="btn custom-button-2 float-right"><i class="fas fa-user-edit"></i>  Update Information</button>
             </form>
         </div>
@@ -30,7 +32,7 @@
             <p class="text-muted">Order History</p>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless">
-                    <thead>
+                    <thead class="text-dark thead-dark">
                         <tr>
                             <th>Order Number</th>
                             <th>Date</th>
@@ -40,7 +42,7 @@
                     </thead>
                     <tbody>
                         {% for order in orders %}
-                            <tr>
+                            <tr class="table-row">
                                 <td>
                                     <a href="{% url 'order_history' order.order_number %}"
                                     title="{{ order.order_number }}">
@@ -57,7 +59,7 @@
                                         {% endfor %}
                                     </ul>
                                 </td>
-                                <td>${{ order.order_total }}</td>
+                                <td>€{{ order.order_total }}</td>
                             </tr>
                         {% endfor %}
                     </tbody>
