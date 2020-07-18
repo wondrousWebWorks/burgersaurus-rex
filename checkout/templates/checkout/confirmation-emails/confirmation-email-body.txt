@@ -1,0 +1,24 @@
+Hello {{ order.full_name }}!
+
+This is a confirmation of your order at Burgersaurus rex. 
+
+Your order information:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: €{{ order.order_sub_total }}
+Delivery: €{{ order.delivery_cost }}
+Grand Total: €{{ order.order_total }}
+
+Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}.
+
+According to our records, your phone number is: {{ order.phone_number }}.
+
+Should you have any questions, feel free to contact us at {{ contact_email }}.
+
+We hope you enjoy or order!
+
+Sincerely,
+
+Burgersaurus Rex
