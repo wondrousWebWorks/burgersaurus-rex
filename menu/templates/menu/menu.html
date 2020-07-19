@@ -41,7 +41,7 @@
         <li class="nav-item">
             <a class="nav-link btn btn-info mb-2" href="{% url 'menu' %}?category=drinks">🥤 Drinks</a>
         </li>
-      </ul>
+    </ul>
     {% for category in categories %}
         <h1 class="mt-5 mb-3 d-inline-block page-heading">{{ category.friendly_name }}</h1>
     {% endfor %}
@@ -49,6 +49,12 @@
         <div class="row menu-item py-4 mb-2 mx-auto" {% if not forloop.first %}data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"{% endif %}>
             <div class="col-sm-9">
                 <h3>{{ menu_item.name }}</h3>
+                {% if request.user.is_superuser %}
+                    <div class="product-management-wrapper">
+                        <a href="{% url 'edit-product' menu_item.id %}" class="btn custom-button-1 mb-2"><i class="fas fa-edit"></i>  Edit Product</a>
+                        <a href="{% url 'delete-product' menu_item.id %}" class="btn custom-button-2 mb-2"><i class="fas fa-trash-alt"></i>  Delete Product</a>
+                    </div>
+                {% endif %}
                 <p>{{ menu_item.description }}</p>
                 {% if menu_item.allergens.all %}
                     <h4><a class="text-dark" href="https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/" target="blank"><strong>Allergens:</strong></a><span class="badge badge-secondary ml-2">Click allergen for info</span></h4>
