@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 
 from .models import Product, Category
@@ -40,6 +40,29 @@ def add_product(request):
     template = 'menu/add-product.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+def edit_product(request, product_id):
+    """ Edit a product on the menu """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product updated successfully!')
+            return redirect(reverse('menu'))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'menu/edit-product.html'
+    context = {
+        'form': form,
+        'product': product,
     }
 
     return render(request, template, context)

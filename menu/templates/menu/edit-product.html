@@ -13,16 +13,16 @@
     </div>
     <div class="row mx-auto">
         <div class="col-12 col-md-8 mx-auto">
-            <form action="{% url 'add-product' %}" method="POST">
+            <form action="{% url 'edit-product' product.id %}" method="POST">
                 {% csrf_token %}
                 <fieldset class="p-3 mb-3">
                     <legend class="p-2 d-inline w-auto">
-                        Add Product
+                        Edit Product
                     </legend>
                     {{ form | crispy }}
                 </fieldset>
                 <div class="text-right">
-                    <button class="btn btn-large custom-button-1 d-inline-block ml-auto"><i class="fas fa-plus-circle"></i> Add Product</button>
+                    <button class="btn btn-large custom-button-1 d-inline-block ml-auto"><i class="fas fa-edit"></i> Update Product</button>
                 </div>
             </form>
         </div>
