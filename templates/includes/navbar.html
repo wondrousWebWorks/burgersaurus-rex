@@ -53,7 +53,7 @@
                 <div class="dropdown-menu py-0" aria-labelledby="accountDropdown">
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
-                            <a class="dropdown-item" href="#"><i class="fas fa-edit"></i>&nbsp;&nbsp;Product Management</a>
+                            <a class="dropdown-item" href="{% url 'add-product' %}"><i class="fas fa-edit"></i>&nbsp;&nbsp;Product Management</a>
                         {% endif %}
                         <a class="dropdown-item" href="{% url 'profile' %}"><i class="fas fa-user-plus"></i>&nbsp;&nbsp;My Profile</a>
                         <a class="dropdown-item" href="{% url 'account_logout' %}"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;Logout</a>
