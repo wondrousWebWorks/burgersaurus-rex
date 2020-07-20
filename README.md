@@ -21,6 +21,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
       - [User Model](#user-model)
       - [Menu App](#menu-app)
         - [Category Model](#category-model)
+        - [Allergen Model](#allergen-model)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries & Frameworks](#libraries--frameworks)
@@ -95,6 +96,14 @@ The standard Djando user model, `django.contrib.auth.models`, was used for this 
 Name | name | max_length=254 | CharField
 Friendly Name | friendly_name | max_length=254, blank=True, null=True | CharField
 Menu Header URL | menu_header_url | max_length=254, blank=True, null=True | CharField
+
+##### Allergen Model
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Name | name | max_length=254 | CharField
+Friendly Name | friendly_name | max_length=254, blank=True, null=True | CharField
+Info URL | info_url | max_length=254, null=True | CharField
 
 ## Technologies Used
 
