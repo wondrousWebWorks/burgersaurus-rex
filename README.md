@@ -17,6 +17,8 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
   - [Wireframes](#wireframes)
   - [Information Architecture](#information-architecture)
     - [Database Choice](#database-choice)
+    - [Data Models](#data-models)
+      - [User](#user)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries & Frameworks](#libraries--frameworks)
@@ -75,6 +77,12 @@ All wireframes were created using [Balsamiq](https://balsamiq.com/) and can be v
 
 - By default, Django works with SQL databases. During development on my local machine I worked with the standard **sqlite3** database installed with Django.
 - Heroku provies a **PostgreSQL** database for deployment.
+
+### Data Models
+
+#### User
+
+The standard Djando user model, `django.contrib.auth.models`, was used for this project.
 
 ## Technologies Used
 
