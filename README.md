@@ -15,6 +15,8 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
       - [Order Summary Page](#order-summary-page)
       - [Checkout Page](#checkout-page)
   - [Wireframes](#wireframes)
+  - [Information Architecture](#information-architecture)
+    - [Database Choice](#database-choice)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries & Frameworks](#libraries--frameworks)
@@ -66,6 +68,13 @@ Due to Django's ability to effortlessly render multi-page sites, Burgersaurus re
 ## Wireframes
 
 All wireframes were created using [Balsamiq](https://balsamiq.com/) and can be viewed [here](https://github.com/wondrousWebWorks/burgersaurus-rex/tree/master/wireframes).
+
+## Information Architecture
+
+### Database Choice
+
+- By default, Django works with SQL databases. During development on my local machine I worked with the standard **sqlite3** database installed with Django.
+- Heroku provies a **PostgreSQL** database for deployment.
 
 ## Technologies Used
 
