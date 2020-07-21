@@ -9,19 +9,13 @@
         >
     </a>
     <a class="navbar-brand d-none d-sm-block text-white" href="{% url 'home' %}"> Burgersaurus <strong>Rex</strong></a>
-    <button class="navbar-toggler h-100" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    <button class="navbar-toggler h-100 mr-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon my-auto"><i class="fas fa-bars pink my-auto"></i></span>
     </button>
     <div class="d-none my-auto ml-5"><p class="m-0 text-white nav-para"><strong>The undisputed <u>KING</u> of burgers</strong></p></div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse mr-0 mr-lg-5" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mr-2">
-            <li class="nav-item mr-5">
-                <form id="search-input" class="form-inline my-2 my-lg-0">
-                    <input class="form-control rounded-0" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn my-2 my-sm-0 rounded-0" type="submit"><i class="fas fa-search"></i></button>
-                </form>
-            </li>
             <li class="nav-item active">
                 <a class="nav-link text-white" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
             </li>
@@ -64,10 +58,14 @@
                 </div>
             </li>
         </ul>
-        <div id="view-cart" class="mr-5 text-center">
-            <a href="{% url 'view_cart' %}" class="m-0 d-block"><i class="fas fa-shopping-cart"></i></a>
-            <a href="{% url 'view_cart' %}" class="text-white d-block">€{% if order_total > 2 %}{{ order_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
-        </div>
+        <form id="search-input" class="form-inline my-2 my-lg-0">
+            <input class="form-control rounded-0" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn my-2 my-sm-0 rounded-0 d-inline" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+    <div id="view-cart" class="text-center">
+        <a href="{% url 'view_cart' %}" class="m-0 d-block"><i class="fas fa-shopping-cart"></i></a>
+        <a href="{% url 'view_cart' %}" class="text-white d-block">€{% if order_total > 2 %}{{ order_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
     </div>
 </nav>
 <h4 id="delivery-banner" class="text-center py-0 m-0"><em>Spend a minimum of €{{ delivery_threshold|floatformat:2 }} to qualify for delivery.</em></h4>

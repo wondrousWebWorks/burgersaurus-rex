@@ -94,7 +94,11 @@ p {
     }
 
     #view-cart {
-        height: 100%;
+        position: absolute;
+        right: .5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        // height: 100%;
 
         i {
             font-size: 1.6rem;

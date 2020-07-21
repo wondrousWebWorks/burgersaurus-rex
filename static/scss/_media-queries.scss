@@ -1,4 +1,4 @@
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
     #navbar {
         padding: 0;
 
@@ -14,14 +14,18 @@
             }
         }
 
-        #search-input  input {
-            display: inline-block !important;
-            width: 60%;
+        #search-input {
+            width: 60% !important;
+            margin: auto;
+            
+            button, input {
+                display: inline !important;
+            }
         }
+    }
 
-        #delivery-banner {
-            font-size: 1rem;
-        }
+    #delivery-banner {
+        font-size: 1rem;
     }
     
     #header {
@@ -92,4 +96,16 @@
             background-color: var(--secondary-color);
         }
     }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-nav {
+        padding: 0 !important;
+    }
+    .navbar-collapse {
+        text-align: center;
+        position: absolute;
+        top: 8vh;
+        background-color: rgba(var(--colour-1), .9) !important;
+    } 
 }
