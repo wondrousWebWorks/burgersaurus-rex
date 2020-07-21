@@ -25,6 +25,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
         - [Product Model](#product-model)
       - [Checkout App](#checkout-app)
         - [Order Model](#order-model)
+        - [OrderItem Model](#orderitem-model)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries & Frameworks](#libraries--frameworks)
@@ -141,6 +142,15 @@ Order Sub Total | order_sub_total | max_digits=10, decimal_places=2, null=False,
 Order Total | order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
 Original Cart | original_cart | null=False, blank=False, default='' | TextField
 Stripe PID | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField
+
+##### OrderItem Model
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Order | order | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='orderitems' | ForeignKey to Order
+Product | product | Product, null=False, blank=False, on_delete=models.CASCADE | ForeignKey to Product
+Quantity | quantity | null=False, blank=False, default=0 | IntegerField
+Order Item Total | order_item_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | Decimalfield
 
 ## Technologies Used
 
