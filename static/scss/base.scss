@@ -105,6 +105,10 @@ p {
             color: rgba(var(--colour-2), 1);
         }
     }
+
+    .navbar-collapse {
+        margin-right: 6rem !important;
+    }
 }
 
 .add-navbar-background {
@@ -644,6 +648,27 @@ select option[value=""] {
 .order-history {
     max-height: 450px;
     overflow-y: auto;
+}
+
+#theme-selector {
+    position: fixed;
+    z-index: 10000;
+    bottom: 5vh;
+    right: 2rem;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    background-color: pink;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
 }
 
 @import 'media-queries';
