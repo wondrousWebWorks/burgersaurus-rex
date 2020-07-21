@@ -22,7 +22,9 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
       - [Menu App](#menu-app)
         - [Category Model](#category-model)
         - [Allergen Model](#allergen-model)
-        - [Product model](#product-model)
+        - [Product Model](#product-model)
+      - [Checkout App](#checkout-app)
+        - [Order Model](#order-model)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries & Frameworks](#libraries--frameworks)
@@ -106,17 +108,39 @@ Name | name | max_length=254 | CharField
 Friendly Name | friendly_name | max_length=254, blank=True, null=True | CharField
 Info URL | info_url | max_length=254, null=True | CharField
 
-##### Product model
+##### Product Model
 
 | Name | Key in db | Validation | Field Type |
 --- | --- | --- | ---
-Category | category | null=True, blank=True, on_delete=models.SET_NULL | ForeignKey to Caterogy model
+Category | category | null=True, blank=True, on_delete=models.SET_NULL | ForeignKey to Category model
 Shop category | category | choices=CATEGORY_CHOICES | CharField
 Name | name | max_length=254, blank=True, null=True | CharField
 Description | description |  | TextField
 Price | price | max_digits=4, decimal_places=2 | DecimalField
 Is Vegetarian | is_vegetarian | default=False | BooleanField
 Allergens | allergens |  | ManyToManyfield
+
+#### Checkout App
+
+##### Order Model
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Order Number | order_number | max_length=32, null=False, editable=False | CharField
+User Profile | user_profile | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' | ForeignKey to UserProfile
+Full Name | full_name | max_length=50, null=False, blank=False | CharField
+Email | email | max_length=254, null=False, blank=False | EmailField
+Phone Number | phone_number | max_length=20, null=False, blank=False | CharField
+Postcode | postcode | max_length=20, null=True, blank=False | CharField
+Town Or City | town_or_city | max_length=40, null=True, blank=False | CharField
+Street Address 1 | street_address1 | max_length=80, null=False, blank=False | CharField
+Street Address 2 | street_address2 | max_length=80, null=True, blank=True | CharField
+Date | date | auto_now_add=True | DateTimefield
+Delivery Cost | delivery_cost | max_digits=6, decimal_places=2, null=False, default=0 | DecimalField
+Order Sub Total | order_sub_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+Order Total | order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+Original Cart | original_cart | null=False, blank=False, default='' | TextField
+Stripe PID | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField
 
 ## Technologies Used
 
