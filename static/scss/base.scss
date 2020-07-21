@@ -16,7 +16,7 @@ p {
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(var(--tertiary-color), 1) #111;
+    scrollbar-color: rgba(var(--colour-3), 1) #111;
 }
 
 .row {
@@ -32,7 +32,7 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, rgba(var(--primary-color), 1), rgba(var(--tertiary-color), 1));
+    background: linear-gradient(to bottom, rgba(var(--colour-1), 1), rgba(var(--colour-3), 1));
     outline: 1px solid slategrey;
     border-radius: 4px;
 }
@@ -82,14 +82,14 @@ p {
     }
 
     #search-input button {
-        background-color: rgba(var(--secondary-color), 1);
+        background-color: rgba(var(--colour-2), 1);
     }
 
     a.nav-link {
         transition: all .5s ease-in-out;
 
         &:hover {
-            color: rgba(var(--tertiary-color), 1) !important;
+            color: rgba(var(--colour-3), 1) !important;
         }
     }
 
@@ -98,13 +98,13 @@ p {
 
         i {
             font-size: 1.6rem;
-            color: rgba(var(--secondary-color), 1);
+            color: rgba(var(--colour-2), 1);
         }
     }
 }
 
 .add-navbar-background {
-    background: rgba(var(--primary-color), .85) !important;
+    background: rgba(var(--colour-1), .85) !important;
     height: 8vh !important;
 }
 
@@ -120,7 +120,7 @@ p {
 }
 
 .add-delivery-banner-background {
-    background-color: rgba(var(--tertiary-color), .8);
+    background-color: rgba(var(--colour-3), .8);
     color: #222 !important;
     top: 8vh !important;
 }
@@ -147,13 +147,13 @@ p {
 
         li {
             height: .8rem;
-            background-color: rgba(var(--primary-color), 1);
+            background-color: rgba(var(--colour-1), 1);
         }
     }
 
     a.carousel-control {
         font-size: 3rem;
-        color: rgba(var(--secondary-color), 1);
+        color: rgba(var(--colour-2), 1);
         z-index: 30;
     }
 
@@ -180,7 +180,7 @@ p {
             a {
                 font-size: 2rem;
                 font-family: "Metal Mania", sans-serif;
-                background-color: rgba(var(--quarternary-color), 1);
+                background-color: rgba(var(--colour-4), 1);
                 color: #f7f7f7;
                 clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
                 transition: all .5s ease-in-out;
@@ -249,7 +249,7 @@ p {
 
 #landing-page-info-boxes {
     clip-path: polygon(0 10%, 8% 8%, 15% 9%, 22% 7%, 37% 8%, 49% 6%, 54% 7%, 62% 5%, 71% 6%, 79% 4%, 87% 5%, 92% 4%, 96% 6%, 100% 1%, 100% 90%, 94% 91%, 86% 89%, 78% 92%, 68% 90%, 58% 93%, 46% 92%, 33% 95%, 25% 94%, 15% 97%, 7% 96%, 0 100%);
-    background: linear-gradient(to right, rgba(var(--quarternary-color), 1), rgba(var(--primary-color), 1), rgba(var(--quanary-color), 1));
+    background: linear-gradient(to right, rgba(var(--colour-4), 1), rgba(var(--colour-1), 1), rgba(var(--colour-5), 1));
     transition: all .5s ease-in-out;
     margin-top: $section-margin-top;
     margin-left: 0;
@@ -322,7 +322,7 @@ p {
 
 footer {
     margin-top: $section-margin-top;
-    background: linear-gradient(to right, rgba(var(--quarternary-color), 1), rgba(var(--primary-color), 1), rgba(var(--quanary-color), 1));
+    background: linear-gradient(to right, rgba(var(--colour-4), 1), rgba(var(--colour-1), 1), rgba(var(--colour-5), 1));
     clip-path: polygon(0 10%, 6% 8%, 15% 9%, 25% 7%, 31% 9%, 44% 7%, 54% 7%, 62% 5%, 67% 7%, 74% 4%, 83% 6%, 88% 4%, 95% 4%, 100% 1%, 100% 100%, 0 100%);
 
     .footer-col {
@@ -342,7 +342,7 @@ footer {
             transition: all .5s ease-in-out;
 
             &:hover {
-                color: rgba(var(--secondary-color), 1);
+                color: rgba(var(--colour-2), 1);
             }
         }
     }
@@ -357,7 +357,7 @@ footer {
             transition: all .5s ease-in-out;
             
             &:hover {
-                color: rgba(var(--secondary-color), 1);
+                color: rgba(var(--colour-2), 1);
             }
         }
     }
@@ -371,7 +371,7 @@ footer {
 
 #menu {
     .menu-item:nth-child(even) {
-        background-color: rgba(var(--tertiary-color), 1);
+        background-color: rgba(var(--colour-3), 1);
         border-radius: .5rem;
     }
 
@@ -399,12 +399,12 @@ footer {
 .add-or-update-button {
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
-    background-color: rgba(var(--secondary-color),1 );
+    background-color: rgba(var(--colour-2),1 );
     color: #f7f7f7 !important;
     border: 2px solid transparent;
 
     &:hover {
-        border: 2px solid rgba(var(--secondary-color),1 );
+        border: 2px solid rgba(var(--colour-2),1 );
         background: white;
         color: #222 !important;
     }
@@ -425,7 +425,7 @@ footer {
 }
 
 .table-row:nth-child(even) {
-    background-color: rgba(var(--tertiary-color), 1);
+    background-color: rgba(var(--colour-3), 1);
 }
 
 table tr td {
@@ -445,12 +445,12 @@ table tr td {
 }
 
 .checkout-button {
-    background-color: rgba(var(--primary-color), 1);
+    background-color: rgba(var(--colour-1), 1);
     font-family: "Open Sans", sans-serif;
 }
 
 fieldset {
-    background-color: rgba(var(--tertiary-color), 1);
+    background-color: rgba(var(--colour-3), 1);
 
     legend {
         font-size: 1.2rem;
@@ -587,7 +587,7 @@ fieldset {
             font-size: 1rem;
 
             /* standard bootstrap btn transitions */
-            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
         }
     }
 }
@@ -608,21 +608,21 @@ fieldset {
 }
 
 .custom-button-1 {
-    background-color: rgba(var(--secondary-color), 1);
+    background-color: rgba(var(--colour-2), 1);
     font-family: "Open Sans", sans-serif;
 }
 
 .custom-button-1:hover {
-    background-color: rgba(var(--secondary-color), .7);
+    background-color: rgba(var(--colour-2), .7);
 }
 
 .custom-button-2 {
-    background-color: rgba(var(--quarternary-color), 1);
+    background-color: rgba(var(--colour-4), 1);
     font-family: "Open Sans", sans-serif;
 }
 
 .custom-button-2:hover {
-    background-color: rgba(var(--quarternary-color), .7);
+    background-color: rgba(var(--colour-4), .7);
 }
 
 /* PROFILE APP */
