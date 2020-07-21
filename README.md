@@ -26,6 +26,8 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
       - [Checkout App](#checkout-app)
         - [Order Model](#order-model)
         - [OrderItem Model](#orderitem-model)
+      - [Profiles App](#profiles-app)
+        - [UserProfile](#userprofile)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries & Frameworks](#libraries--frameworks)
@@ -151,6 +153,19 @@ Order | order | Order, null=False, blank=False, on_delete=models.CASCADE, relate
 Product | product | Product, null=False, blank=False, on_delete=models.CASCADE | ForeignKey to Product
 Quantity | quantity | null=False, blank=False, default=0 | IntegerField
 Order Item Total | order_item_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | Decimalfield
+
+#### Profiles App
+
+##### UserProfile
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+User | user | User, on_delete=models.CASCADE | OneToOneField
+Default Phone Number | default_phone_number | max_length=20, null=True, blank=True | CharField
+Default Street Address 1 | deafult_street_address_1 | max_length=80, null=True, blank=True | CharField
+Default Street Address 2 | deafult_street_address_2 | max_length=80, null=True, blank=True | CharField
+Default Town Or City | default_town_or_city | max_length=40, null=True, blank=True | CharField
+Postcode | postcode | max_length=20, null=True, blank=True | CharField
 
 ## Technologies Used
 
