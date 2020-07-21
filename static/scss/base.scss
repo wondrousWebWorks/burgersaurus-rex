@@ -8,6 +8,7 @@ body {
     font-size: 16px;
     font-family: 'Miltonian Tattoo', sans-serif;
     background-color: rgba(var(--body-colour), 1);
+    overflow-x: hidden;
 }
 
 p {
@@ -650,24 +651,75 @@ select option[value=""] {
     overflow-y: auto;
 }
 
-#theme-selector {
+.translate-left {
+    transform: translateX(0) !important;
+}
+
+#theme-selector-wrapper {
     position: fixed;
     z-index: 10000;
     bottom: 5vh;
     right: 2rem;
-    border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-    background-color: pink;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    
+    #theme-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(35rem);
+        transition: transform .8s ease-in-out;
 
-    h3 {
-        font-size: 1rem;
-        font-weight: bold;
+        .theme-option {
+            cursor: pointer;
+            z-index: 10000;
+            border-radius: 50%;
+            height: 5rem;
+            width: 5rem;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all .5s ease-in-out;
+
+            &:hover {
+                transform: translateY(-1rem);
+                box-shadow: 4px 4px 4px #222;
+            }
+        }
+
+        .dark-mode {
+            background-color: #1c1c1c;
+        }
+
+        .theme-colour-band {
+            width: 100%;
+            height: 25%;
+        }
+    }
+
+    #theme-selector-trigger {
+        cursor: pointer;
+        border-radius: 50%;
+        height: 5rem;
+        width: 5rem;
+        background-color: pink;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        h3 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
     }
 }
 
