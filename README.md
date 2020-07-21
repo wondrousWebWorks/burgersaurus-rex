@@ -22,6 +22,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
       - [Menu App](#menu-app)
         - [Category Model](#category-model)
         - [Allergen Model](#allergen-model)
+        - [Product model](#product-model)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries & Frameworks](#libraries--frameworks)
@@ -104,6 +105,18 @@ Menu Header URL | menu_header_url | max_length=254, blank=True, null=True | Char
 Name | name | max_length=254 | CharField
 Friendly Name | friendly_name | max_length=254, blank=True, null=True | CharField
 Info URL | info_url | max_length=254, null=True | CharField
+
+##### Product model
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Category | category | null=True, blank=True, on_delete=models.SET_NULL | ForeignKey to Caterogy model
+Shop category | category | choices=CATEGORY_CHOICES | CharField
+Name | name | max_length=254, blank=True, null=True | CharField
+Description | description |  | TextField
+Price | price | max_digits=4, decimal_places=2 | DecimalField
+Is Vegetarian | is_vegetarian | default=False | BooleanField
+Allergens | allergens |  | ManyToManyfield
 
 ## Technologies Used
 

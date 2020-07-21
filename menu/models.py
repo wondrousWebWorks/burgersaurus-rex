@@ -33,7 +33,7 @@ class Product(models.Model):
     name = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=4, decimal_places=2)
-    is_vegetarian = models.BooleanField(null=True, blank=True)
+    is_vegetarian = models.BooleanField(default=False)
     allergens = models.ManyToManyField('Allergen')
 
     def __str__(self):
