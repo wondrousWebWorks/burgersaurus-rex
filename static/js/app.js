@@ -3,6 +3,16 @@
 const themesWrapper = document.querySelector('#theme-options');
 const themeSelectors = document.querySelectorAll('.theme-option');
 
+/* Set default theme colours */
+let colour1 = '6, 214, 160';
+let colour2 = '239, 71, 111';
+let colour3 = '255, 209, 102';
+let colour4 = '17, 138, 178';
+let colour5 = '7, 59, 76';
+let darkModeColor = '28, 28, 28';
+
+let colours;
+
 /**
  * Toggles the navbar animation when scrolling past a certain screen height
  */
@@ -53,15 +63,42 @@ themeSelectors.forEach(themeSelector => {
             document.documentElement.style.setProperty('--colour-2', '17, 138, 178');
             document.documentElement.style.setProperty('--colour-3', '7, 59, 76');
         } else if (themeSelectorClassList.contains('dark-mode')) {
-            document.documentElement.style.setProperty('--body-colour', '10, 10, 10');
+            sessionStorage.setItem("dark-mode", "true");
+            document.documentElement.style.setProperty('--body-colour', darkModeColor);
         }
     });
 });
 
+const getTheme = () => {
+    const targetUrl = `/content/get-theme/`;
+    const csrfToken = "{{ csrf_token }}";
 
-// document.documentElement.style.setProperty('--colour-1', '6, 214, 160');
-// document.documentElement.style.setProperty('--colour-2', '239, 71, 111');
-// document.documentElement.style.setProperty('--colour-3', '255, 209, 102');
-// document.documentElement.style.setProperty('--colour-4', '17, 138, 178');
-// document.documentElement.style.setProperty('--colour-5', '7, 59, 76');
-// document.documentElement.style.setProperty('--body-colour', '10, 10, 10');
+    fetch(targetUrl, {
+        method: "get",
+        credentials: "same-origin",
+        headers: {
+            "X-CSRFToken": csrfToken,
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+    }).then(response => {
+        return response.json();
+    }).then(data => {
+        colours = data;
+    }).catch(error => {
+        console.log("Something went wrong!", error);
+    });
+};
+
+const checkTheme = () => {
+    const darkMode = sessionStorage.getItem('dark-mode');
+
+    if (darkMode === 'true') {
+        document.documentElement.style.setProperty('--body-colour', '10, 10, 10');
+    }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    getTheme();
+    checkTheme();
+});

@@ -98,3 +98,12 @@
         </div>
     </section>
 {% endblock %}
+{% block extra_js %}
+    {{ block.super }}
+    {{ theme.colour_1|json_script:"colour-1" }}
+    {{ theme.colour_2|json_script:"colour-2" }}
+    {{ theme.colour_3|json_script:"colour-3" }}
+    {{ theme.colour_4|json_script:"colour-4" }}
+    {{ theme.colour_5|json_script:"colour-5" }}
+    {{ theme.dark_mode_background_colour|json_script:"dark-mode-colour" }}
+{% endblock %}
