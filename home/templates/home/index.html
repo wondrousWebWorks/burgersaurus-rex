@@ -12,19 +12,19 @@
                 <div class="carousel-item image-wrapper image-wrapper-1 active">
                     <div class="call-to-action">
                         <h1 class="text-center p-xs-3 mb-xs-3 mb-lg-5">Get a-clickin' and those fingers a-lickin'</h1>
-                        <a href="{% url 'menu' %}?category=burgers" class="btn call-to-action-btn pt-2 pb-4 text-center">Order Now!</a>
+                        <a href="{% url 'menu' %}?category=burgers" class="btn call-to-action-btn pt-2 pb-4 text-center text-white">Order Now!</a>
                     </div>
                 </div>
                 <div class="carousel-item image-wrapper image-wrapper-2">
                     <div class="call-to-action">
                         <h1 class="text-center p-xs-3 mb-xs-3 mb-lg-5">Speed <i class="fas fa-arrow-up"></i> the ordering process</h1>
-                        <a href="{% url 'account_signup' %}" class="btn call-to-action-btn pt-2 pb-4 text-center">Sign Up</a>
+                        <a href="{% url 'account_signup' %}" class="btn call-to-action-btn pt-2 pb-4 text-center text-white">Sign Up</a>
                     </div>
                 </div>
                 <div class="carousel-item image-wrapper image-wrapper-3">
                     <div class="call-to-action">
                         <h1 class="text-center p-xs-3 mb-xs-3 mb-lg-5">Go on. You deserve the best ingredients!</h1>
-                        <a href="#" class="btn call-to-action-btn pt-2 pb-4 text-center">Read More</a>
+                        <a href="#" class="btn call-to-action-btn pt-2 pb-4 text-center text-white">Read More</a>
                     </div>
                 </div>
             </div>
@@ -99,11 +99,4 @@
     </section>
 {% endblock %}
 {% block extra_js %}
-    {{ block.super }}
-    {{ theme.colour_1|json_script:"colour-1" }}
-    {{ theme.colour_2|json_script:"colour-2" }}
-    {{ theme.colour_3|json_script:"colour-3" }}
-    {{ theme.colour_4|json_script:"colour-4" }}
-    {{ theme.colour_5|json_script:"colour-5" }}
-    {{ theme.dark_mode_background_colour|json_script:"dark-mode-colour" }}
 {% endblock %}

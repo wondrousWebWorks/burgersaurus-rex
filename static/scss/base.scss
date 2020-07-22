@@ -185,19 +185,6 @@ p {
                 font-size: 4rem;
                 color: white;
             }
-
-            a {
-                font-size: 2rem;
-                font-family: "Metal Mania", sans-serif;
-                background-color: rgba(var(--colour-4), 1);
-                color: #f7f7f7;
-                clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-                transition: all .5s ease-in-out;
-
-                &:hover {
-                    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 45% 75%, 25% 98%, 25% 75%, 0% 75%);
-                }
-            }
         }
     }
 
@@ -225,6 +212,18 @@ p {
     .image-wrapper-3 {
         background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592662748/burgersaurus/ingredients.png');
         background-attachment: fixed;
+    }
+}
+
+.call-to-action-btn {
+    font-size: 2rem;
+    font-family: "Metal Mania", sans-serif;
+    background-color: rgba(var(--colour-4), 1);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 45% 75%, 25% 98%, 25% 75%, 0% 75%);
     }
 }
 
@@ -427,6 +426,11 @@ footer {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 92% 98%, 85% 100%, 79% 98%, 69% 100%, 56% 98%, 52% 100%, 45% 98%, 35% 100%, 25% 98%, 19% 100%, 10% 97%, 0% 100%);
     box-shadow: inset 5rem 5rem 16rem #000,
                 inset -5rem -5rem 16rem #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #cart-table {
