@@ -11,8 +11,6 @@ let colour4 = '17, 138, 178';
 let colour5 = '7, 59, 76';
 let darkModeColor = '28, 28, 28';
 
-let colours;
-
 /**
  * Toggles the navbar animation when scrolling past a certain screen height
  */
@@ -84,7 +82,12 @@ const getTheme = () => {
     }).then(response => {
         return response.json();
     }).then(data => {
-        colours = data;
+        colour1 = hexToRgb(data.colour_1);
+        colour2 = hexToRgb(data.colour_2);
+        colour3 = hexToRgb(data.colour_3);
+        colour4 = hexToRgb(data.colour_4);
+        colour5 = hexToRgb(data.colour_5);
+        darkModeColor = hexToRgb(data.dark_mode_colour);
     }).catch(error => {
         console.log("Something went wrong!", error);
     });
@@ -96,6 +99,19 @@ const checkTheme = () => {
     if (darkMode === 'true') {
         document.documentElement.style.setProperty('--body-colour', '10, 10, 10');
     }
+};
+
+/**
+ * Converts a hex colour value to RGB
+ * @param {String} hex A hexidecimal colour value
+ */
+const hexToRgb = hex =>{
+    const bigint = parseInt(hex, 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+
+    return `${r}, ${g}, ${b}`;
 };
 
 document.addEventListener("DOMContentLoaded", () => {

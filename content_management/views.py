@@ -15,6 +15,7 @@ def get_theme(request):
         'colour_3': theme.colour_3,
         'colour_4': theme.colour_4,
         'colour_5': theme.colour_5,
+        'dark_mode_colour': theme.dark_mode_background_colour,
     }
 
     response = JsonResponse(theme_dict)
