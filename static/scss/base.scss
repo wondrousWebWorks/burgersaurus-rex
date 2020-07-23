@@ -375,6 +375,7 @@ footer {
     transform: rotateZ(-7deg);
     font-size: 2.5rem;
     text-decoration: underline;
+    color: rgba(var(--heading-color), 1);
 }
 
 #menu {
@@ -423,7 +424,7 @@ footer {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 92% 98%, 85% 100%, 79% 98%, 69% 100%, 56% 98%, 52% 100%, 45% 98%, 35% 100%, 25% 98%, 19% 100%, 10% 97%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
     box-shadow: inset 5rem 5rem 16rem #000,
                 inset -5rem -5rem 16rem #000;
 
