@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
-    'content_management',
     'about',
 
     # other
