@@ -32,7 +32,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
     - [Languages](#languages)
     - [Libraries, Frameworks & Tools](#libraries-frameworks--tools)
   - [Deployment](#deployment)
-  - [Running the project locally](#running-the-project-locally)
+    - [Running the project locally](#running-the-project-locally)
     - [Credits](#credits)
   - [Disclaimer](#disclaimer)
 
@@ -192,7 +192,7 @@ Postcode | postcode | max_length=20, null=True, blank=True | CharField
 
 ## Deployment
 
-## Running the project locally
+### Running the project locally
 
 Follow the instructions below to run this project in your own Interactive Development Environment (IDE):
 
@@ -214,6 +214,8 @@ You will also need to create free accounts with the following services:
 ### Credits
 
 - [AOS](https://github.com/michalsnik/aos) (Animate On Scroll)
+- Ordering Process images were taken from [PNGTREE](https://pngtree.com/)
+- All other images were taken from [Pexels](https://www.pexels.com/) and [Pixabay](https://pixabay.com/)
 
 ## Disclaimer
 
