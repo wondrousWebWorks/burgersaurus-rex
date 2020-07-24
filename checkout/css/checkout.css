@@ -1,0 +1,74 @@
+.StripeElement,
+.stripe-style-input {
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 1rem !important;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 0px;
+    border: none !important;
+    background-color: white;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+    border: none !important;
+    box-shadow:  inset 2px 2px 3px #888,
+                 inset -2px -2px 3px #888;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #222;
+}
+
+.stripe-style-input::placeholder {
+    color: #aab7c4;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: #000;
+}
+
+#loading-wrapper {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .85);
+    z-index: 9999;
+}
+
+.opacity-full {
+    display: block !important;
+}
+
+.loading-spinner {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+    color: #f7f7f7;
+}
+
+.checkout-success-wrapper {
+    background-color: rgba(var(--tertiary-color), 1);
+}
+
+.checkout-success-section {
+    background-color: #f7f7f7;
+}
+
+.checkout-success-row {
+    margin: 0 !important;
+}
+
+.text-shadow-medium {
+    text-shadow: 2px 2px #222;
+}

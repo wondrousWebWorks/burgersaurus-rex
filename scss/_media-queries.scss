@@ -1,0 +1,116 @@
+@media only screen and (max-width: 576px) {
+    #navbar {
+        padding: 0;
+
+        .navbar-collapse {
+            position: relative;
+            z-index: 10;
+            margin: 0 !important;
+
+            ul {
+                width: 100%;
+                background-color: var(--quanary-color);
+                padding-left: 2rem;
+            }
+        }
+
+        #search-input {
+            width: 60% !important;
+            margin: auto;
+            
+            button, input {
+                display: inline !important;
+            }
+        }
+    }
+
+    #delivery-banner {
+        font-size: 1rem;
+    }
+    
+    #header {
+        .image-wrapper::after {
+            box-shadow: inset 4rem 4rem 7rem #000,
+                        inset -4rem -4rem 7rem #000;
+        }
+
+        .image-wrapper {
+            .call-to-action {
+                bottom: 20vh;
+
+                h1 {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    #landing-page-info-boxes {
+    
+        .landing-page-info-box {
+    
+            h2 {
+                width: 90%;
+                font-size: 2rem;
+            }
+    
+            p {
+                font-size: 1.2rem;
+            }
+    
+            img.landing-page-info-box-1-image {
+                height: 65%;
+            }
+    
+            img.landing-page-info-box-2-image {
+                height: 80%;
+            }
+    
+            &:hover {
+                box-shadow: inset 15rem 15rem 20rem #000,
+                            inset -15rem -15rem 20rem #000;
+    
+                p {
+                    opacity: 1;
+                    transform: translateY(-3rem);
+                }
+    
+                h2 {
+                    transform: translateY(-7rem);
+                }
+    
+                img {
+                    opacity: .35;
+                }
+            }
+        }
+    }
+
+    footer { 
+        article {
+            text-align: center;
+        }
+
+        hr {
+            width: 60%;
+            background-color: var(--secondary-color);
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-nav {
+        padding: 0 !important;
+    }
+    .navbar-collapse {
+        margin-right: 0 !important;
+        text-align: center;
+        position: absolute;
+        top: 8vh;
+        background-color: rgba(var(--colour-1), .9) !important;
+    }
+
+    #-search-input {
+        display: inline-block !important;
+    }
+}

@@ -1,9 +1,19 @@
 from django import forms
+from colorfield.fields import ColorField
+
 from .models import Theme
 
 class ThemeForm(forms.ModelForm):
     class Meta:
         model = Theme
+        fields = (
+            'colour_1',
+            'colour_2',
+            'colour_3',
+            'colour_4',
+            'colour_5',
+            'dark_mode_background_colour',
+        )
 
     def __init__(self, *args, **kwargs):
         """
@@ -19,12 +29,12 @@ class ThemeForm(forms.ModelForm):
             'dark_mode_background_colour': 'Dark Mode Background Colour',
         }
 
-        colour_1 = forms.CharField(widget=ColorPickerWidget)
-        colour_2 = forms.CharField(widget=ColorPickerWidget)
-        colour_3 = forms.CharField(widget=ColorPickerWidget)
-        colour_4 = forms.CharField(widget=ColorPickerWidget)
-        colour_5 = forms.CharField(widget=ColorPickerWidget)
-        dark_mode_background_colour = forms.CharField(widget=ColorPickerWidget)
+        colour_1 = ColourField()
+        colour_2 = ColourField()
+        colour_3 = ColourField()
+        colour_4 = ColourField()
+        colour_5 = ColourField()
+        dark_mode_background_colour = ColourField()
 
         self.fields['colour_1'].widget.attrs['autofocus'] = True
         for field in self.fields:
