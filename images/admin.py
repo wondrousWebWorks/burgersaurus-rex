@@ -3,8 +3,8 @@ from .models import Page, Image
 
 class ImageAdmin(admin.ModelAdmin):
     list_display = (
-        'page',
         'image_name',
+        'page',
         'image',
     )
 
