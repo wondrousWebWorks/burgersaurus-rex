@@ -30,8 +30,9 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
         - [UserProfile](#userprofile)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
-    - [Libraries & Frameworks](#libraries--frameworks)
-    - [Tools](#tools)
+    - [Libraries, Frameworks & Tools](#libraries-frameworks--tools)
+  - [Deployment](#deployment)
+  - [Running the project locally](#running-the-project-locally)
     - [Credits](#credits)
   - [Disclaimer](#disclaimer)
 
@@ -176,14 +177,11 @@ Postcode | postcode | max_length=20, null=True, blank=True | CharField
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
 - [Python](https://www.python.org/about/)
 
-### Libraries & Frameworks
+### Libraries, Frameworks & Tools
 
 - [Django](https://www.djangoproject.com/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Bootstrap](https://getbootstrap.com/)
-
-### Tools
-
 - [Font Awesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [Cloudinary](https://cloudinary.com/about)
@@ -191,6 +189,27 @@ Postcode | postcode | max_length=20, null=True, blank=True | CharField
 - [mockDrop](https://mockdrop.io/)
 - [Git](https://git-scm.com/about)
 - [GitHub](https://github.com/)
+
+## Deployment
+
+## Running the project locally
+
+Follow the instructions below to run this project in your own Interactive Development Environment (IDE):
+
+Ensure that you have an IDE of your choice installed:
+
+- An example is [Visual Studio Code](https://code.visualstudio.com/), a free and powerful IDE which was used for the development of this project
+
+Ensure that the following is installed on your machine. **This is a must!**:
+
+- [Python 3](https://www.python.org/downloads/) as the site's backend is written in Python
+- [PIP](https://pip.pypa.io/en/stable/installing/) for installing Python packages
+- [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03) for version control
+
+You will also need to create free accounts with the following services:
+
+- [AWS](https://aws.amazon.com/) and [set up an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+- [Stripe](https://dashboard.stripe.com/register)
 
 ### Credits
 
