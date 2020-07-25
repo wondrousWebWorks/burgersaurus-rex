@@ -242,6 +242,42 @@ NOTE: The following **Python** and **PIP** commands are for Linux operating syst
 
     `pip3 -r requirements.txt`
 
+8. Set up the required environment variables
+
+Setting up the required environment variables can be achieved in two ways.
+
+- If you have chosen Visual Studio Code as your IDE, locate the `settings.json` file in the .vscode directory or open it for editing in Visual Studio Code by navigating to `File`, `Preferences`, `Settings` and searching for the `settings.json` file. Enter the environment variables as follows:
+
+```json
+    "terminal.integrated.env.linux": {
+        "DEVELOPMENT": "True",
+        "SECRET_KEY": "<your key here>",
+        "STRIPE_PUBLIC_KEY": "<your key here>",
+        "STRIPE_SECRET_KEY": "<your key here>",
+        "STRIPE_WH_SECRET": "<your key here>",
+        "AWS_ACCESS_KEY_ID": "<your key here>",
+        "AWS_SECRET_ACCESS_KEY": "<your key here>",
+        "AWS_STORAGE_BUCKET_NAME": "<your bucket name here>",
+    }
+```
+
+- Alternatively, open the `activate` file in a text editor like **nano** using the following command in the terminal when in your project's root directory:
+
+`nano venv/bin/activate`
+
+- Set the environment variables by adding the following text anywhere in the file as follows:
+
+```bash
+    export DEVELOPMENT=True
+    export SECRET_KEY=<your key here>
+    export STRIPE_PUBLIC_KEY=<your key here>
+    export STRIPE_SECRET_KEY=<your key here>
+    export STRIPE_WH_SECRET=<your key here>
+    export AWS_ACCESS_KEY_ID=<your key here>
+    export AWS_SECRET_ACCESS_KEY=<your key here>
+    export AWS_STORAGE_BUCKET_NAME=<your bucket name here>
+```
+
 ### Credits
 
 - [AOS](https://github.com/michalsnik/aos) (Animate On Scroll)
