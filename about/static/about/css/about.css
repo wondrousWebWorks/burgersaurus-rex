@@ -1,11 +1,9 @@
 #supplier-wrapper-1 {
-    background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1595540792/burgersaurus/farm.jpg');
     background-attachment: fixed;
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
 }
 
 #supplier-wrapper-2 {
-    background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1595540792/burgersaurus/hydroponics.jpg');
     background-attachment: fixed;
     clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
 }

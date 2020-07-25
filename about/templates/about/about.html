@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block header %}
-    <section id="about-header" class="header-container container-fluid mb-5" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1595518003/burgersaurus/grill.jpg');background-attachment: fixed;">
+    <section id="about-header" class="header-container container-fluid mb-5" style="background: url({{ about_header.image.url }});background-attachment: fixed;">
         <h1 class="text-center p-xs-3 mb-xs-3 mb-lg-5 text-white">Yes, we know we're special... Read on to see why!</h1>
         <a href="#about" class="btn call-to-action-btn pt-2 pb-4 px-5 text-center text-white">Go!!!</a>
     </section>
@@ -16,12 +16,12 @@
 {% block content %}
     <article id="about" class="container-fluid p-0">
         <section class="row m-0">
-            <section id="supplier-wrapper-1" class="col-12 supplier-wrapper my-5">
+            <section id="supplier-wrapper-1" class="col-12 supplier-wrapper my-5" style="background: url({{ about_farm.image.url }});">
                 <p class="text-white px-5">
                     All of our ingredients can be traced from the farm to our kitchens, and ultimately to your tastebuds. We take great care in selecting our suppliers and ensure that the animals which source our meat are treated humanely with the freedom to roam and enjoy their lives to the fullest. No corners cut here!
                 </p>
             </section>
-            <section id="supplier-wrapper-2" class="col-12 supplier-wrapper my-5">
+            <section id="supplier-wrapper-2" class="col-12 supplier-wrapper my-5" style="background: url({{ about_hydroponics.image.url }});">
                 <p class="text-white px-5">
                     Our plant-based products are grown hydroponically and can also be traced right back to the supplier. Why not organic you might ask? Surely that's better? Actually, having our plants grown hydroponically allows for indoor growth. This in turn eliminates the need for herbicides and insecticides. Pest control is performed using natural predators, such as ladybirds and lacewing larvae. This means that the juicy tomato and crispy lettuce on your burger are completely toxin-free! Now, who doesn't want that?
                 </p>
