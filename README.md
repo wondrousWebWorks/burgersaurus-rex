@@ -244,39 +244,63 @@ NOTE: The following **Python** and **PIP** commands are for Linux operating syst
 
 8. Set up the required environment variables
 
-Setting up the required environment variables can be achieved in two ways.
+   - Setting up the required environment variables can be achieved in two ways.
 
-- If you have chosen Visual Studio Code as your IDE, locate the `settings.json` file in the .vscode directory or open it for editing in Visual Studio Code by navigating to `File`, `Preferences`, `Settings` and searching for the `settings.json` file. Enter the environment variables as follows:
+   - If you have chosen Visual Studio Code as your IDE, locate the `settings.json` file in the .vscode directory or open it for editing in Visual Studio Code by navigating to `File`, `Preferences`, `Settings` and searching for the `settings.json` file. Enter the environment variables as follows:
 
-```json
-    "terminal.integrated.env.linux": {
-        "DEVELOPMENT": "True",
-        "SECRET_KEY": "<your key here>",
-        "STRIPE_PUBLIC_KEY": "<your key here>",
-        "STRIPE_SECRET_KEY": "<your key here>",
-        "STRIPE_WH_SECRET": "<your key here>",
-        "AWS_ACCESS_KEY_ID": "<your key here>",
-        "AWS_SECRET_ACCESS_KEY": "<your key here>",
-        "AWS_STORAGE_BUCKET_NAME": "<your bucket name here>",
-    }
-```
+   ```json
+       "terminal.integrated.env.linux": {
+           "DEVELOPMENT": "True",
+           "SECRET_KEY": "<your key here>",
+           "STRIPE_PUBLIC_KEY": "<your key here>",
+           "STRIPE_SECRET_KEY": "<your key here>",
+           "STRIPE_WH_SECRET": "<your key here>",
+           "AWS_ACCESS_KEY_ID": "<your key here>",
+           "AWS_SECRET_ACCESS_KEY": "<your key here>",
+           "AWS_STORAGE_BUCKET_NAME": "<your bucket name here>",
+       }
+   ```
 
-- Alternatively, open the `activate` file in a text editor like **nano** using the following command in the terminal when in your project's root directory:
+   - Alternatively, open the `activate` file in a text editor like **nano** using the following command in the terminal when in your project's root directory:
 
-`nano venv/bin/activate`
+   `nano venv/bin/activate`
 
-- Set the environment variables by adding the following text anywhere in the file as follows:
+   - Set the environment variables by adding the following text anywhere in the file as follows:
 
-```bash
-    export DEVELOPMENT=True
-    export SECRET_KEY=<your key here>
-    export STRIPE_PUBLIC_KEY=<your key here>
-    export STRIPE_SECRET_KEY=<your key here>
-    export STRIPE_WH_SECRET=<your key here>
-    export AWS_ACCESS_KEY_ID=<your key here>
-    export AWS_SECRET_ACCESS_KEY=<your key here>
-    export AWS_STORAGE_BUCKET_NAME=<your bucket name here>
-```
+   ```bash
+       export DEVELOPMENT=True
+       export SECRET_KEY=<your key here>
+       export STRIPE_PUBLIC_KEY=<your key here>
+       export STRIPE_SECRET_KEY=<your key here>
+       export STRIPE_WH_SECRET=<your key here>
+       export AWS_ACCESS_KEY_ID=<your key here>
+       export AWS_SECRET_ACCESS_KEY=<your key here>
+       export AWS_STORAGE_BUCKET_NAME=<your bucket name here>
+   ```
+
+9. Ensure that your virtual environment is activated using the command in step 6
+
+10. From the terminal in your IDE, migrate the database models to your databse using the command:
+
+    `python3 manage.py migrate`
+
+11. Load data into the databse using the following commands:
+
+    `python3 manage.py loaddata categories.json`
+    `python3 manage.py loaddata allergens.json`
+    `python3 manage.py loaddata products.json`
+
+12. Create a super user to access the admin panel using the following command and follow the instructions:
+
+    `python3 manage.py createsuperuser`
+
+13. Run the app locally using the following command:
+
+    `python3 manae.py runserver`
+
+14. To access to admin panel, add `/admin` to the end of the app's url in the browser and log in using your super user details
+
+15. Enjoy using the app!
 
 ### Credits
 
