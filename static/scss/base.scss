@@ -644,6 +644,7 @@ select option[value=""] {
 
 .translate-left {
     transform: translateX(0) !important;
+    opacity: 1 !important;
 }
 
 #theme-selector-wrapper {
@@ -663,7 +664,8 @@ select option[value=""] {
         justify-content: center;
         align-items: center;
         transform: translateX(35rem);
-        transition: transform .8s ease-in-out;
+        opacity: 0;
+        transition: all .8s ease-in-out;
 
         .theme-option {
             cursor: pointer;
