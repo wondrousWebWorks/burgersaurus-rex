@@ -165,7 +165,8 @@ p {
     width: 100vw;
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
     #header .image-wrapper .call-to-action {
       text-align: center;
       position: absolute;
@@ -184,15 +185,6 @@ p {
     top: 0;
     left: 0;
     box-shadow: inset 15rem 15rem 30rem #000, inset -15rem -15rem 30rem #000; }
-  #header .image-wrapper-1 {
-    background: url("https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/burger-close-up.jpg");
-    background-attachment: fixed; }
-  #header .image-wrapper-2 {
-    background: url("https://res.cloudinary.com/wondrouswebworks/image/upload/v1592432817/burgersaurus/hotdog.jpg");
-    background-attachment: fixed; }
-  #header .image-wrapper-3 {
-    background: url("https://res.cloudinary.com/wondrouswebworks/image/upload/v1592662748/burgersaurus/ingredients.png");
-    background-attachment: fixed; }
 
 .call-to-action-btn {
   font-size: 2rem;

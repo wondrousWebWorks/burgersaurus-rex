@@ -34,7 +34,8 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
   - [Deployment](#deployment)
     - [Running the project locally](#running-the-project-locally)
       - [Instructions](#instructions)
-    - [Credits](#credits)
+    - [Heroky Deployment](#heroky-deployment)
+  - [Credits](#credits)
   - [Disclaimer](#disclaimer)
 
 ## User Experience
@@ -280,11 +281,11 @@ NOTE: The following **Python** and **PIP** commands are for Linux operating syst
 
 9. Ensure that your virtual environment is activated using the command in step 6
 
-10. From the terminal in your IDE, migrate the database models to your databse using the command:
+10. From the terminal in your IDE, migrate the database models to your database using the command:
 
     `python3 manage.py migrate`
 
-11. Load data into the databse using the following commands:
+11. Load data into the database using the following commands:
 
     `python3 manage.py loaddata categories.json`
     `python3 manage.py loaddata allergens.json`
@@ -296,13 +297,25 @@ NOTE: The following **Python** and **PIP** commands are for Linux operating syst
 
 13. Run the app locally using the following command:
 
-    `python3 manae.py runserver`
+    `python3 manage.py runserver`
 
 14. To access to admin panel, add `/admin` to the end of the app's url in the browser and log in using your super user details
 
 15. Enjoy using the app!
 
-### Credits
+### Heroky Deployment
+
+Follow the following steps to deploy Burgersaurus Rex to Heroku:
+
+1. From the terminal in your IDE, run the folowing command in the project's root directory to create a **requirements.txt** file:
+
+    `pip3 freeze --local > requirements.txt`
+
+2. While still in the project's root directory, create a **Procfile** using the following command:
+
+    `echo web: gunicorn burgersaurus.wsgi.application > Procfile`
+
+## Credits
 
 - [AOS](https://github.com/michalsnik/aos) (Animate On Scroll)
 - Ordering Process images were taken from [PNGTREE](https://pngtree.com/)
