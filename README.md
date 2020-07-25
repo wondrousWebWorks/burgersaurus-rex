@@ -33,6 +33,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
     - [Libraries, Frameworks & Tools](#libraries-frameworks--tools)
   - [Deployment](#deployment)
     - [Running the project locally](#running-the-project-locally)
+      - [Instructions](#instructions)
     - [Credits](#credits)
   - [Disclaimer](#disclaimer)
 
@@ -202,6 +203,8 @@ Ensure that you have an IDE of your choice installed:
 
 Ensure that the following is installed on your machine. **This is a must!**:
 
+*Please click the links below for documentation on how to set up the following requirements and retrieve the necessary environment variables.*
+
 - [Python 3](https://www.python.org/downloads/) as the site's backend is written in Python
 - [PIP](https://pip.pypa.io/en/stable/installing/) for installing Python packages
 - [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03) for version control
@@ -210,6 +213,34 @@ You will also need to create free accounts with the following services:
 
 - [AWS](https://aws.amazon.com/) and [set up an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
 - [Stripe](https://dashboard.stripe.com/register)
+
+#### Instructions
+
+NOTE: The following **Python** and **PIP** commands are for Linux operating systems only. An Ubuntu environment was used to create this app, so the following instructions are tailored for this operating system. If you are using a Windows system, the commands may vary, e.g. `python` and `pip` instead of `python3` and `pip3` which are used on Linux and Mac.
+
+1. Using Git, clone the repository as follows.
+
+    `git clone https://github.com/wondrousWebWorks/burgersaurus-rex`
+
+2. Open your preferred IDE and open a terminal session
+
+3. Using a virtual environment is recommended. I used **virtualenv**, which can be installed as follows:
+
+    `pip3 install virtualenv`
+
+4. Create and navigate to a project folder of your choice
+
+5. Create a virtual environment using the following command:
+
+    `virtualenv venv`
+
+6. Activate your virtual environment as follows:
+
+    `source venv/bin/activate`
+
+7. Install all required modules with the following command:
+
+    `pip3 -r requirements.txt`
 
 ### Credits
 
