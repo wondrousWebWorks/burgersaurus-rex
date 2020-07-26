@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
+from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -10,6 +12,7 @@ def menu(request):
 
     menu = Product.objects.all()
     categories = None
+    query = None
 
     if request.GET:
         if 'category' in request.GET:
@@ -17,9 +20,19 @@ def menu(request):
             menu = menu.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
+            
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            menu = menu.filter(queries)
+
     context = {
         'menu': menu,
-        'categories': categories
+        'categories': categories,
+        'query': query,
     }
 
     return render(request, 'menu/menu.html', context)
