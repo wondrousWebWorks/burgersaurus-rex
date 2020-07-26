@@ -318,7 +318,7 @@ Follow the following steps to deploy Burgersaurus Rex to Heroku:
 
 ## Testing
 
-Testing details can be found in the testing.md file [here]()
+Testing details can be found in the testing.md file [here](https://github.com/wondrousWebWorks/burgersaurus-rex/blob/master/testing.md)
 
 ## Credits
 
