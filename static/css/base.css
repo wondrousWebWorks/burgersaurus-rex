@@ -300,9 +300,13 @@ footer {
   text-decoration: underline;
   color: rgba(var(--heading-color), 1); }
 
-#menu .menu-item:nth-child(even) {
+.headerless-container {
+  margin-top: 20vh; }
+
+.list-item:nth-child(even) {
   background-color: rgba(var(--colour-3), 1);
   border-radius: .5rem; }
+
 #menu h3 {
   font-size: 1.5rem; }
 #menu h4 {

@@ -20,8 +20,8 @@ let darkMode = 'false';
 const toggleNavbarBackground = () => {
     const nav = document.querySelector('#navbar');
     const deliveryBanner = document.querySelector('#delivery-banner');
-    nav.classList.toggle('add-navbar-background', window.scrollY > 300);
-    deliveryBanner.classList.toggle('add-delivery-banner-background', window.scrollY > 300);
+    nav.classList.toggle('add-navbar-background', window.scrollY > 100);
+    deliveryBanner.classList.toggle('add-delivery-banner-background', window.scrollY > 100);
 };
 
 window.addEventListener('scroll', toggleNavbarBackground);

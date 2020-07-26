@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'images/css/images.css' %}">
+{% endblock %}
+
+{% block content %}
+<article id="images" class="container headerless-container">
+    <h1 class="my-5 d-inline-block page-heading">Image Management</h1>
+    <div class="row list-item py-4 mb-2 mx-auto">
+    {% for image in images %}   
+            <div class="col-12 col-md-6 mb-5" {% if forloop.counter|divisibleby:2 %}data-aos="fade-left"{% else %}data-aos="fade-right"{% endif %} data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <h3 class="d-block">{{ image.image_friendly_name }}</h3>
+                <h3>{{ image.id }}</h3>
+                <a href="{% url 'edit-image' image.id %}" class="btn colour-4-bg px-2 mb-2">Edit</a>
+                <img src="{{ image.image.url }}" alt="{{ image.image_friendly_name }}" style="width:100%; margin: 0 auto; border-radius: .5rem;">
+            </div>    
+    {% endfor %}
+    </div>
+</article>
+{% endblock %}

@@ -55,7 +55,7 @@
         <h3 class="open-sans mt-4 text-small">Oops! No products were found matching your category or query...</h3>
     {% else %}
         {% for menu_item in menu %}
-            <div class="row menu-item py-4 mb-2 mx-auto" {% if not forloop.first %}data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"{% endif %}>
+            <div class="row list-item py-4 mb-2 mx-auto" {% if not forloop.first %}data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"{% endif %}>
                 <div class="col-sm-9">
                     <h3>{{ menu_item.name }}</h3>
                     {% if request.user.is_superuser %}
