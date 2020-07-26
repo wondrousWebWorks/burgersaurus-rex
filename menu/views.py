@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 from .models import Product, Category
 from .forms import ProductForm
+from images.models import Image, Page
 
 def menu(request):
 
@@ -42,9 +43,12 @@ def add_product(request):
     else:
         form = ProductForm()
     
+    images = Image.objects.all()
+    add_product_header = images.filter(image_name__icontains='add-product-header')[0]
     template = 'menu/add-product.html'
     context = {
         'form': form,
+        'add_product_header': add_product_header,
     }
 
     return render(request, template, context)

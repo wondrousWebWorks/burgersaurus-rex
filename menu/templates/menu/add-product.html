@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    <section id="admin-header" class="header-container container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/burger-close-up.jpg');background-attachment: fixed;"></section>
+    <section id="admin-header" class="header-container container-fluid" style="background: url({{ add_product_header.image.url }});background-attachment: fixed;"></section>
 {% endblock %}
 
 {% block content %}
