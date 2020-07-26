@@ -7,7 +7,6 @@ class Category(models.Model):
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
-    menu_header_url = models.CharField(max_length=254, null=True)
 
     def __str__(self):
         return self.name
