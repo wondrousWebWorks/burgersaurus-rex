@@ -2,9 +2,7 @@
 
 {% block header %}
     {% if categories %}
-        {% for category in categories %}
-            <section id="menu-header" class="header-container container-fluid" style="background: url('{{ category.menu_header_url }}');background-attachment: fixed;"></section>
-        {% endfor %}
+        <section id="menu-header" class="header-container container-fluid" style="background: url('{{ image.image.url }}');background-attachment: fixed;"></section>
     {% else %}
             <section id="menu-header" class="header-container container-fluid" style="background: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592585702/burgersaurus/burger-close-up.jpg');background-attachment: fixed;"></section>
     {% endif %}
@@ -18,7 +16,7 @@
             <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}">💯 Full Menu</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=meal_deals">🤑 Meal Deals</a>
+            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=meal-deals">🤑 Meal Deals</a>
         </li>
         <li class="nav-item">
             <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=burgers">🍔 Burgers</a>

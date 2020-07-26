@@ -11,14 +11,24 @@ from images.models import Image, Page
 def menu(request):
 
     menu = Product.objects.all()
+    images = Image.objects.all()
     categories = None
     query = None
+    image = None
 
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             menu = menu.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+            if categories:
+                image = images.filter(image_name__icontains=categories[0])
+            
+            if image:
+                image = image[0]
+            else:
+                image = images.filter(image_name__icontains='default')
+
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -33,6 +43,7 @@ def menu(request):
         'menu': menu,
         'categories': categories,
         'query': query,
+        'image': image,
     }
 
     return render(request, 'menu/menu.html', context)
