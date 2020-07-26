@@ -26,7 +26,6 @@ const toggleNavbarBackground = () => {
 
 window.addEventListener('scroll', toggleNavbarBackground);
 
-
 document.querySelector('#theme-selector-trigger').addEventListener('click', () => {
     themesWrapper.classList.toggle('translate-left');
 });
@@ -79,15 +78,29 @@ themeSelectors.forEach(themeSelector => {
     });
 });
 
+/**
+ * Sets the colour value as an RGB triplet for a specified
+ * CSS variable
+ * @param {String} target The CSS variable to be targeted
+ * @param {String} colour The RGB values for the CSS variable's value
+ */
 const setCSSColour = (target, colour) => {
     document.documentElement.style.setProperty(target, colour);
 };
 
+/**
+ * Gets the current theme and whether dark mode is enabled
+ * from session storage
+ */
 const getTheme = () => {
     theme = sessionStorage.getItem('theme');
     darkMode = sessionStorage.getItem('dark-mode');
 };
 
+/**
+ * Sets the CSS colour variables to the relevant values
+ * depending on theme and dark or light mode
+ */
 const setTheme = () => {
     switch(theme) {
         case '1':
