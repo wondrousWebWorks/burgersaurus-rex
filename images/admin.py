@@ -3,6 +3,7 @@ from .models import Page, Image
 
 class ImageAdmin(admin.ModelAdmin):
     list_display = (
+        'image_friendly_name',
         'image_name',
         'page',
         'image',
