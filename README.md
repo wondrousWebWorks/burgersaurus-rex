@@ -34,7 +34,8 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
   - [Deployment](#deployment)
     - [Running the project locally](#running-the-project-locally)
       - [Instructions](#instructions)
-    - [Heroky Deployment](#heroky-deployment)
+    - [Heroku Deployment](#heroku-deployment)
+  - [Testing](#testing)
   - [Credits](#credits)
   - [Disclaimer](#disclaimer)
 
@@ -303,7 +304,7 @@ NOTE: The following **Python** and **PIP** commands are for Linux operating syst
 
 15. Enjoy using the app!
 
-### Heroky Deployment
+### Heroku Deployment
 
 Follow the following steps to deploy Burgersaurus Rex to Heroku:
 
@@ -314,6 +315,10 @@ Follow the following steps to deploy Burgersaurus Rex to Heroku:
 2. While still in the project's root directory, create a **Procfile** using the following command:
 
     `echo web: gunicorn burgersaurus.wsgi.application > Procfile`
+
+## Testing
+
+Testing details can be found in the testing.md file [here]()
 
 ## Credits
 
