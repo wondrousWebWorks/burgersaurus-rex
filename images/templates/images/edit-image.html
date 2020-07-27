@@ -8,5 +8,22 @@
 {% block content %}
 <article id="edit-image" class="container headerless-container">
     <h1 class="my-5 d-inline-block page-heading">Edit Image</h1>
+    <div class="row mx-auto">
+        <div class="col-12 col-md-8 mx-auto">
+            <form action="{% url 'edit-image' image.id %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset class="p-3 mb-3">
+                    <legend class="p-2 d-inline w-auto">
+                        Editing {{ image.image_friendly_name }}
+                    </legend>
+                    <img src={{ image.image.url }} alt="{{ image.image_friendly_name }}">
+                    {{ form | crispy }}
+                </fieldset>
+                <div class="text-right">
+                    <button class="btn btn-large custom-button-1 d-inline-block ml-auto" type="submit"><i class="fas fa-plus-circle"></i> Change Image</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </article>
 {% endblock %}

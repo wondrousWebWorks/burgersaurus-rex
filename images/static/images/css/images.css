@@ -3,3 +3,17 @@
     margin: auto !important;
 }
 
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#edit-image form img {
+    width: 100%;
+}
+

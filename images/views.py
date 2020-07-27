@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-from images.models import Image, Page
+from .models import Image, Page
+from .forms import ImageForm
 
 def images(request):
     """Renders all image entries in the Image model"""
@@ -23,10 +24,22 @@ def edit_image(request, image_id):
         return redirect(reverse('home'))
 
     image = get_object_or_404(Image, pk=image_id)
+    if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES, instance=image)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully changed image!')
+            return redirect('images')
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:        
+        form = ImageForm(instance=image)
+        messages.info(request, f'You are editing {image.image_friendly_name}')
 
     template = 'images/edit-image.html'
     context = {
         'image': image,
+        'form': form,
     }
 
     return render(request, template, context)
