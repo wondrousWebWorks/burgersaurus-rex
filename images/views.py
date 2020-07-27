@@ -9,9 +9,16 @@ def images(request):
     """Renders all image entries in the Image model"""
     images = Image.objects.all()
 
+    home = images.filter(page__name__in=['home'])
+    about = images.filter(page__name__in=['about'])
+    menu = images.filter(page__name__in=['menu'])
+
     template = 'images/images.html'
     context = {
         'images': images,
+        'about': about,
+        'home': home,
+        'menu': menu
     }
 
     return render(request, template, context)
