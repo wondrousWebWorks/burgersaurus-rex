@@ -20,6 +20,7 @@
     --warning-toast-color: 153, 92, 0;
 }
 
+/* Set Background colours */
 .colour-1-bg {
     background-color: rgb(6, 214, 160);
 }
@@ -36,6 +37,28 @@
     background-color: rgb(17, 138, 178);
 }
 
+/* Variable Background colours */
+.colour-1-bg-var {
+    background-color: rgba(var(--colour-1), 1);
+}
+
+.colour-2-bg-var {
+    background-color: rgba(var(--colour-2), 1);
+}
+
+.colour-3-bg-var {
+    background-color: rgba(var(--colour-3), 1);
+}
+
+.colour-4-bg-var {
+    background-color: rgba(var(--colour-4), 1);
+}
+
+.colour-5-bg-var {
+    background-color: rgba(var(--colour-5), 1);
+}
+
+/* Border colours */
 .colour-1-border {
     border: 4px solid rgba(var(--colour-1), 1);
 }
@@ -52,12 +75,31 @@
     border: 4px solid rgba(var(--colour-4), 1);
 }
 
+/* Margins */
 $section-margin-top: 10vh;
 
+
+/* Fonts */
 .open-sans {
     font-family: "Open Sans", sans-serif !important;
 }
 
 .miltonian-tattoo {
     font-family: "Miltonian Tattoo", sans-serif !important;
+}
+
+/* Font colour */
+.light-or-dark-mode-font-color {
+    color: rgba(var(--heading-colour), 1);
+}
+
+/* Text shadow */
+
+.text-shadow-2px {
+    text-shadow: 2px 2px #1c1c1c;
+}
+
+.btn-custom {
+    text-shadow: 2px 2px #1c1c1c;
+    color: #f7f7f7 !important;
 }

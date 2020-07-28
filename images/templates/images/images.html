@@ -7,8 +7,8 @@
 
 {% block content %}
 <article id="images" class="container headerless-container">
-    <h1 class="my-5 d-inline-block page-heading">Image Management</h1>
-    <h2>Home Page</h2>
+    <h1 class="my-5 d-inline-block page-heading light-or-dark-mode-font-color">Image Management</h1>
+    <h2 class="light-or-dark-mode-font-color">Home Page</h2>
     <div class="row list-item py-4 mb-2 mx-auto">
     {% for image in home %}   
         <div class="col-12 col-md-6 mb-5" {% if forloop.counter|divisibleby:2 %}data-aos="fade-left"{% else %}data-aos="fade-right"{% endif %} data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -19,7 +19,7 @@
     {% endfor %}
     </div>
 
-    <h2>About Page</h2>
+    <h2 class="light-or-dark-mode-font-color">About Page</h2>
     <div class="row list-item py-4 mb-2 mx-auto">
         {% for image in about %}   
             <div class="col-12 col-md-6 mb-5" {% if forloop.counter|divisibleby:2 %}data-aos="fade-left"{% else %}data-aos="fade-right"{% endif %} data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -30,7 +30,7 @@
         {% endfor %}
     </div>
 
-    <h2>Menu Page</h2>
+    <h2 class="light-or-dark-mode-font-color">Menu Page</h2>
     <div class="row list-item py-4 mb-2 mx-auto">
         {% for image in menu %}   
             <div class="col-12 col-md-6 mb-5" {% if forloop.counter|divisibleby:2 %}data-aos="fade-left"{% else %}data-aos="fade-right"{% endif %} data-aos-duration="1000" data-aos-easing="ease-in-out">

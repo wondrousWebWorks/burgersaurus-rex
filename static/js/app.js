@@ -68,10 +68,12 @@ themeSelectors.forEach(themeSelector => {
             if (darkModeCheck === 'false') {
                 sessionStorage.setItem('dark-mode', 'true');
                 setCSSColour('--body-colour', darkModeColor);
+                setCSSColour('--heading-colour', lightModeColor);
                 document.querySelector('.dark-mode').style.backgroundColor = '#f7f7f7';
             } else {
                 sessionStorage.setItem('dark-mode', 'false');
                 setCSSColour('--body-colour', lightModeColor);
+                setCSSColour('--heading-colour', darkModeColor);
                 document.querySelector('.dark-mode').style.backgroundColor = '#1c1c1c';
             }
         }
@@ -141,8 +143,10 @@ const setTheme = () => {
 
     if (darkMode === 'true') {
         setCSSColour('--body-colour', darkModeColor);
+        setCSSColour('--heading-colour', lightModeColor);
     } else {
         setCSSColour('--body-colour', lightModeColor);
+        setCSSColour('--heading-colour', darkModeColor);
     }
 };
 
