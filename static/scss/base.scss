@@ -6,13 +6,9 @@ html {
 
 body {
     font-size: 16px;
-    font-family: 'Miltonian Tattoo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: rgba(var(--body-colour), 1);
     overflow-x: hidden;
-}
-
-p {
-    font-family: "Open Sans", sans-serif;
 }
 
 * {
@@ -36,6 +32,30 @@ p {
     background: linear-gradient(to bottom, rgba(var(--colour-1), 1), rgba(var(--colour-3), 1));
     outline: 1px solid slategrey;
     border-radius: 4px;
+}
+
+h1, h2 {
+    font-family: 'Miltonian Tattoo', sans-serif;
+}
+
+/* Buttons */
+.btn-custom {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(var(--body-colour), 1);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    text-decoration: none !important;
+    transition: all .15s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        color: rgba(var(--card-heading-colour), 1);
+    }
 }
 
 #navbar {
@@ -364,7 +384,7 @@ footer {
 }
 
 .headerless-container {
-    margin-top: 20vh;
+    margin-top: 15vh !important;
 }
 
 .list-item:nth-child(even) {
@@ -717,6 +737,49 @@ select option[value=""] {
             font-weight: bold;
         }
     }
+}
+
+#images {
+    
+    .image-card {
+        width: 90%;
+        margin: auto;
+        // box-shadow: 5px 5px 5px rgba(var(--box-shadow-colour), 1);
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-1rem);
+            box-shadow: 8px 8px 8px rgba(var(--box-shadow-colour), 1);
+        }
+
+        img {
+            width: 100% !important;
+            margin: auto !important;
+        }
+    }
+}
+
+#edit-image {
+    form  {
+        img {
+            width: 100%;
+        }
+
+        .btn-file input[type="file"] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+.inverted-light-and-dark-mode-colours {
+    background-color: rgba(var(--card-heading-background-colour), 1);
+    color: rgba(var(--card-heading-colour), 1);
 }
 
 @import 'media-queries';

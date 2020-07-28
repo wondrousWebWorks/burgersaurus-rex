@@ -9,8 +9,14 @@ let colour2 = '239, 71, 111';
 let colour3 = '255, 209, 102';
 let colour4 = '17, 138, 178';
 let colour5 = '7, 59, 76';
-let darkModeColor = '28, 28, 28';
-let lightModeColor = '247, 247, 247';
+let darkModeColour = '28, 28, 28';
+let lightModeColour = '247, 247, 247';
+let darkModeBoxShadowColour = '0, 0, 0';
+let lightModeBoxShadowColour = '51, 51, 51';
+let invertedLightModeColour = '247, 247, 247';
+let invertedDarkModeColour = '28, 28, 28';
+let invertedLightModeBackgroundColour = '28, 28, 28';
+let invertedDarkModeBackgroundColour = '247, 247, 247';
 let theme = "1";
 let darkMode = 'false';
 
@@ -67,13 +73,19 @@ themeSelectors.forEach(themeSelector => {
             
             if (darkModeCheck === 'false') {
                 sessionStorage.setItem('dark-mode', 'true');
-                setCSSColour('--body-colour', darkModeColor);
-                setCSSColour('--heading-colour', lightModeColor);
+                setCSSColour('--body-colour', darkModeColour);
+                setCSSColour('--heading-colour', lightModeColour);
+                setCSSColour('--box-shadow-colour', darkModeBoxShadowColour);
+                setCSSColour('--card-heading-colour', invertedDarkModeColour);
+                setCSSColour('--card-heading-background-colour', invertedDarkModeBackgroundColour);
                 document.querySelector('.dark-mode').style.backgroundColor = '#f7f7f7';
             } else {
                 sessionStorage.setItem('dark-mode', 'false');
-                setCSSColour('--body-colour', lightModeColor);
-                setCSSColour('--heading-colour', darkModeColor);
+                setCSSColour('--body-colour', lightModeColour);
+                setCSSColour('--heading-colour', darkModeColour);
+                setCSSColour('--box-shadow-colour', lightModeBoxShadowColour);
+                setCSSColour('--card-heading-colour', invertedLightModeColour);
+                setCSSColour('--card-heading-background-colour', invertedLightModeBackgroundColour);
                 document.querySelector('.dark-mode').style.backgroundColor = '#1c1c1c';
             }
         }
@@ -142,11 +154,17 @@ const setTheme = () => {
     }
 
     if (darkMode === 'true') {
-        setCSSColour('--body-colour', darkModeColor);
-        setCSSColour('--heading-colour', lightModeColor);
+        setCSSColour('--body-colour', darkModeColour);
+        setCSSColour('--heading-colour', lightModeColour);
+        setCSSColour('--box-shadow-colour', darkModeBoxShadowColour);
+        setCSSColour('--card-heading-colour', invertedDarkModeColour);
+        setCSSColour('--card-heading-background-colour', invertedDarkModeBackgroundColour);
     } else {
-        setCSSColour('--body-colour', lightModeColor);
-        setCSSColour('--heading-colour', darkModeColor);
+        setCSSColour('--body-colour', lightModeColour);
+        setCSSColour('--heading-colour', darkModeColour);
+        setCSSColour('--box-shadow-colour', lightModeBoxShadowColour);
+        setCSSColour('--card-heading-colour', invertedLightModeColour);
+        setCSSColour('--card-heading-background-colour', invertedLightModeBackgroundColour);
     }
 };
 
