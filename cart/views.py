@@ -4,6 +4,7 @@ from django.contrib import messages
 from menu.models import Product
 import json
 
+
 def view_cart(request):
     """ Renders the shopping cart page """
 

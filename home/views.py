@@ -15,4 +15,6 @@ def home(request):
         'carousel_image_2': carousel_image_2,
         'carousel_image_3': carousel_image_3,
     }
+
     return render(request, 'home/index.html', context)
+

@@ -10,6 +10,7 @@ CITIES = [
     ('Waterford', 'Waterford')
 ]
 
+
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
@@ -19,7 +20,7 @@ class OrderForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders, set autofocus on first field and remove labels 
+        Add placeholders, set autofocus on first field and remove labels
         """
         super().__init__(*args, **kwargs)
         placeholders = {

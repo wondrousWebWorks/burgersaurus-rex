@@ -13,6 +13,7 @@ from cart.contexts import cart_content
 import json
 import stripe
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -29,6 +30,7 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
     """Handle payment form POST request and set up stripe payment intent"""
@@ -47,9 +49,9 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
         }
-        
+
         order_form = OrderForm(form_data)
-        
+
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
@@ -90,8 +92,8 @@ def checkout(request):
         stripe_total = round(cart_total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
-            amount = stripe_total,
-            currency = settings.STRIPE_CURRENCY,
+            amount=stripe_total,
+            currency=settings.STRIPE_CURRENCY,
         )
 
         if request.user.is_authenticated:
@@ -119,6 +121,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 def checkout_success(request, order_number):
     """Handle successful checkouts"""

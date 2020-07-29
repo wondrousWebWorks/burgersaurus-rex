@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
-from images.models import Image, Page
+from images.models import Image
+
 
 def about(request):
     """Returns a rendered template of the about page"""

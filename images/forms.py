@@ -1,5 +1,5 @@
 from django import forms
-from .models import Image, Page
+from .models import Image
 
 
 class ImageForm(forms.ModelForm):

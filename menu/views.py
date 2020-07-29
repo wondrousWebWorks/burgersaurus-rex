@@ -2,13 +2,17 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
-from images.models import Image, Page
+from images.models import Image
+
 
 def menu(request):
+    """
+    Renders the menu page with images, menu objects
+    and query parameters sent in the context
+    """
 
     menu = Product.objects.all()
     images = Image.objects.all()
@@ -23,19 +27,19 @@ def menu(request):
             categories = Category.objects.filter(name__in=categories)
             if categories:
                 image = images.filter(image_name__icontains=categories[0])
-            
+
             if image:
                 image = image[0]
             else:
                 image = images.filter(image_name__icontains='default')
 
-
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any \
+                               search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             menu = menu.filter(queries)
 
@@ -47,6 +51,7 @@ def menu(request):
     }
 
     return render(request, 'menu/menu.html', context)
+
 
 @login_required
 def add_product(request):
@@ -66,7 +71,7 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-    
+
     template = 'menu/add-product.html'
     context = {
         'form': form,
@@ -74,11 +79,14 @@ def add_product(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_product(request, product_id):
     """ Edit a product on the menu """
     if not request.user.is_superuser:
-        messages.info(request, 'Oops! You don\'t have the required permission to access this page. Login with the required credentials to do so!')
+        messages.info(request, 'Oops! You don\'t have the required \
+                      permission to access this page. Login with the \
+                      required credentials to do so!')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -102,15 +110,16 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
+
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the menu """
     if not request.user.is_superuser:
         messages.info(request, 'Oops! You don\'t have the required permission to access this page. Login with the required credentials to do so!')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
-    
+
     return redirect(reverse('menu'))

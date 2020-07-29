@@ -11,6 +11,7 @@ from profiles.models import UserProfile
 import json
 import time
 
+
 class Stripe_Web_Hook_Handler:
     """Handle Stripe webhooks"""
 
@@ -26,13 +27,13 @@ class Stripe_Web_Hook_Handler:
         body = render_to_string(
             'checkout/confirmation-emails/confirmation-email-body.txt',
             {'order': order, 'contact-email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [customer_email]
-        )     
+        )
 
     def handle_event(self, event):
         """
@@ -68,23 +69,23 @@ class Stripe_Web_Hook_Handler:
                 profile.default_town_or_city = shipping_details.address.city
                 profile.default_street_address1 = shipping_details.address.line1
                 profile.save()
-        
+
         order_exists = False
 
         attempt = 1
         while attempt <= 5:
             try:
                 order = Order.objects.get(
-                    full_name__iexact = shipping_details.name,
-                    email__iexact = billing_details.email,
-                    phone_number__iexact = shipping_details.phone,
-                    postcode__iexact = shipping_details.address.postal_code,
-                    town_or_city__iexact = shipping_details.address.city,
-                    street_address1__iexact = shipping_details.address.line1,
-                    street_address2__iexact = shipping_details.address.line2,
-                    order_total = order_total,
-                    original_cart = cart,
-                    stripe_pid = pid,
+                    full_name__iexact=shipping_details.name,
+                    email__iexact=billing_details.email,
+                    phone_number__iexact=shipping_details.phone,
+                    postcode__iexact=shipping_details.address.postal_code,
+                    town_or_city__iexact=shipping_details.address.city,
+                    street_address1__iexact=shipping_details.address.line1,
+                    street_address2__iexact=shipping_details.address.line2,
+                    order_total=order_total,
+                    original_cart=cart,
+                    stripe_pid=pid,
                 )
                 order_exists = True
                 break
@@ -100,16 +101,16 @@ class Stripe_Web_Hook_Handler:
             order = None
             try:
                 order = Order.objects.create(
-                    full_name = shipping_details.name,
+                    full_name=shipping_details.name,
                     user_profile=profile,
-                    email = billing_details.email,
-                    phone_number = shipping_details.phone,
-                    postcode = shipping_details.address.postal_code,
-                    town_or_city = shipping_details.address.city,
-                    street_address1 = shipping_details.address.line1,
-                    street_address2 = shipping_details.address.line2,
-                    original_cart = cart,
-                    stripe_pid = pid,
+                    email=billing_details.email,
+                    phone_number=shipping_details.phone,
+                    postcode=shipping_details.address.postal_code,
+                    town_or_city=shipping_details.address.city,
+                    street_address1=shipping_details.address.line1,
+                    street_address2=shipping_details.address.line2,
+                    original_cart=cart,
+                    stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(cart).items():
                     product = Product.objects.get(id=item_id)

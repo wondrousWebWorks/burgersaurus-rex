@@ -2,8 +2,9 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from menu.models import Product
 
-def cart_content(request):
 
+def cart_content(request):
+    """ Makes the cart content available across the entire site """
     cart_items = []
     sub_total = 0
     order_total = 0
@@ -23,7 +24,7 @@ def cart_content(request):
         })
 
     order_total = delivery_charge + sub_total
-    
+
     context = {
         'cart_items': cart_items,
         'sub_total': sub_total,
