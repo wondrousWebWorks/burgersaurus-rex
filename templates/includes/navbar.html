@@ -69,4 +69,4 @@
         <a href="{% url 'view_cart' %}" class="text-white d-block">€{% if order_total > 2 %}{{ order_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
     </div>
 </nav>
-<h4 id="delivery-banner" class="text-center py-0 m-0"><em>Spend a minimum of €{{ delivery_threshold|floatformat:2 }} to qualify for delivery.</em></h4>
+<h4 id="delivery-banner" class="text-center py-0 m-0"><em>Only €{{ delivery_charge|floatformat:2 }} for delivery.</em></h4>

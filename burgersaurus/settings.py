@@ -174,7 +174,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Delivery
 DELIVERY_THRESHOLD = 7
-DELIVERY_CHARGE = 2
+DELIVERY_CHARGE = 3
 
 # Stripe
 STRIPE_CURRENCY = 'eur'
