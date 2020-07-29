@@ -1,1 +1,1 @@
-web: gunicorn burgersaurus.wsgi.application
+web: gunicorn burgersaurus.wsgi:application
