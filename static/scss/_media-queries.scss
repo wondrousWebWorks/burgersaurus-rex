@@ -110,6 +110,21 @@
             font-size: 1.3rem;
         }
     }
+
+    .supplier-wrapper {
+        min-height: 70vh;
+        box-shadow: inset 3rem 3rem 7rem #000,
+                    inset -3rem -3rem 7rem #000;
+    }
+
+    .supplier-wrapper:hover {
+        box-shadow: inset 5rem 5rem 10rem #000,
+                    inset -5rem -5rem 10rem #000;
+    }
+    .supplier-wrapper p {
+        width: 100%;
+        font-size: 1rem !important;
+    }
 }
 
 @media only screen and (max-width: 768px) {

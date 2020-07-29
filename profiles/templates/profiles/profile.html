@@ -34,7 +34,7 @@
                     </thead>
                     <tbody>
                         {% for order in orders %}
-                            <tr class="table-row">
+                            <tr class="table-row {% if forloop.counter|divisibleby:2 %}light-or-dark-mode-font-color"{% endif %}">
                                 <td>
                                     <a href="{% url 'order_history' order.order_number %}"
                                     title="{{ order.order_number }}">

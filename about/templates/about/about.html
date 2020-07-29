@@ -1,11 +1,5 @@
 {% extends 'base.html' %}
 
-{% load static %}
-
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'about/css/about.css' %}">
-{% endblock %}
-
 {% block header %}
     <section id="about-header" class="header-container container-fluid mb-5" style="background: url({{ about_header.image.url }});background-attachment: fixed;">
         <h1 class="text-center p-xs-3 mb-xs-3 mb-lg-5 text-white">Yes, we know we're special... Read on to see why!</h1>

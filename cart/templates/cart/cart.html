@@ -11,7 +11,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1 class="my-5 d-inline-block page-heading">Your Order</h1>
+            <h1 class="my-5 d-inline-block page-heading light-or-dark-mode-font-color">Your Order</h1>
         </div>
         <div class="col-12">
             {% if cart_items %}
@@ -27,7 +27,7 @@
                         </thead>
 
                         {% for cart_item in cart_items %}
-                            <tr class="table-row" {% if not forloop.first %}data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"{% endif %}>
+                            <tr class="table-row {% if forloop.counter|divisibleby:2 %}light-or-dark-mode-font-color{% endif %}" {% if not forloop.first %}data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"{% endif %}>
                                 <td class="py-3 align-middle">
                                     <p class="my-0 pl-2"><strong>{{ cart_item.product.name }}</strong></p>
                                 </td>
@@ -38,7 +38,6 @@
                                     <form class="form" action="{% url 'update_cart' cart_item.item_id %}" method="POST">
                                         {% csrf_token %}
                                         <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1" max="99" data-id="{{ cart_item.item_id }}" id="item-id-{{ cart_item.item_id }}">
-                                        <!-- <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}"> -->
                                         <a class="update-quantity-link cart-quantity-link mr-2" data-id="{{ cart_item.item_id }}"><small><i class="fas fa-edit text-success"></i> Update</small></a>
                                         <a class="remove-item-link cart-quantity-link" data-id="{{ cart_item.item_id }}"><small><i class="fas fa-trash-alt text-danger"></i> Remove</small></a>
                                     </form>
@@ -48,7 +47,7 @@
                                 </td>
                             </tr>
                         {% endfor %}
-                        <tr class="order-charges" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                        <tr class="order-charges light-or-dark-mode-font-color" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <td colspan="5" class="pt-5 text-right">
                                 <h6><strong>Order Sub-Total: €{{ sub_total|floatformat:2 }}</strong></h6>
                                 <h6><strong>Delivery: €{{ delivery_charge|floatformat:2 }}</strong></h6>
