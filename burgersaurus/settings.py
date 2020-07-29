@@ -26,7 +26,7 @@ SECRET_KEY = '3aajh0lupzsthh!^irkdatwtwg&5rwayi!04ltqx!4*6)_9jz@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['burgersaurus-rex', 'localhost']
 
 
 # Application definition
@@ -123,17 +123,17 @@ WSGI_APPLICATION = 'burgersaurus.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse('postgres://mnsgfgrragslvh:d74c0cd14f9eebf4cc35062fe12ec825ee0b438805e06b2c2eac3e014d2d51a0@ec2-54-228-250-82.eu-west-1.compute.amazonaws.com:5432/dk9fiilh12i0m')
     }
-}
-
-# DATABASES = {
-#     'default': dj_database_url.parse('postgres://mnsgfgrragslvh:d74c0cd14f9eebf4cc35062fe12ec825ee0b438805e06b2c2eac3e014d2d51a0@ec2-54-228-250-82.eu-west-1.compute.amazonaws.com:5432/dk9fiilh12i0m')
-# }
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
