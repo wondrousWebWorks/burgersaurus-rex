@@ -13,31 +13,31 @@
     <h2 class="mt-5 light-or-dark-mode-font-color">Menu Categories</h2>
     <ul id="menu-nav" class="nav">
         <li class="nav-item">
-            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}">💯 Full Menu</a>
+            <a class="nav-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" href="{% url 'menu' %}">💯 Full Menu</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=meal-deals">🤑 Meal Deals</a>
+            <a class="nav-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" href="{% url 'menu' %}?category=meal-deals">🤑 Meal Deals</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=burgers">🍔 Burgers</a>
+            <a class="nav-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" href="{% url 'menu' %}?category=burgers">🍔 Burgers</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=hotdogs">🌭 Hotdogs</a>
+            <a class="nav-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" href="{% url 'menu' %}?category=hotdogs">🌭 Hotdogs</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=kebabs">🥙 Kebabs</a>
+            <a class="nav-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" href="{% url 'menu' %}?category=kebabs">🥙 Kebabs</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=fish">🐟 Fish</a>
+            <a class="nav-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" href="{% url 'menu' %}?category=fish">🐟 Fish</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=chips">🍟 Chips</a>
+            <a class="nav-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" href="{% url 'menu' %}?category=chips">🍟 Chips</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn btn-info mr-2 mb-2" href="{% url 'menu' %}?category=extras">🍵 Extras</a>
+            <a class="nav-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" href="{% url 'menu' %}?category=extras">🍵 Extras</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link btn btn-info mb-2" href="{% url 'menu' %}?category=drinks">🥤 Drinks</a>
+            <a class="nav-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" href="{% url 'menu' %}?category=drinks">🥤 Drinks</a>
         </li>
     </ul>
 
@@ -60,15 +60,15 @@
                     <h3>{{ menu_item.name }}</h3>
                     {% if request.user.is_superuser %}
                         <div class="product-management-wrapper">
-                            <a href="{% url 'edit-product' menu_item.id %}" class="btn colour-2-bg-var btn-custom mb-2"><i class="fas fa-edit"></i>  Edit Product</a>
-                            <a href="{% url 'delete-product' menu_item.id %}" class="btn colour-4-bg-var btn-custom mb-2"><i class="fas fa-trash-alt"></i>  Delete Product</a>
+                            <a href="{% url 'edit-product' menu_item.id %}" class="btn-custom colour-1-border btn-background-and-colour mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-edit"></i>  Edit Product</a>
+                            <a href="{% url 'delete-product' menu_item.id %}" class="btn-custom colour-red-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-trash-alt"></i>  Delete Product</a>
                         </div>
                     {% endif %}
                     <p>{{ menu_item.description }}</p>
                     {% if menu_item.allergens.all %}
-                        <h4><a class="text-dark" href="https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/" target="blank"><strong>Allergens:</strong></a><span class="badge badge-secondary ml-2">Click allergen for info</span></h4>
+                        <h4><a class="text-dark" href="https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/" target="blank"><strong>Allergens:</strong></a><span class="badge badge-info ml-2">Click allergen for info</span></h4>
                         {% for allergen in menu_item.allergens.all %}
-                            <a href="{{ allergen.info_url }}" target="_blank" class="allergen btn-custom btn colour-4-bg-var">{{ allergen.friendly_name }}</a>
+                            <a href="{{ allergen.info_url }}" target="_blank" class="btn-custom colour-1-border btn-background-and-colour mb-2 d-xs-block d-sm-inline-block">{{ allergen.friendly_name }}</a>
                         {% endfor %}
                     {% endif %}
                 </div>
@@ -78,7 +78,7 @@
                         {% csrf_token %}
                         <label for="id_qty_{{ menu_item.id }}">Quantity</label>
                         <input type="number" name="quantity" value="1" min="1" max="99">
-                        <a class="btn-custom btn add-to-cart-link colour-2-bg-var" data-id="{{ menu_item.id }}"><i class="fas fa-cart-plus"></i>  ADD TO ORDER</a>
+                        <a class="add-to-cart-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" data-id="{{ menu_item.id }}"><i class="fas fa-cart-plus"></i>  ADD TO ORDER</a>
                     </form>
                 </div>
             </div>

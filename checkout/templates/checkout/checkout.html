@@ -54,8 +54,8 @@
                 <input type="hidden" name="client_secret" value="{{ client_secret }}">
                 <div class="row m-0 mt-3">
                     <div class="col-12 text-right px-0">
-                        <a href="{% url 'view_cart' %}" class="btn custom-button-1 mb-1"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Modify Order</a>
-                        <button id="submit-button" class="btn checkout-button mb-1"><i class="far fa-credit-card"></i>&nbsp;&nbsp;Checkout</button>
+                        <a href="{% url 'view_cart' %}" class="btn-custom colour-1-border btn-background-and-colour mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Modify Order</a>
+                        <button id="submit-button" class="btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block"><i class="far fa-credit-card"></i>&nbsp;&nbsp;Checkout</button>
                     </div>
                 </div>
             </form>
@@ -95,11 +95,6 @@
                                 <h6 class="light-or-dark-mode-font-color"><strong>Order Sub-Total: €{{ sub_total|floatformat:2 }}</strong></h6>
                                 <h6 class="light-or-dark-mode-font-color"><strong>Delivery: €{{ delivery_charge|floatformat:2 }}</strong></h6>
                                 <h4 class="light-or-dark-mode-font-color mt-4"><strong>Order Total: €{{ order_total|floatformat:2 }}</strong></h4>
-                                {% if sub_total < delivery_threshold %}
-                                    <p class="mb-1 text-danger">
-                                        You could get free delivery by spending just <strong>€a bit</strong> more!
-                                    </p>
-                                {% endif %}
                             </td>
                         </tr>
                     </table>

@@ -53,24 +53,19 @@
                                 <h6><strong>Order Sub-Total: €{{ sub_total|floatformat:2 }}</strong></h6>
                                 <h6><strong>Delivery: €{{ delivery_charge|floatformat:2 }}</strong></h6>
                                 <h4 class="mt-4"><strong>Order Total: €{{ order_total|floatformat:2 }}</strong></h4>
-                                {% if sub_total < delivery_threshold %}
-                                    <p class="mb-1 text-danger">
-                                        You could get free delivery by spending just <strong>€a bit</strong> more!
-                                    </p>
-                                {% endif %}
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div class="row m-0">
                     <div class="col-12 text-right px-0">
-                        <a href="{% url 'menu' %}" class="btn custom-button-1 mb-1 text-white"><i class="fas fa-hamburger"></i>&nbsp;&nbsp;Go To Menu</a>
-                        <a href="{% url 'checkout' %}" class="btn checkout-button mb-1 text-white"><i class="far fa-credit-card"></i>&nbsp;&nbsp;Checkout</a>
+                        <a href="{% url 'menu' %}" class="btn-custom colour-1-border btn-background-and-colour mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-hamburger"></i>&nbsp;&nbsp;Go To Menu</a>
+                        <a href="{% url 'checkout' %}" class="btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block"><i class="far fa-credit-card"></i>&nbsp;&nbsp;Checkout</a>
                     </div>
                 </div>
             {% else %}
                 <h4 class="mt-5">Your shopping cart is empty &#x1F625;</h4>
-                <a class="btn custom-button-1 text-white" href="{% url 'menu' %}"><i class="fas fa-list-alt"></i> Go To Menu</a>
+                <a class="btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" href="{% url 'menu' %}"><i class="fas fa-list-alt"></i> Go To Menu</a>
             {% endif %}
         </div>
     </div>

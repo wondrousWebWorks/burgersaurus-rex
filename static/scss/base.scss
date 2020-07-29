@@ -38,6 +38,10 @@ h1, h2 {
     font-family: 'Miltonian Tattoo', sans-serif;
 }
 
+a {
+    cursor: pointer !important;
+}
+
 /* Buttons */
 .btn-custom {
     display: inline-block;
@@ -56,6 +60,11 @@ h1, h2 {
         transform: scale(1.1);
         color: rgba(var(--card-heading-colour), 1);
     }
+}
+
+.btn-background-and-colour {
+    background-color: #222;
+    color: #f7f7f7 !important;
 }
 
 #navbar {
@@ -398,7 +407,6 @@ footer {
     }
 
     h4 {
-        font-family: "Open Sans", sans-serif;
         font-size: 1.15rem;
         text-decoration: underline;
     }
@@ -777,9 +785,5 @@ select option[value=""] {
     }
 }
 
-.inverted-light-and-dark-mode-colours {
-    background-color: rgba(var(--card-heading-background-colour), 1);
-    color: rgba(var(--card-heading-colour), 1);
-}
 
 @import 'media-queries';

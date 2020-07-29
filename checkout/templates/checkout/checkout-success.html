@@ -141,19 +141,9 @@
             <div class="row">
                 <div class="col-12 text-right pr-0 mb-3">
                     {% if from_profile %}
-                        <a href="{% url 'profile' %}" class="btn custom-button-1 text-white my-2">
-                            <span class="icon mr-2">
-                                <i class="fas fa-arrow-circle-left"></i>
-                            </span>
-                            <span class="text-uppercase">Back to Profile</span>
-                        </a>
+                        <a href="{% url 'profile' %}" class="btn-custom colour-1-border btn-background-and-colour mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-arrow-circle-left"></i>  Back to Profile</a>
                     {% else %}
-                        <a href="{% url 'menu' %}?category=meal_deals" class="btn custom-button-1 text-white my-2">
-                            <span class="icon mr-2">
-                                <i class="fas fa-hamburger"></i>
-                            </span>
-                            <span class="text-uppercase">Check out the menu for next time!</span>
-                        </a>
+                        <a href="{% url 'menu' %}?category=meal_deals" class="btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-hamburger"></i>  Check out the menu for next time!</a>
                     {% endif %}
                 </div>
             </div>

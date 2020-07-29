@@ -67,12 +67,9 @@ def add_product(request):
     else:
         form = ProductForm()
     
-    images = Image.objects.all()
-    add_product_header = images.filter(image_name__icontains='add-product-header')[0]
     template = 'menu/add-product.html'
     context = {
         'form': form,
-        'add_product_header': add_product_header,
     }
 
     return render(request, template, context)

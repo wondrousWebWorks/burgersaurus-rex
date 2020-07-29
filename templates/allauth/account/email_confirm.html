@@ -17,7 +17,7 @@
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
-    <button class="btn custom-button-2" type="submit"><i class="fas fa-check-circle"></i>  {% trans 'Confirm' %}</button>
+    <button class="btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" type="submit"><i class="fas fa-check-circle"></i>  {% trans 'Confirm' %}</button>
 </form>
 
 {% else %}

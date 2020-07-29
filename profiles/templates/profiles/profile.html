@@ -25,7 +25,9 @@
                     {% csrf_token %}
                     {{ form|crispy }}
                 </fieldset>
-                <button class="btn custom-button-2 float-right"><i class="fas fa-user-edit"></i>  Update Information</button>
+                <div class="text-right">
+                    <button class="btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-user-edit"></i>  Update Information</button>
+                </div>
             </form>
         </div>
         <div class="col-12 col-lg-6">
