@@ -75,7 +75,7 @@
                         </thead>
 
                         {% for cart_item in cart_items %}
-                            <tr class="table-row">
+                            <tr class="table-row {% if forloop.counter|divisibleby:2 %}light-or-dark-mode-font-color{% endif %}">
                                 <td class="py-3 align-middle">
                                     <p class="my-0 pl-2"><strong>{{ cart_item.product.name }}</strong></p>
                                 </td>
