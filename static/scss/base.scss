@@ -18,6 +18,7 @@ body {
 
 .row {
     width: 100% !important;
+    overflow: hidden;
 }
 
 /* Scrollbar */
@@ -133,10 +134,9 @@ a {
 
     #view-cart {
         position: absolute;
-        right: .5rem;
+        right: 2rem;
         top: 50%;
         transform: translateY(-50%);
-        // height: 100%;
 
         i {
             font-size: 1.6rem;
@@ -251,18 +251,16 @@ a {
 }
 
 #ordering-process-wrapper {
-    margin-top: $section-margin-top;
     width: 100%;
     padding: 8vh 0;
     z-index: -1;
 
     #ordering-process-heading {
-        font-size: 4rem;
-        transform: rotateZ(-5deg);
+        font-size: 5rem;
+        width: 70%;
+        margin: 0 auto 8vh;
+        transform: rotateZ(-7deg);
         text-align: center;
-        margin-bottom: 5rem;
-        width: 85%;
-        margin: auto;
     }
 
     .ordering-process-image-wrapper {
@@ -279,82 +277,50 @@ a {
 }
 
 #landing-page-info-boxes {
-    clip-path: polygon(0 10%, 8% 8%, 15% 9%, 22% 7%, 37% 8%, 49% 6%, 54% 7%, 62% 5%, 71% 6%, 79% 4%, 87% 5%, 92% 4%, 96% 6%, 100% 1%, 100% 90%, 94% 91%, 86% 89%, 78% 92%, 68% 90%, 58% 93%, 46% 92%, 33% 95%, 25% 94%, 15% 97%, 7% 96%, 0 100%);
-    background: linear-gradient(to right, rgba(var(--colour-4), 1), rgba(var(--colour-1), 1), rgba(var(--colour-5), 1));
     transition: all .5s ease-in-out;
-    margin-top: $section-margin-top;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100vw;
-    overflow: hidden;
 
-    .landing-page-info-box {
-        text-align: center;
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: all .5s ease-in-out;
+    .landing-page-info-row {
 
-        img {
+        .landing-page-info-box {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             transition: all .5s ease-in-out;
-        }
-
-        h2 {
-            position: absolute;
-            top: 50%;
-            width: 80%;
-            left: 0;
-            right: 0;
-            margin: auto;
-            transform: translateY(-50%);
-            font-size: 3rem;
-            transition: all .5s ease-in-out;
-            text-shadow: 2px 2px #222;
-        }
-
-        p {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.5rem;
-            opacity: 0;
-            transition: all .5s ease-in-out;
-        }
-
-        img.landing-page-info-box-1-image {
-            height: 65%;
-        }
-
-        img.landing-page-info-box-2-image {
-            height: 80%;
-        }
-
-        &:hover {
-            box-shadow: inset 15rem 15rem 20rem #000,
-                        inset -15rem -15rem 20rem #000;
-
-            p {
-                opacity: 1;
-                transform: translateY(-3rem);
-            }
-
+            height: 50vh;
+    
             h2 {
-                transform: translateY(-7rem);
+                font-size: 3rem;
+                margin: 0 auto;
             }
+    
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        .landing-page-info-image-wrapper {
+            background: linear-gradient(to right, rgba(var(--colour-4), 1), rgba(var(--colour-1), 1), rgba(var(--colour-5), 1));
+            clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
 
             img {
-                opacity: .35;
+                transition: all .5s ease-in-out;
+                height: 75%;
             }
         }
     }
 }
 
 footer {
-    margin-top: $section-margin-top;
     background: linear-gradient(to right, rgba(var(--colour-4), 1), rgba(var(--colour-1), 1), rgba(var(--colour-5), 1));
-    clip-path: polygon(0 10%, 6% 8%, 15% 9%, 25% 7%, 31% 9%, 44% 7%, 54% 7%, 62% 5%, 67% 7%, 74% 4%, 83% 6%, 88% 4%, 95% 4%, 100% 1%, 100% 100%, 0 100%);
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    margin-top: 20vh;
 
     .footer-col {
         display: flex;

@@ -1,7 +1,5 @@
 @media only screen and (max-width: 576px) {
     #navbar {
-        padding: 0;
-
         .navbar-collapse {
             position: relative;
             z-index: 10;
@@ -9,13 +7,14 @@
 
             ul {
                 width: 100%;
-                background-color: var(--quanary-color);
+                background-color: var(--colour-2-bg);
                 padding-left: 2rem;
             }
         }
 
         button.navbar-toggler {
             font-size: 1.5rem !important;
+            margin-right: 5rem;
     
             .navbar-toggler-icon {
                 padding-top: .3rem;
@@ -53,44 +52,49 @@
         }
     }
 
+    #ordering-process-wrapper {
+        #ordering-process-heading {
+            font-size: 2rem;
+            width: 90%;
+        }
+    
+        .ordering-process-image-wrapper {
+            margin-top: 10vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+
     #landing-page-info-boxes {
-    
+
         .landing-page-info-box {
-    
+            height: auto !important;
+
             h2 {
+                margin-top: 15vh !important;
                 width: 90%;
-                font-size: 2rem;
+                font-size: 2rem !important;
+            }
+
+            img {
+                width: 60%;
+                height: auto;
             }
     
             p {
-                font-size: 1.2rem;
+                font-size: 1.2rem !important;
             }
-    
-            img.landing-page-info-box-1-image {
-                height: 65%;
-            }
-    
-            img.landing-page-info-box-2-image {
-                height: 80%;
-            }
-    
-            &:hover {
-                box-shadow: inset 15rem 15rem 20rem #000,
-                            inset -15rem -15rem 20rem #000;
-    
-                p {
-                    opacity: 1;
-                    transform: translateY(-3rem);
-                }
-    
-                h2 {
-                    transform: translateY(-7rem);
-                }
-    
-                img {
-                    opacity: .35;
-                }
-            }
+        }
+
+        .landing-page-info-image-wrapper {
+            clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%) !important;
         }
     }
 

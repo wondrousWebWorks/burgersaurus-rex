@@ -9,7 +9,7 @@
         >
     </a>
     <a class="navbar-brand d-none d-lg-block text-white" href="{% url 'home' %}"> Burgersaurus <strong>Rex</strong></a>
-    <button class="navbar-toggler h-100 mr-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    <button class="navbar-toggler h-100" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon my-auto"><i class="fas fa-bars pink my-auto"></i></span>
     </button>
@@ -60,7 +60,7 @@
             </li>
         </ul>
         <form id="search-input" method="GET" action="{% url 'menu' %}" class="form-inline my-2 my-lg-0">
-            <input class="form-control rounded-0" type="search" name="q" placeholder="Search" aria-label="Search">
+            <input class="form-control rounded-0 d-inline" type="search" name="q" placeholder="Search" aria-label="Search">
             <button class="btn my-2 my-sm-0 rounded-0 d-inline" type="submit"><i class="fas fa-search"></i></button>
         </form>
     </div>

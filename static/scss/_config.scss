@@ -87,7 +87,9 @@
 }
 
 /* Margins */
-$section-margin-top: 10vh;
+.section-margin-top {
+    margin-top: 15vh;
+}
 
 /* Fonts */
 .open-sans {
