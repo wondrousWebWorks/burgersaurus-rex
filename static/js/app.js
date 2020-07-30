@@ -1,5 +1,7 @@
 /*jshint esversion: 6 */
 
+const nav = document.querySelector('#navbar');
+const deliveryBanner = document.querySelector('#delivery-banner');
 const themesWrapper = document.querySelector('#theme-options');
 const themeSelectors = document.querySelectorAll('.theme-option');
 
@@ -20,8 +22,6 @@ let darkMode = 'false';
  * Toggles the navbar animation when scrolling past a certain screen height
  */
 const toggleNavbarBackground = () => {
-    const nav = document.querySelector('#navbar');
-    const deliveryBanner = document.querySelector('#delivery-banner');
     nav.classList.toggle('add-navbar-background', window.scrollY > 100);
     deliveryBanner.classList.toggle('add-delivery-banner-background', window.scrollY > 100);
 };
