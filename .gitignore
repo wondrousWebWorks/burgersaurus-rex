@@ -1,5 +1,6 @@
-node_modules
+node_modules/
 package-lock.json
 *.xml
 *.iml
-temp-images
+temp-images/
+db.sqlite3
