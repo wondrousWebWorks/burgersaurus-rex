@@ -49,11 +49,16 @@ const loadingWrapper = document.querySelector('#loading-wrapper');
 
 form.addEventListener('submit', event => {
     event.preventDefault();
+    let saveInfo = false;
     card.update({ 'disabled': true });
     submitButton.setAttribute('disabled', true);
     loadingWrapper.classList.toggle('opacity-full');
     const saveInfoCheckbox = document.querySelector('#id-save-info');
-    const saveInfo = Boolean(saveInfoCheckbox.hasAttribute('checked'));
+    if (saveInfoCheckbox) {
+        saveInfo = Boolean(saveInfoCheckbox.hasAttribute('checked'));
+    } else {
+        saveInfo = false;
+    }
     console.log(saveInfo);
     const csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     const postData = {
