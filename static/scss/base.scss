@@ -18,7 +18,6 @@ body {
 
 .row {
     width: 100% !important;
-    overflow: hidden;
 }
 
 /* Scrollbar */
@@ -254,6 +253,7 @@ a {
     width: 100%;
     padding: 8vh 0;
     z-index: -1;
+    overflow: hidden;
 
     #ordering-process-heading {
         font-size: 5rem;

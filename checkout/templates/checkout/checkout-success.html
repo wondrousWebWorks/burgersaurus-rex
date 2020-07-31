@@ -21,12 +21,12 @@
                 <strong>{{ order.email }}</strong>.</p>
         </div>
         <div class="col-12 col-lg-8 offset-lg-2 checkout-success-wrapper">
-            <div class="row">
+            <div class="row m-0">
                 <div class="col-12">
                     <h3 class="light-or-dark-mode-font-color mt-3">Order Info</h3>
                 </div>
                 <div class="col-12 mb-3">
-                    <div class="row border rounded px-3 pt-3 colour-3-bg-var">
+                    <div class="row border rounded px-3 pt-3 mb-4 colour-3-bg-var">
                         <div class="col-12 col-md-6">
                             <p class="mb-0 text-black font-weight-bold">Order Number</p>
                         </div>
@@ -43,12 +43,12 @@
                 </div>
             </div>
     
-            <div class="row">
+            <div class="row m-0">
                 <div class="col-12">
                     <h3 class="light-or-dark-mode-font-color">Order Details</h3>
                 </div>
                 <div class="col-12 mb-3">
-                    <div class="row border rounded px-3 pt-3 colour-3-bg-var">
+                    <div class="row border rounded px-3 pt-3 mb-4 colour-3-bg-var">
                         {% for item in order.orderitems.all %}
                         <div class="col-12 col-md-6">
                             <p class="font-weight-bold">
@@ -63,12 +63,12 @@
                 </div>
             </div>
     
-            <div class="row">
+            <div class="row m-0">
                 <div class="col-12">
                     <h3 class="light-or-dark-mode-font-color">Delivery Details</h3>
                 </div>
                 <div class="col-12 mb-3">
-                    <div class="row px-3 pt-3 border rounded colour-3-bg-var">
+                    <div class="row px-3 pt-3 border rounded mb-4 colour-3-bg-var">
                         <div class="col-12 col-md-6">
                             <p class="font-weight-bold">Full Name</p>
                         </div>
@@ -111,12 +111,12 @@
                 </div>
             </div>
     
-            <div class="row">
+            <div class="row m-0">
                 <div class="col-12">
-                    <h3 class="text-muted">Billing Info</h3>
+                    <h3 class="light-or-dark-mode-font-color">Billing Info</h3>
                 </div>
                 <div class="col-12 mb-3">
-                    <div class="row px-3 pt-3 border rounded colour-3-bg-var">
+                    <div class="row px-3 pt-3 border rounded mb-4 colour-3-bg-var">
                         <div class="col-12 col-md-4">
                             <p class="font-weight-bold">Order Sub-Total</p>
                         </div>
@@ -141,9 +141,9 @@
             <div class="row">
                 <div class="col-12 text-right pr-0 mb-3">
                     {% if from_profile %}
-                        <a href="{% url 'profile' %}" class="btn-custom colour-1-border btn-background-and-colour mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-arrow-circle-left"></i>  Back to Profile</a>
+                        <a href="{% url 'profile' %}" class="btn-custom colour-1-border btn-background-and-colour mb-2 d-xs-block d-sm-inline-block mr-3"><i class="fas fa-arrow-circle-left"></i>  Back to Profile</a>
                     {% else %}
-                        <a href="{% url 'menu' %}?category=meal_deals" class="btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-hamburger"></i>  Check out the menu for next time!</a>
+                        <a href="{% url 'menu' %}?category=meal_deals" class="btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block mr-3"><i class="fas fa-hamburger"></i>  Check out the menu for next time!</a>
                     {% endif %}
                 </div>
             </div>
