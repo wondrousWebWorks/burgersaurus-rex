@@ -126,7 +126,7 @@ WSGI_APPLICATION = 'burgersaurus.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse('postgres://mnsgfgrragslvh:d74c0cd14f9eebf4cc35062fe12ec825ee0b438805e06b2c2eac3e014d2d51a0@ec2-54-228-250-82.eu-west-1.compute.amazonaws.com:5432/dk9fiilh12i0m')
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
