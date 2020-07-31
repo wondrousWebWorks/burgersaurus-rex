@@ -53,7 +53,7 @@ form.addEventListener('submit', event => {
     submitButton.setAttribute('disabled', true);
     loadingWrapper.classList.toggle('opacity-full');
     const saveInfoCheckbox = document.querySelector('#id-save-info');
-    const saveInfo = saveInfoCheckbox.hasAttribute('checked');
+    const saveInfo = Boolean(saveInfoCheckbox.hasAttribute('checked'));
     console.log(saveInfo);
     const csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     const postData = {
