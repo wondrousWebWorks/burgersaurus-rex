@@ -32,7 +32,8 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
         - [UserProfile](#userprofile)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
-    - [Libraries, Frameworks & Tools](#libraries-frameworks--tools)
+    - [Libraries, Frameworks](#libraries-frameworks)
+    - [Tools](#tools)
   - [Deployment](#deployment)
     - [Running the project locally](#running-the-project-locally)
       - [Instructions](#instructions)
@@ -182,11 +183,16 @@ Postcode | postcode | max_length=20, null=True, blank=True | CharField
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
 - [Python](https://www.python.org/about/)
 
-### Libraries, Frameworks & Tools
+### Libraries, Frameworks
 
 - [Django](https://www.djangoproject.com/)
+- [Pillow](https://pillow.readthedocs.io/en/stable/)
+- [Gunicorn](https://gunicorn.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Bootstrap](https://getbootstrap.com/)
+
+### Tools
+
 - [Font Awesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [Cloudinary](https://cloudinary.com/about)
