@@ -30,6 +30,9 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
         - [OrderItem Model](#orderitem-model)
       - [Profiles App](#profiles-app)
         - [UserProfile](#userprofile)
+      - [Images App](#images-app)
+        - [Page](#page)
+        - [Image](#image)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Libraries, Frameworks](#libraries-frameworks)
@@ -173,6 +176,23 @@ Default Street Address 1 | deafult_street_address_1 | max_length=80, null=True, 
 Default Street Address 2 | deafult_street_address_2 | max_length=80, null=True, blank=True | CharField
 Default Town Or City | default_town_or_city | max_length=40, null=True, blank=True | CharField
 Postcode | postcode | max_length=20, null=True, blank=True | CharField
+
+#### Images App
+
+##### Page
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Name | name | max_length=254 | CharField
+
+##### Image
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Page | page | Page, null=True, blank=True, on_delete=models.SET_NULL | OneToOneField
+Image Name | image_name | max_length=254, null=False, blank=False, default='default' | CharField
+Image Friendly Name | image_friendly_name | max_length=254, null=False, blank=False, default='Default' | CharField
+Image | image | upload_to='images/', null=True, blank=False | ImageField
 
 ## Technologies Used
 
