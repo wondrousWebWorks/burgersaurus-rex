@@ -55,28 +55,28 @@
         <h3 class="open-sans mt-4 text-small light-or-dark-mode-font-color">Oops! No products were found matching your category or query...</h3>
     {% else %}
         {% for menu_item in menu %}
-            <div class="row list-item py-4 mb-2 mx-auto" {% if not forloop.first %}data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"{% endif %}>
+            <div class="row list-item py-4 mb-2 mx-auto {% if forloop.counter|divisibleby:2 %}colour-3-bg-var{% endif %}" {% if not forloop.first %}data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"{% endif %}>
                 <div class="col-sm-9">
-                    <h3 {% if forloop.counter|divisibleby:2 %} class="light-or-dark-mode-font-color"{% endif %}>{{ menu_item.name }}</h3>
+                    <h3 class="{% if forloop.counter|divisibleby:2 %}text-dark {% else %}light-or-dark-mode-font-color{% endif %}">{{ menu_item.name }}</h3>
                     {% if request.user.is_superuser %}
                         <div class="product-management-wrapper">
                             <a href="{% url 'edit-product' menu_item.id %}" class="btn-custom colour-1-border btn-background-and-colour mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-edit"></i>  Edit Product</a>
                             <a href="{% url 'delete-product' menu_item.id %}" class="btn-custom colour-red-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block"><i class="fas fa-trash-alt"></i>  Delete Product</a>
                         </div>
                     {% endif %}
-                    <p {% if forloop.counter|divisibleby:2 %} class="light-or-dark-mode-font-color"{% endif %}>{{ menu_item.description }}</p>
+                    <p class="{% if forloop.counter|divisibleby:2 %}text-dark {% else %}light-or-dark-mode-font-color{% endif %}">{{ menu_item.description }}</p>
                     {% if menu_item.allergens.all %}
-                        <h4><a {% if forloop.counter|divisibleby:2 %} class="light-or-dark-mode-font-color"{% endif %} href="https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/" target="blank"><strong>Allergens:</strong></a><span class="badge badge-info ml-2">Click allergen for info</span></h4>
+                        <h4><a class="{% if forloop.counter|divisibleby:2 %}text-dark {% else %}light-or-dark-mode-font-color{% endif %}" href="https://erudus.com/14-major-food-allergens-for-eu-food-information-for-consumers/" target="blank"><strong>Allergens:</strong></a><span class="badge badge-info ml-2">Click allergen for info</span></h4>
                         {% for allergen in menu_item.allergens.all %}
                             <a href="{{ allergen.info_url }}" target="_blank" class="btn-custom colour-1-border btn-background-and-colour mb-2 d-xs-block d-sm-inline-block">{{ allergen.friendly_name }}</a>
                         {% endfor %}
                     {% endif %}
                 </div>
                 <div class="col-sm-3 price-and-add-button text-right">
-                    <p class="text-right {% if forloop.counter|divisibleby:2 %}light-or-dark-mode-font-color{% endif %}"><strong>€{{ menu_item.price }}</strong></p>
+                    <p class="text-right {% if forloop.counter|divisibleby:2 %}text-dark {% else %}light-or-dark-mode-font-color{% endif %}"><strong>€{{ menu_item.price }}</strong></p>
                     <form class="form" action="{% url 'add_to_cart' menu_item.id %}" method="POST">
                         {% csrf_token %}
-                        <label {% if forloop.counter|divisibleby:2 %} class="light-or-dark-mode-font-color"{% endif %} for="id_qty_{{ menu_item.id }}">Quantity</label>
+                        <label class="{% if forloop.counter|divisibleby:2 %}text-dark {% else %}light-or-dark-mode-font-color{% endif %}" for="id_qty_{{ menu_item.id }}">Quantity</label>
                         <input id="id_qty_{{ menu_item.id }}" type="number" name="quantity" value="1" min="1" max="99">
                         <a class="add-to-cart-link btn-custom colour-2-border btn-background-and-colour ml-2 mb-2 d-xs-block d-sm-inline-block" data-id="{{ menu_item.id }}"><i class="fas fa-cart-plus"></i>  ADD TO ORDER</a>
                     </form>
