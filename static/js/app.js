@@ -38,32 +38,16 @@ themeSelectors.forEach(themeSelector => {
 
         if (themeSelectorClassList.contains('theme-1')) {
             sessionStorage.setItem('theme', '1');
-            setCSSColour('--colour-1', green);
-            setCSSColour('--colour-2', pink);
-            setCSSColour('--colour-3', yellow);
-            setCSSColour('--colour-4', lightBlue);
-            setCSSColour('--colour-5', darkBlue);
+            setThemeColours(green, pink, yellow, lightBlue, darkBlue);
         } else if (themeSelectorClassList.contains('theme-2')) {
             sessionStorage.setItem("theme", '2');
-            setCSSColour('--colour-1', pink);
-            setCSSColour('--colour-2', yellow);
-            setCSSColour('--colour-3', lightBlue);
-            setCSSColour('--colour-4', darkBlue);
-            setCSSColour('--colour-5', green);
+            setThemeColours(pink, yellow, lightBlue, darkBlue, green);
         } else if (themeSelectorClassList.contains('theme-3')) {
             sessionStorage.setItem('theme', '3');
-            setCSSColour('--colour-1', yellow);
-            setCSSColour('--colour-2', lightBlue);
-            setCSSColour('--colour-3', darkBlue);
-            setCSSColour('--colour-4', green);
-            setCSSColour('--colour-5', pink);
+            setThemeColours(yellow, lightBlue, darkBlue, green, pink);
         } else if (themeSelectorClassList.contains('theme-4')) {
             sessionStorage.setItem('theme', '4');
-            setCSSColour('--colour-1', lightBlue);
-            setCSSColour('--colour-2', darkBlue);
-            setCSSColour('--colour-3', green);
-            setCSSColour('--colour-4', pink);
-            setCSSColour('--colour-5', yellow);
+            setThemeColours(lightBlue, darkBlue, green, pink, yellow);
         } else if (themeSelectorClassList.contains('dark-mode')) {
             let darkModeCheck = sessionStorage.getItem('dark-mode');
             
@@ -83,6 +67,23 @@ themeSelectors.forEach(themeSelector => {
         }
     });
 });
+
+/**
+ * Sets the CSS colour variable values to the supplied
+ * RGB triplet values to set the theme colours
+ * @param {String} colour1 the RGB triplet values for the primary colour
+ * @param {String} colour2 the RGB triplet values for the secondary colour
+ * @param {String} colour3 the RGB triplet values for the tertiary colour
+ * @param {String} colour4 the RGB triplet values for the quarternary colour
+ * @param {String} colour5 the RGB triplet values for the quinary colour
+ */
+const setThemeColours = (colour1, colour2, colour3, colour4, colour5) => {
+    setCSSColour('--colour-1', colour1);
+    setCSSColour('--colour-2', colour2);
+    setCSSColour('--colour-3', colour3);
+    setCSSColour('--colour-4', colour4);
+    setCSSColour('--colour-5', colour5);
+};
 
 /**
  * Sets the colour value as an RGB triplet for a specified
@@ -110,39 +111,19 @@ const getTheme = () => {
 const setTheme = () => {
     switch(theme) {
         case '1':
-            setCSSColour('--colour-1', green);
-            setCSSColour('--colour-2', pink);
-            setCSSColour('--colour-3', yellow);
-            setCSSColour('--colour-4', lightBlue);
-            setCSSColour('--colour-5', darkBlue);
+            setThemeColours(green, pink, yellow, lightBlue, darkBlue);
             break;
         case '2':
-            setCSSColour('--colour-1', pink);
-            setCSSColour('--colour-2', yellow);
-            setCSSColour('--colour-3', lightBlue);
-            setCSSColour('--colour-4', darkBlue);
-            setCSSColour('--colour-5', green);
+            setThemeColours(pink, yellow, lightBlue, darkBlue, green);
             break;
         case '3':
-            setCSSColour('--colour-1', yellow);
-            setCSSColour('--colour-2', lightBlue);
-            setCSSColour('--colour-3', darkBlue);
-            setCSSColour('--colour-4', green);
-            setCSSColour('--colour-5', pink);
+            setThemeColours(yellow, lightBlue, darkBlue, green, pink);
             break;
         case '4':
-            setCSSColour('--colour-1', lightBlue);
-            setCSSColour('--colour-2', darkBlue);
-            setCSSColour('--colour-3', green);
-            setCSSColour('--colour-4', pink);
-            setCSSColour('--colour-5', yellow);
+            setThemeColours(lightBlue, darkBlue, green, pink, yellow);
             break;
         default:
-            setCSSColour('--colour-1', green);
-            setCSSColour('--colour-2', pink);
-            setCSSColour('--colour-3', yellow);
-            setCSSColour('--colour-4', lightBlue);
-            setCSSColour('--colour-5', darkBlue);
+            setThemeColours(green, pink, yellow, lightBlue, darkBlue);
     }
 
     if (darkMode === 'true') {
