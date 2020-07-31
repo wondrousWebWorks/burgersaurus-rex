@@ -208,6 +208,13 @@ Image | image | upload_to='images/', null=True, blank=False | ImageField
 - [Django](https://www.djangoproject.com/)
 - [Pillow](https://pillow.readthedocs.io/en/stable/)
 - [Gunicorn](https://gunicorn.org/)
+- [dj-database-url](https://pypi.org/project/dj-database-url/)
+- [boto3](https://pypi.org/project/boto3/)
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+- [psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
+- [flake8](https://pypi.org/project/flake8/)
+- [Stripe](https://stripe.com/ie)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Bootstrap](https://getbootstrap.com/)
 
