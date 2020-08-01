@@ -17,6 +17,7 @@
   - [Behaviour of Shared Site Components](#behaviour-of-shared-site-components)
     - [Navbar (Navigation Bar)](#navbar-navigation-bar)
     - [Theme Selector](#theme-selector)
+    - [Footer](#footer)
   - [Behaviour of Site Components](#behaviour-of-site-components)
     - [Navbar](#navbar)
   - [Behaviour of Individual Pages](#behaviour-of-individual-pages)
@@ -114,6 +115,17 @@ As the images in the Burgersaurus Rex app aren't linked to products or any other
 - Verify that clicking on a theme sets the colours across the site to the selected theme's colours :heavy_check_mark:
 - Verify that clicking on the *dark mode* option triggers the dark background on all pages and adjust font colour where necessary to make it legible :heavy_check_mark:
 - Confirm that the selected theme and dark mode selections persists across different app pages :heavy_check_mark:
+
+### Footer
+
+As no actual social media accounts exist for this fictional company, links were added to the home pages for each social media service.
+
+- Verify that background colour gradient displays correctly :heavy_check_mark:
+- Confirm that copyright information displays correctly :heavy_check_mark:
+- Verify that **Opening Times** display correctly :heavy_check_mark:
+- Verify that navigation links redirect the user to the expected destination :heavy_check_mark:
+- Confirm that the social media icons redirect the user to the relevant social media site upon clicking it :heavy_check_mark:
+- Confirm that the order of footer components change when viewed on mobile devices in portrait mode :heavy_check_mark:
 
 ## Behaviour of Site Components
 
