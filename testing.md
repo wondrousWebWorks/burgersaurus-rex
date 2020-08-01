@@ -11,10 +11,13 @@
       - [Desired Result](#desired-result-1)
       - [Steps Taken to Ensure Result](#steps-taken-to-ensure-result-1)
       - [Verdict](#verdict-1)
-  - [Behaviour of site components](#behaviour-of-site-components)
+  - [Authentication](#authentication)
+    - [Menu App](#menu-app)
+    - [Images App](#images-app)
+  - [Behaviour of Site Components](#behaviour-of-site-components)
     - [Navbar](#navbar)
-  - [Behaviour of individual pages](#behaviour-of-individual-pages)
-    - [Home page](#home-page)
+  - [Behaviour of Individual Pages](#behaviour-of-individual-pages)
+    - [Home Page](#home-page)
   - [Bugs](#bugs)
     - [Development Bugs](#development-bugs)
       - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
@@ -75,15 +78,27 @@ Browsers tested include:
 
 No obvious bugs were detected in any of the tested browsers. :heavy_check_mark:
 
-## Behaviour of site components
+## Authentication
+
+Every attempt has been made to secure the app by only allowing authenticated super users to access pages where CUD (create, update, delete) functionality needs to be performed.
+
+### Menu App
+
+A user has be logged in as a super user in order to Add, Update or Delete a product. Should they try to access the related URLs by typing them directly in the browser, they're informed of the need to be logged in with the proper credentials and redirected to the **Home** page. Furthermore, the buttons to **Update** and **Delete** products are only displayed on the **Menu** screen when a user is logged in as a super user.
+
+### Images App
+
+As the images in the Burgersaurus Rex app aren't linked to products or any other apps which can expand the site, users don't have the ability to **add** images.  Instead, they're only allowed to update the images already present within the Image app. A user needs to be logged in as a super user to Update images. Should they try to access the related URLs by typing them directly in the browser, they're informed of the need to be logged in with the proper credentials and redirected to the **Home** page.
+
+## Behaviour of Site Components
 
 ### Navbar
 
 - 
 
-## Behaviour of individual pages
+## Behaviour of Individual Pages
 
-### Home page
+### Home Page
 
 ## Bugs
 
