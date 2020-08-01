@@ -23,6 +23,7 @@
       - [Carousel](#carousel)
       - [Delivery Information](#delivery-information)
       - [Information Section](#information-section)
+    - [Menu Page](#menu-page)
   - [Bugs](#bugs)
     - [Development Bugs](#development-bugs)
       - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
@@ -157,6 +158,25 @@ This section provides information on sources from Irish suppliers and winning aw
 - Verify that the correct background gradient colours are displayed for each image wrapper :heavy_check_mark:
 - Verify that the the correct text is displayed for each section :heavy_check_mark:
 - Confirm that the font colour for the text changes when **dark mode** is selected :heavy_check_mark:
+
+### Menu Page
+
+- Verify that the expected background image is displayed in the header depending on **category** selected :heavy_check_mark:
+- Verify that the default image is displayed if no category is selected :heavy_check_mark:
+- Confirm that a message is displayed informing the user when a non-existent category is entered as a parameter in the URL :heavy_check_mark:
+- Verify that the **Menu** category icons are displayed as expected :heavy_check_mark:
+- Verify that clicking on a **Menu** category icon displays the correct filtered menu items :heavy_check_mark:
+- Confirm that the appropriate heading is displayed for the selected category :heavy_check_mark:
+- Confirm that all expected menu items are displayed for each category :heavy_check_mark:
+- Verify that every other menu item has a background colour matching the currently selected theme :heavy_check_mark:
+- Verify that the correct **name** is displayed for each menu item :heavy_check_mark:
+- Confirm that the correct **description** is displayed for each menu item :heavy_check_mark:
+- Confirm that the correct **allergens** are displayed for each menu item :heavy_check_mark:
+- Verify that clicking on an allergen directs the user to a page with more information on it :heavy_check_mark:
+- Verify that the **price** for each menu item is displayed correctly :heavy_check_mark:
+- Confirm that the quantity input works as expected :heavy_check_mark:
+- Confirm that the **Add To Order** button is displayed correctly :heavy_check_mark:
+- Verify that clicking the **Add To Order** buttons adds the menu item and quantity to the cart, the cart amount is updated and a success toast is displayed to inform the user that an item has been successfully added to their order :heavy_check_mark:
 
 ## Bugs
 
