@@ -34,6 +34,8 @@
       - [Order Details](#order-details)
       - [Delivery Details](#delivery-details)
       - [Billing Info](#billing-info)
+    - [Image Management Page](#image-management-page)
+    - [Edit Image Page](#edit-image-page)
   - [Bugs](#bugs)
     - [Development Bugs](#development-bugs)
       - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
@@ -263,6 +265,29 @@ This section provides information on sources from Irish suppliers and winning aw
 - Confirm that that the section heading displays correctly :heavy_check_mark:
 - Confirm that the section has a background colour matching the currently selected theme :heavy_check_mark:
 - Verify that the correct **Order Sub-Total**, **Delivery** charge and **Order Total** are displayed :heavy_check_mark:
+
+### Image Management Page
+
+- Verify that the page heading displays correctly :heavy_check_mark:
+- Verify that font colour changes when **dark mode** is selected for targeted text :heavy_check_mark:
+- Confirm that the correct background colour is displayed for each image card as determined by the selected theme :heavy_check_mark:
+- Confirm that all the images for the **Home**, **About** and **Menu** pages are displayed for editing :heavy_check_mark:
+- Verify that the correct **friendly name** is displayed for each image :heavy_check_mark:
+- Confirm that an **Edit** button is displayed for each image :heavy_check_mark:
+- Confirm that clicking on an image's **Edit** redirects the user to the **Edit Image** for the selected image :heavy_check_mark:
+
+### Edit Image Page
+
+- Verify that the page heading displays correctly :heavy_check_mark:
+- Verify that the correct **friendly name** is displayed for the image to be edited :heavy_check_mark:
+- Confirm that an alert message is displayed letting the user know which image they're about to edit :heavy_check_mark:
+- Confirm that the correct image which is currently saved is displayed to let the user know what they're going to change :heavy_check_mark:
+- Verify that the *current* image URL is displayed :heavy_check_mark:
+- Verify that clicking on the **Choose File** button opens and explorer to select an image to upload :heavy_check_mark:
+- Confirm that the **Back To Images** button is displayed and redirects the user to the **Image Management** page when clicked :heavy_check_mark:
+- Confirm that the **Change Image** button is displayed and redirects the user to the **Image Management** page when clicked :heavy_check_mark:
+- Verify that the image in question has been changed by inspecting the image displayed in the relevant section on the **Image Management** page :heavy_check_mark:
+- Confirm that a **success** notification is displayed :heavy_check_mark:
 
 ## Bugs
 
