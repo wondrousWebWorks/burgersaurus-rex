@@ -5,9 +5,13 @@ from django.contrib import messages
 from .models import Image
 from .forms import ImageForm
 
-
+@login_required
 def images(request):
     """ Renders all image entries in the Image model """
+    if not request.user.is_superuser:
+        messages.info(request, 'Oops! You don\'t have the required permission to access this page. Login with the required credentials to do so!')
+        return redirect(reverse('home'))
+
     images = Image.objects.all()
 
     home = images.filter(page__name__in=['home'])
