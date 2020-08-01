@@ -1,12 +1,59 @@
 # Testing & Bugs
 
+- [Testing & Bugs](#testing--bugs)
+  - [Testing](#testing)
+    - [HTML Validation](#html-validation)
+    - [Responsiveness](#responsiveness)
+      - [Desired Result](#desired-result)
+      - [Steps Taken to Ensure Result](#steps-taken-to-ensure-result)
+      - [Verdict](#verdict)
+  - [Behaviour of site components](#behaviour-of-site-components)
+    - [Navbar](#navbar)
+  - [Behaviour of individual pages](#behaviour-of-individual-pages)
+    - [Home page](#home-page)
+  - [Bugs](#bugs)
+    - [Development Bugs](#development-bugs)
+      - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
+      - [Navbar Displayed Wider Than Screen Width on Mobile Devices](#navbar-displayed-wider-than-screen-width-on-mobile-devices)
+      - [Dark and Light Mode Text Colour Change in Menu App](#dark-and-light-mode-text-colour-change-in-menu-app)
+
+## Testing
+
+Manual testing was performed for this project due to time constraints.
+
+### HTML Validation
+
+The deployed site was run through an online [HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fburgersaurus-rex.herokuapp.com%2F), and though warnings were returned for content within `article` and `section` tags not having headings, it was considered not to be important as these sections were designed not to have them.
+
+### Responsiveness
+
+#### Desired Result
+
+The site is displayed on any screen size without compromising legibility and eliminating screen and element overflow.
+
+#### Steps Taken to Ensure Result
+
+Bootstrap was used as a library to create Burgersaurus Rex. In particular, its grid system was used extensively to ensure responsiveness on any screen size. It proved necessary to use CSS media queries to display the content as intended on mobile and tablet devices.
+
+In addition to testing using responsiveness using Chrome Developer Tools Microsoft Edge Developer Tools and Firefox Developer Tools, these physical devices were also used for testing:
+
+- Sony Xperia Xa2
+- Samsung J5, Galaxy S10 Lite
+- Apple iPhone X, iPad Pro
+- Amazon Fire HD 7 Inch tablet
+- Dell Inspiron 5490 Laptop
+
+#### Verdict
+
+The app adapts to all tested screen sizes and devices and displays as expected. :heavy_check_mark:
+
 ## Behaviour of site components
 
 ### Navbar
 
 - 
 
-## Behaviour of indivudual pages
+## Behaviour of individual pages
 
 ### Home page
 
@@ -22,7 +69,7 @@
 
 - **Fix**
 
-    I added an if statement in `stripe-elements.js` to determine whether the checkbox element exists before trying to check its status and to set the value explicitely as `false` if no checkbox is found.
+    I added an if statement in `stripe-elements.js` to determine whether the checkbox element exists before trying to check its status and to set the value explicitly as `false` if no checkbox is found.
 
 - **Verdict**
 
@@ -36,7 +83,7 @@
 
 - **Fix**
 
-    Absolute positioning was used for both icons on mobile devices in portait orientation.
+    Absolute positioning was used for both icons on mobile devices in portrait orientation.
 
 - **Verdict**
 
@@ -50,7 +97,7 @@
 
 - **Fix**
 
-    I removed the CSS styling, and used the `divisibleby` template tag to add the approprate class to menu items where the font colour requires changing in dark mode.
+    I removed the CSS styling, and used the `divisibleby` template tag to add the appropriate class to menu items where the font colour requires changing in dark mode.
 
 - **Verdict**
 
