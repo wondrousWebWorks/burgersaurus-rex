@@ -18,10 +18,10 @@
     - [Navbar (Navigation Bar)](#navbar-navigation-bar)
     - [Theme Selector](#theme-selector)
     - [Footer](#footer)
-  - [Behaviour of Site Components](#behaviour-of-site-components)
-    - [Navbar](#navbar)
   - [Behaviour of Individual Pages](#behaviour-of-individual-pages)
     - [Home Page](#home-page)
+      - [Carousel](#carousel)
+      - [Delivery Information](#delivery-information)
   - [Bugs](#bugs)
     - [Development Bugs](#development-bugs)
       - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
@@ -127,15 +127,26 @@ As no actual social media accounts exist for this fictional company, links were 
 - Confirm that the social media icons redirect the user to the relevant social media site upon clicking it :heavy_check_mark:
 - Confirm that the order of footer components change when viewed on mobile devices in portrait mode :heavy_check_mark:
 
-## Behaviour of Site Components
-
-### Navbar
-
-- 
-
 ## Behaviour of Individual Pages
 
 ### Home Page
+
+#### Carousel
+
+- Verify that the expected background images are displayed in carousel slides :heavy_check_mark:
+- Verify that the expected text is displayed on carousel slides :heavy_check_mark:
+- Confirm that the CTA (Call to Action) buttons animate correctly on hover :heavy_check_mark:
+- Confirm that the CTA buttons link to the expected pages :heavy_check_mark:
+- Confirm that the *carousel indicators* and *carousel selectors* display correctly :heavy_check_mark:
+- Verify that the carousel animations work as expected when navigating to new slides :heavy_check_mark:
+- Verify that the background shadow effect is visibly to improve legibility of carousel text :heavy_check_mark:
+
+#### Delivery Information
+
+- Verify that the correct images are displayed for each step of the ordering process :heavy_check_mark:
+- Verify that the expected Animate On Scroll (AOS) effects are shown when scrolling to the **Delivery Information** section :heavy_check_mark:
+- Confirm that ordering of the images and text change when viewed on mobile devices in portrait orientation :heavy_check_mark:
+- Confirm that the link *Browse* for the first image's text direct the user to the **Menu** page :heavy_check_mark:
 
 ## Bugs
 
