@@ -24,6 +24,7 @@
       - [Delivery Information](#delivery-information)
       - [Information Section](#information-section)
     - [Menu Page](#menu-page)
+    - [Cart Page](#cart-page)
   - [Bugs](#bugs)
     - [Development Bugs](#development-bugs)
       - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
@@ -177,6 +178,21 @@ This section provides information on sources from Irish suppliers and winning aw
 - Confirm that the quantity input works as expected :heavy_check_mark:
 - Confirm that the **Add To Order** button is displayed correctly :heavy_check_mark:
 - Verify that clicking the **Add To Order** buttons adds the menu item and quantity to the cart, the cart amount is updated and a success toast is displayed to inform the user that an item has been successfully added to their order :heavy_check_mark:
+
+### Cart Page
+
+- Verify that the page heading displays correctly :heavy_check_mark:
+- Verify that the page heading's colour changes when **dark mode** is selected :heavy_check_mark:
+- Confirm that the cart table's header content is displayed correctly :heavy_check_mark:
+- Confirm that the **Product Info**, **Price**, **Quantity** and **Subtotal** are displayed correctly for each cart item :heavy_check_mark:
+- Confirm that every other cart item has a background colour matching that of the theme :heavy_check_mark:
+- Verify that cart items with a background colour matching the page background change font colour when **dark mode** is selected :heavy_check_mark:
+- Verify that the **quantity** for each cart item can be updated :heavy_check_mark:
+- Verify that cart items can be removed from the cart :heavy_check_mark:
+- Confirm that the **Order Sub-total**, **Delivery Charge** and **Order Total** are displayed correctly :heavy_check_mark:
+- Confirm that the **Order Sub-total**, **Delivery Charge** and **Order Total** font colour changes when **dark mode** is active :heavy_check_mark:
+- Verify that the **Go To Menu** button directs the user back to the menu :heavy_check_mark:
+- Verify that the **Checkout** button directs the user to the **Checkout** page :heavy_check_mark:
 
 ## Bugs
 
