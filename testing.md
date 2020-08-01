@@ -29,6 +29,11 @@
       - [Payment Form](#payment-form)
       - [Order Summary](#order-summary)
       - [Stripe](#stripe)
+    - [Checkout Success Page](#checkout-success-page)
+      - [Order Info](#order-info)
+      - [Order Details](#order-details)
+      - [Delivery Details](#delivery-details)
+      - [Billing Info](#billing-info)
   - [Bugs](#bugs)
     - [Development Bugs](#development-bugs)
       - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
@@ -226,6 +231,38 @@ This section provides information on sources from Irish suppliers and winning aw
 #### Stripe
 
 - Verify in **Stripe** account that the payment was successful and that the webhooks were handled successfully :heavy_check_mark:
+
+### Checkout Success Page
+
+- Verify that the page heading displays correctly :heavy_check_mark:
+- Verify that the confirmation email notification displays below the page heading with the correct email address listed :heavy_check_mark:
+- Verify that font colour changes when **dark mode** is selected for targeted text :heavy_check_mark:
+- Confirm that a **Success Toast** is displayed at the top right of the screen with the order number and email address for the confirmation email :heavy_check_mark:
+- Confirm that the **Check out the menu for next time** button is displayed and directs the user to the *menu* page :heavy_check_mark:
+
+#### Order Info
+
+- Confirm that that the section heading displays correctly :heavy_check_mark:
+- Confirm that the section has a background colour matching the currently selected theme :heavy_check_mark:
+- Verify that the correct **Order Number** and **Order Date** are displayed :heavy_check_mark:
+
+#### Order Details
+
+- Confirm that that the section heading displays correctly :heavy_check_mark:
+- Confirm that the section has a background colour matching the currently selected theme :heavy_check_mark:
+- Verify that the correct **Menu Item**, **quantity** and **price** are displayed for each order item :heavy_check_mark:
+
+#### Delivery Details
+
+- Confirm that that the section heading displays correctly :heavy_check_mark:
+- Confirm that the section has a background colour matching the currently selected theme :heavy_check_mark:
+- Verify that the correct delivery details (**Full Name**, **Address 1**, **Address 2 if present**, **Town or City**, **Postal Code** and **phone number**) are displayed :heavy_check_mark:
+
+#### Billing Info
+
+- Confirm that that the section heading displays correctly :heavy_check_mark:
+- Confirm that the section has a background colour matching the currently selected theme :heavy_check_mark:
+- Verify that the correct **Order Sub-Total**, **Delivery** charge and **Order Total** are displayed :heavy_check_mark:
 
 ## Bugs
 
