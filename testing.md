@@ -14,6 +14,8 @@
   - [Authentication](#authentication)
     - [Menu App](#menu-app)
     - [Images App](#images-app)
+  - [Behaviour of Shared Site Components](#behaviour-of-shared-site-components)
+    - [Navbar (Navigation Bar)](#navbar-navigation-bar)
   - [Behaviour of Site Components](#behaviour-of-site-components)
     - [Navbar](#navbar)
   - [Behaviour of Individual Pages](#behaviour-of-individual-pages)
@@ -90,6 +92,18 @@ A user has be logged in as a super user in order to Add, Update or Delete a prod
 
 As the images in the Burgersaurus Rex app aren't linked to products or any other apps which can expand the site, users don't have the ability to **add** images.  Instead, they're only allowed to update the images already present within the Image app. A user needs to be logged in as a super user to Update images. Should they try to access the related URLs by typing them directly in the browser, they're informed of the need to be logged in with the proper credentials and redirected to the **Home** page.
 
+## Behaviour of Shared Site Components
+
+### Navbar (Navigation Bar)
+
+- Click on navigation links to confirm correct redirection to the appropriate pages :heavy_check_mark:
+- Verify correct colour transition of navigation links on hover :heavy_check_mark:
+- Verify that the so-called **'burger'** menu icon displays on smaller screens :heavy_check_mark:
+- Verify that on clicking of the **'burger** icon triggers visibility of the vertical navigation menu for smaller screens :heavy_check_mark:
+- Verify that using the search input redirects the user to the **Menu** app which displays the relevant results or a message stating that no results were found :heavy_check_mark:
+- Confirm that the navbar's height and background colour changes when scrolling past a specified height on screen :heavy_check_mark:
+- Confirm that the navbar stays fixed at the top of the screen and is displayed on top of all other site content :heavy_check_mark:
+
 ## Behaviour of Site Components
 
 ### Navbar
@@ -116,7 +130,7 @@ As the images in the Burgersaurus Rex app aren't linked to products or any other
 
 - **Verdict**
 
-    This bug was squashed and the checkout process now works for authenticated and non-authenticated users.
+    This bug was squashed and the checkout process now works for authenticated and non-authenticated users. :heavy_check_mark:
 
 #### Navbar Displayed Wider Than Screen Width on Mobile Devices
 
@@ -130,7 +144,7 @@ As the images in the Burgersaurus Rex app aren't linked to products or any other
 
 - **Verdict**
 
-    This bug was squashed and the icons in the navbar are now displayed as expected with zero horizontal scrolling required to view them.
+    This bug was squashed and the icons in the navbar are now displayed as expected with zero horizontal scrolling required to view them. :heavy_check_mark:
 
 #### Dark and Light Mode Text Colour Change in Menu App
 
@@ -144,5 +158,4 @@ As the images in the Burgersaurus Rex app aren't linked to products or any other
 
 - **Verdict**
 
-    This bug was squashed, and the light and dark mode font colours display as expected.
-
+    This bug was squashed, and the light and dark mode font colours display as expected. :heavy_check_mark:
