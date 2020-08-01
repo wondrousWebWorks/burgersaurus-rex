@@ -16,6 +16,7 @@
     - [Images App](#images-app)
   - [Behaviour of Shared Site Components](#behaviour-of-shared-site-components)
     - [Navbar (Navigation Bar)](#navbar-navigation-bar)
+    - [Theme Selector](#theme-selector)
   - [Behaviour of Site Components](#behaviour-of-site-components)
     - [Navbar](#navbar)
   - [Behaviour of Individual Pages](#behaviour-of-individual-pages)
@@ -103,6 +104,16 @@ As the images in the Burgersaurus Rex app aren't linked to products or any other
 - Verify that using the search input redirects the user to the **Menu** app which displays the relevant results or a message stating that no results were found :heavy_check_mark:
 - Confirm that the navbar's height and background colour changes when scrolling past a specified height on screen :heavy_check_mark:
 - Confirm that the navbar stays fixed at the top of the screen and is displayed on top of all other site content :heavy_check_mark:
+
+### Theme Selector
+
+- Verify that the **Theme Selector** is displayed as a fixed circle on the bottom right of the screen :heavy_check_mark:
+- Click on **Theme Selector** to confirm the animation of *theme options* works by translating them from off-screen to on-screen :heavy_check_mark:
+- Confirm that each *theme option* is displayed with the correct border and background colours :heavy_check_mark:
+- Verify that hovering over a *theme option* triggers a vertical translation animation :heavy_check_mark:
+- Verify that clicking on a theme sets the colours across the site to the selected theme's colours :heavy_check_mark:
+- Verify that clicking on the *dark mode* option triggers the dark background on all pages and adjust font colour where necessary to make it legible :heavy_check_mark:
+- Confirm that the selected theme and dark mode selections persists across different app pages :heavy_check_mark:
 
 ## Behaviour of Site Components
 
