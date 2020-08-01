@@ -22,6 +22,7 @@
     - [Home Page](#home-page)
       - [Carousel](#carousel)
       - [Delivery Information](#delivery-information)
+      - [Information Section](#information-section)
   - [Bugs](#bugs)
     - [Development Bugs](#development-bugs)
       - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
@@ -147,6 +148,15 @@ As no actual social media accounts exist for this fictional company, links were 
 - Verify that the expected Animate On Scroll (AOS) effects are shown when scrolling to the **Delivery Information** section :heavy_check_mark:
 - Confirm that ordering of the images and text change when viewed on mobile devices in portrait orientation :heavy_check_mark:
 - Confirm that the link *Browse* for the first image's text direct the user to the **Menu** page :heavy_check_mark:
+
+#### Information Section
+
+This section provides information on sources from Irish suppliers and winning awards
+
+- Confirm that the correct images are displayed for each of the two sections :heavy_check_mark:
+- Verify that the correct background gradient colours are displayed for each image wrapper :heavy_check_mark:
+- Verify that the the correct text is displayed for each section :heavy_check_mark:
+- Confirm that the font colour for the text changes when **dark mode** is selected :heavy_check_mark:
 
 ## Bugs
 
