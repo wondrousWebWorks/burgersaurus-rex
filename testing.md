@@ -7,6 +7,10 @@
       - [Desired Result](#desired-result)
       - [Steps Taken to Ensure Result](#steps-taken-to-ensure-result)
       - [Verdict](#verdict)
+    - [Cross-browser Compatibility](#cross-browser-compatibility)
+      - [Desired Result](#desired-result-1)
+      - [Steps Taken to Ensure Result](#steps-taken-to-ensure-result-1)
+      - [Verdict](#verdict-1)
   - [Behaviour of site components](#behaviour-of-site-components)
     - [Navbar](#navbar)
   - [Behaviour of individual pages](#behaviour-of-individual-pages)
@@ -46,6 +50,30 @@ In addition to testing using responsiveness using Chrome Developer Tools Microso
 #### Verdict
 
 The app adapts to all tested screen sizes and devices and displays as expected. :heavy_check_mark:
+
+### Cross-browser Compatibility
+
+#### Desired Result
+
+Display correctly in any browser users are likely to use, except for older versions of Internet Explorer.
+
+#### Steps Taken to Ensure Result
+
+A a range of browsers were used to test the site, and where I did not have access to it - such as Safari - I borrowed Apple devices to test for potential bugs.
+
+As Firefox does not support the WebKit browser rendering engine, steps were taken to ensure an approximation of the same functionality and styling in the Firefox browser. An example of this would be custom scrollbar styling, where Firefox uses the more modern CSS scrollbar styling tool. Including this not only makes the scrollbars display correctly in Firefox, but also makes the site future proof as the WebKit specification has been abandoned by W3C (World Wide Web Consortium) and will be deprecated eventually.
+
+Browsers tested include:
+
+- [Chrome](https://www.google.com/chrome/) - desktop and mobile
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/) - desktop and mobile
+- [Opera](https://www.opera.com/computer/opera) - desktop
+- [Opera Mini](https://www.opera.com/mobile/mini) - mobile
+- [DuckDuckGo](https://duckduckgo.com/app) - mobile
+
+#### Verdict
+
+No obvious bugs were detected in any of the tested browsers. :heavy_check_mark:
 
 ## Behaviour of site components
 
