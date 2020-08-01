@@ -27,3 +27,32 @@
 - **Verdict**
 
     This bug was squashed and the checkout process now works for authenticated and non-authenticated users.
+
+#### Navbar Displayed Wider Than Screen Width on Mobile Devices
+
+- **Bug**
+
+    The position of the **Burger** icon to toggle the navigation dropdown on mobile screens caused it to be displayed off screen. This in turn resulted in a fair amount of horizontal scroll needed to view the **Cart** and **Burger** icons.
+
+- **Fix**
+
+    Absolute positioning was used for both icons on mobile devices in portait orientation.
+
+- **Verdict**
+
+    This bug was squashed and the icons in the navbar are now displayed as expected with zero horizontal scrolling required to view them.
+
+#### Dark and Light Mode Text Colour Change in Menu App
+
+- **Bug**
+
+    When viewing the **full menu**, the ordering of the individual menu items did not behave as expected causing the CSS `nth-child` rule I created to be misapplied. This in turn caused the font colour to be changed in menu items that did not require it which resulted in the text being illegible. This was strange, as this behaviour only manifested when viewing the **full menu** and with none of the other menu categories.
+
+- **Fix**
+
+    I removed the CSS styling, and used the `divisibleby` template tag to add the approprate class to menu items where the font colour requires changing in dark mode.
+
+- **Verdict**
+
+    This bug was squashed, and the light and dark mode font colours display as expected.
+
