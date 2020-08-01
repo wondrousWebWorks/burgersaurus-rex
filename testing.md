@@ -26,6 +26,8 @@
     - [Menu Page](#menu-page)
     - [Cart Page](#cart-page)
     - [Checkout Page](#checkout-page)
+      - [Payment Form](#payment-form)
+      - [Order Summary](#order-summary)
       - [Stripe](#stripe)
   - [Bugs](#bugs)
     - [Development Bugs](#development-bugs)
@@ -198,6 +200,8 @@ This section provides information on sources from Irish suppliers and winning aw
 
 ### Checkout Page
 
+#### Payment Form
+
 - Verify that the page heading displays correctly :heavy_check_mark:
 - Verify that font colour changes when **dark mode** is selected for targeted text :heavy_check_mark:
 - Confirm that the Details section of the payment form displays correctly with all inputs present and placeholders displaying :heavy_check_mark:
@@ -208,13 +212,16 @@ This section provides information on sources from Irish suppliers and winning aw
 - Confirm that buttons to **register** or **sign in** are displayed instead of the checkbox for users not logged into the site :heavy_check_mark:
 - Confirm that the **register** and **sign in** buttons direct the user to the appropriate page when clicked :heavy_check_mark:
 - Verify that an error message is displayed below the **Payment** section when invalid card details are entered :heavy_check_mark:
+- Verify that an *loading spinner* is displayed when the **Checkout** button is clicked :heavy_check_mark:
+- Verify that the **Checkout** button is *disabled* when the **Checkout** button is clicked :heavy_check_mark:
+
+#### Order Summary
+
 - Verify that the **Order Summary** heading is displayed :heavy_check_mark:
 - Verify that the **Order Summary** table headers (Product Info, Price, Qty, Subtotal) are displayed :heavy_check_mark:
 - Confirm that all items in the order are displayed in the **Order Summary** table :heavy_check_mark:
 - Confirm that every other item in the **Order Summary** has a background colour matching that of the theme :heavy_check_mark:
 - Confirm that the **Order Sub-total**, **Delivery Charge** and **Order Total** are displayed correctly :heavy_check_mark:
-- Verify that an *loading spinner* is displayed when the **Checkout** button is clicked :heavy_check_mark:
-- Verify that the **Checkout** button is *disabled* when the **Checkout** button is clicked :heavy_check_mark:
 
 #### Stripe
 
