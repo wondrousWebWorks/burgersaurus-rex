@@ -72,31 +72,28 @@
         }
     }
 
-    #landing-page-info-boxes {
+    .info-row {
+        .info-box {
+            height: auto;
 
-        .landing-page-info-row {
-            .landing-page-info-box {
+            h2 {
+                margin-top: 15vh;
+                width: 90%;
+                font-size: 2rem;
+            }
+
+            img {
+                width: 60%;
                 height: auto;
-    
-                h2 {
-                    margin-top: 15vh;
-                    width: 90%;
-                    font-size: 2rem;
-                }
-    
-                img {
-                    width: 60%;
-                    height: auto;
-                }
-        
-                p {
-                    font-size: 1.2rem;
-                }
             }
     
-            .landing-page-info-image-wrapper {
-                clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+            p {
+                font-size: 1.2rem;
             }
+        }
+
+        .info-image-wrapper {
+            clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
         }
     }
 
