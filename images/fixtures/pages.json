@@ -1,0 +1,26 @@
+[
+    {
+        "model": "images.page",
+        "pk": 1,
+        "fields": {
+            "name": "home"
+           
+        }
+    },
+    {
+        "model": "images.page",
+        "pk": 2,
+        "fields": {
+            "name": "about"
+           
+        }
+    },
+    {
+        "model": "images.page",
+        "pk": 3,
+        "fields": {
+            "name": "menu"
+           
+        }
+    }
+]
