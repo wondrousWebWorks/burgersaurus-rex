@@ -2,10 +2,12 @@
 {% load static %}
 
 {% block content %}
-    <div class="auth-container">
-        <div class="allauth-form-inner-content">
-            {% block inner_content %}
-            {% endblock %}
+    <div class="container-fluid auth-container">
+        <div class="row">
+            <div class="col-12 col-md-4 pl-md-5 ml-md-5 allauth-form-inner-content">
+                {% block inner_content %}
+                {% endblock %}
+            </div>
         </div>
     </div>
 {% endblock %}

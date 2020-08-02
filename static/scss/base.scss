@@ -505,17 +505,14 @@ fieldset {
 
 .auth-container {
     height: 100vh !important;
-    width: 100% !important;
     background-image: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592430542/burgersaurus/header-1.jpg') !important;
     background-size: cover;
     clip-path: polygon(0% 0%, 100% 0%, 100% 88%, 88% 91%, 76% 91%, 64% 94%, 52% 94%, 40% 96%, 29% 95%, 18% 98%, 9% 97%, 0% 100%);
 
     .allauth-form-inner-content {
-        width: 35%;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 10%;
 
         h2, p {
             color: #f7f7f7;
