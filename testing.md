@@ -24,7 +24,8 @@
       - [Delivery Information](#delivery-information)
       - [Information Section](#information-section)
     - [Menu Page](#menu-page)
-    - [Product Management Page](#product-management-page)
+    - [Add Product Page](#add-product-page)
+    - [Edit Product Page](#edit-product-page)
     - [Cart Page](#cart-page)
     - [Checkout Page](#checkout-page)
       - [Payment Form](#payment-form)
@@ -190,8 +191,11 @@ This section provides information on sources from Irish suppliers and winning aw
 - Confirm that the quantity input works as expected :heavy_check_mark:
 - Confirm that the **Add To Order** button is displayed correctly :heavy_check_mark:
 - Verify that clicking the **Add To Order** buttons adds the menu item and quantity to the cart, the cart amount is updated and a success toast is displayed to inform the user that an item has been successfully added to their order :heavy_check_mark:
+- Verify that the **Edit** and **Delete** buttons are displayed for authenticated superusers :heavy_check_mark:
+- Verify that clicking the **Edit** button for a given menu item redirects the user to the **Edit Product** page with the form pre-filled with data :heavy_check_mark:
+- Confirm that clicking the **Delete** button for a given menu item removes it from the menu :heavy_check_mark:
 
-### Product Management Page
+### Add Product Page
 
 - Verify that the page heading displays correctly :heavy_check_mark:
 - Verify that the page heading's colour changes when **dark mode** is selected :heavy_check_mark:
@@ -204,6 +208,23 @@ This section provides information on sources from Irish suppliers and winning aw
 - Verify that clicking the **Add Product** button with a valid form add the product to the menu :heavy_check_mark:
 - Confirm that a success message is displayed notifying the user that product was added successfully :heavy_check_mark:
 - Confirm that the user is redirected to the **Menu** page :heavy_check_mark:
+
+### Edit Product Page
+
+- Verify that the page heading displays correctly :heavy_check_mark:
+- Verify that the page heading's colour changes when **dark mode** is selected :heavy_check_mark:
+- Confirm that the **Edit Product** form has a background colour matching that of the theme :heavy_check_mark:
+- Confirm that an alert message is displayed notifying the user of which product is being edited :heavy_check_mark:
+- Confirm that the **Category** dropdown features all categories and that the product's existing category is selected :heavy_check_mark:
+- Verify that the product's existing *name* is displayed in the **Name** input :heavy_check_mark:
+- Verify that the product's existing *description* is displayed in the **Description** input :heavy_check_mark:
+- Confirm that the product's existing price is listed in the **Price** input :heavy_check_mark:
+- Confirm that the **Is vegetarian** checkbox is selected or not depending on the product :heavy_check_mark:
+- Confirm that the **Allergen** dropdown features all allergens and tha the product's existing allergens are selected :heavy_check_mark:
+- Verify that the **Back To Menu** button redirects the user back to the menu :heavy_check_mark: :heavy_check_mark:
+- Verify that clicking the **Edit Product** button with a valid form edits the product's values :heavy_check_mark: :heavy_check_mark:
+- Confirm that the user is then redirected to the **Menu** page :heavy_check_mark:
+- Confirm that a **success** message is displayed notifying the user that the product has been edited successfully :heavy_check_mark:
 
 ### Cart Page
 
