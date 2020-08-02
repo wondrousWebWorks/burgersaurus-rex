@@ -24,6 +24,7 @@
       - [Delivery Information](#delivery-information)
       - [Information Section](#information-section)
     - [Menu Page](#menu-page)
+    - [Product Management Page](#product-management-page)
     - [Cart Page](#cart-page)
     - [Checkout Page](#checkout-page)
       - [Payment Form](#payment-form)
@@ -189,6 +190,20 @@ This section provides information on sources from Irish suppliers and winning aw
 - Confirm that the quantity input works as expected :heavy_check_mark:
 - Confirm that the **Add To Order** button is displayed correctly :heavy_check_mark:
 - Verify that clicking the **Add To Order** buttons adds the menu item and quantity to the cart, the cart amount is updated and a success toast is displayed to inform the user that an item has been successfully added to their order :heavy_check_mark:
+
+### Product Management Page
+
+- Verify that the page heading displays correctly :heavy_check_mark:
+- Verify that the page heading's colour changes when **dark mode** is selected :heavy_check_mark:
+- Confirm that the **Add Product** form has a background colour matching that of the theme :heavy_check_mark:
+- Confirm that the **Category** dropdown features all categories :heavy_check_mark:
+- Verify that all input fields are displayed :heavy_check_mark:
+- Verify that required fields need an input for the form to be validated :heavy_check_mark:
+- Confirm that all **Allergens** are displayed in the allergen multiple select dropdown :heavy_check_mark:
+- Verify that the **Back To Menu** button redirects the user back to the menu :heavy_check_mark:
+- Verify that clicking the **Add Product** button with a valid form add the product to the menu :heavy_check_mark:
+- Confirm that a success message is displayed notifying the user that product was added successfully :heavy_check_mark:
+- Confirm that the user is redirected to the **Menu** page :heavy_check_mark:
 
 ### Cart Page
 
