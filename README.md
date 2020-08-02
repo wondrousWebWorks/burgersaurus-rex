@@ -213,6 +213,7 @@ Image | image | upload_to='images/', null=True, blank=False | ImageField
 - [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
 - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
 - [psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
+- [django-storages](https://django-storages.readthedocs.io/en/latest/)
 - [flake8](https://pypi.org/project/flake8/)
 - [Stripe](https://stripe.com/ie)
 - [PostgreSQL](https://www.postgresql.org/)
