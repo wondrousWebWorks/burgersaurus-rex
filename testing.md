@@ -38,6 +38,7 @@
       - [Billing Info](#billing-info)
     - [Image Management Page](#image-management-page)
     - [Edit Image Page](#edit-image-page)
+    - [Allauth Pages (Authentication)](#allauth-pages-authentication)
   - [Bugs](#bugs)
     - [Development Bugs](#development-bugs)
       - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
@@ -324,6 +325,18 @@ This section provides information on sources from Irish suppliers and winning aw
 - Confirm that the **Change Image** button is displayed and redirects the user to the **Image Management** page when clicked :heavy_check_mark:
 - Verify that the image in question has been changed by inspecting the image displayed in the relevant section on the **Image Management** page :heavy_check_mark:
 - Confirm that a **success** notification is displayed :heavy_check_mark:
+
+### Allauth Pages (Authentication)
+
+There are simply too many pages here to list individually within my time constraints. A summary is provided below which is true for all **allauth** pages where applicable.
+
+- Verify that the page heading displays correctly :heavy_check_mark:
+- Verify that all inputs are displayed as expected :heavy_check_mark:
+- Confirm that **buttons** for returning to the **Home** page redirect the user as expected :heavy_check_mark:
+- Confirm that forms require validation to be submitted :heavy_check_mark:
+- Verify that **buttons** for submitting forms do so and redirect the user back the **Home** page :heavy_check_mark:
+- Verify that the correct background image is displayed on all **authentication** pages :heavy_check_mark:
+- Verify that the **Confirm Email** page displays as expected and allows the user to confirm their email address :heavy_check_mark:
 
 ## Bugs
 
