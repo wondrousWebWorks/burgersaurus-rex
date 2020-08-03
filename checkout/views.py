@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse, \
+                             get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.views.decorators.http import require_POST
 from django.conf import settings
@@ -70,14 +71,16 @@ def checkout(request):
                         order_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "It seems that one of the projects you selected couldn't be found in our database. "
+                        "It seems that one of the projects you selected \
+                        couldn't be found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout-success', args=[order.order_number]))
+            return redirect(reverse('checkout-success',
+                            args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')

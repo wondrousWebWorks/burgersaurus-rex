@@ -10,7 +10,8 @@ from profiles.models import UserProfile
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-                                    null=True, blank=True, related_name='orders')
+                                     null=True, blank=True,
+                                     related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -19,11 +20,15 @@ class Order(models.Model):
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
-    order_sub_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2,
+                                        null=False, default=0)
+    order_sub_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                          null=False, default=0)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
     original_cart = models.TextField(null=False, blank=False, default='')
-    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False,
+                                  blank=False, default='')
 
     def _generate_order_number(self):
         """
@@ -35,7 +40,9 @@ class Order(models.Model):
         """
         Update order total with delivery cost each time an item is added
         """
-        self.order_sub_total = self.orderitems.aggregate(Sum('order_item_total'))['order_item_total__sum'] or 0
+        self.order_sub_total = self.orderitems.aggregate(
+            Sum('order_item_total')
+            )['order_item_total__sum'] or 0
         self.delivery_cost = settings.DELIVERY_CHARGE
         self.order_total = self.order_sub_total + self.delivery_cost
         self.save()
@@ -53,10 +60,15 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='orderitems')
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, null=False, blank=False,
+                              on_delete=models.CASCADE,
+                              related_name='orderitems')
+    product = models.ForeignKey(Product, null=False, blank=False,
+                                on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    order_item_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    order_item_total = models.DecimalField(max_digits=6, decimal_places=2,
+                                           null=False, blank=False,
+                                           editable=False)
 
     def save(self, *args, **kwargs):
         """

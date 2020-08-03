@@ -9,7 +9,9 @@ def about(request):
 
     about_header = images.filter(image_name__icontains='about-header')[0]
     about_farm = images.filter(image_name__icontains='about-farm')[0]
-    about_hydroponics = images.filter(image_name__icontains='about-hydroponics')[0]
+    about_hydroponics = images.filter(
+        image_name__icontains='about-hydroponics'
+    )[0]
 
     template = 'about/about.html'
 

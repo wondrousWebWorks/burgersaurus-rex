@@ -9,7 +9,10 @@ class Page(models.Model):
 
 
 class Image(models.Model):
-    page = models.ForeignKey('Page', null=True, blank=True, on_delete=models.SET_NULL)
-    image_name = models.CharField(max_length=254, null=False, blank=False, default='default')
-    image_friendly_name = models.CharField(max_length=254, null=False, blank=False, default='Default')
+    page = models.ForeignKey('Page', null=True, blank=True,
+                             on_delete=models.SET_NULL)
+    image_name = models.CharField(max_length=254, null=False, blank=False,
+                                  default='default')
+    image_friendly_name = models.CharField(max_length=254, null=False,
+                                           blank=False, default='Default')
     image = models.ImageField(upload_to='images/', null=True, blank=False)
