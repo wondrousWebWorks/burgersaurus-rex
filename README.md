@@ -297,22 +297,23 @@ NOTE: The following **Python** and **PIP** commands are for Linux operating syst
        }
    ```
 
-   - Alternatively, open the `activate` file in a text editor like **nano** using the following command in the terminal when in your project's root directory:
+    - Alternatively, create a file called `env.py` in the root directory of your project and open it your IDE for editing
+    - In the `env.py` file, set your environment variables as follows:
 
-   `nano venv/bin/activate`
+    ```python
+        import os
+        os.environ["AWS_ACCESS_KEY_ID"] = "<your key here>"
+        os.environ["AWS_S3_REGION_NAME"] = "<your AWS S3 region name here>
+        os.environ["AWS_SECRET_ACCESS_KEY"] = "<your key here>"
+        os.environ["AWS_STORAGE_BUCKET_NAME"] = "<your AWS S3 bucket name here>"
+        os.environ["SECRET_KEY"] = "<your secret key here>"
+        os.environ["STRIPE_PUBLIC_KEY"] = "<your key here>"
+        os.environ["STRIPE_SECRET_KEY"] = "<your key here>"
+        os.environ["STRIPE_WH_SECRET"] = "<your key here>"
+        os.environ["DEVELOPMENT"] = "True"
+    ```
 
-   - Set the environment variables by adding the following text anywhere in the file as follows:
-
-   ```bash
-       export DEVELOPMENT=True
-       export SECRET_KEY=<your key here>
-       export STRIPE_PUBLIC_KEY=<your key here>
-       export STRIPE_SECRET_KEY=<your key here>
-       export STRIPE_WH_SECRET=<your key here>
-       export AWS_ACCESS_KEY_ID=<your key here>
-       export AWS_SECRET_ACCESS_KEY=<your key here>
-       export AWS_STORAGE_BUCKET_NAME=<your bucket name here>
-   ```
+    NOTE: Ensure that the filename `env.py` is added to the `.gitignore` file in your project's root directory
 
 9. Ensure that your virtual environment is activated using the command in step 6
 10. From the terminal in your IDE, migrate the database models to your database using the command:
