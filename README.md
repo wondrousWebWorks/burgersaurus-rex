@@ -43,6 +43,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
     - [Heroku Deployment](#heroku-deployment)
   - [Testing](#testing)
   - [Credits](#credits)
+  - [Acknowledgements](#acknowledgements)
   - [Disclaimer](#disclaimer)
 
 ## User Experience
@@ -412,7 +413,6 @@ NOTE: In order to deploy successfully to Heroku, both a *requirements.txt* file 
 21. Once successful deployment is indicated, click on **Open App** to view the deployed site
 22. Log into the site using your superuser credentials created earlier and verify your email address. You are now ready to use the app, Enjoy!
 
-
 ## Testing
 
 Testing details can be found in the testing.md file [here](https://github.com/wondrousWebWorks/burgersaurus-rex/blob/master/testing.md)
@@ -420,8 +420,17 @@ Testing details can be found in the testing.md file [here](https://github.com/wo
 ## Credits
 
 - [AOS](https://github.com/michalsnik/aos) (Animate On Scroll)
-- Ordering Process images were taken from [PNGTREE](https://pngtree.com/)
+- Ordering Process images on the Home Page were taken from [PNGTREE](https://pngtree.com/)
+- Information box images on the Home and About pages were taken from [PNGTREE](https://pngtree.com/)
 - All other images were taken from [Pexels](https://www.pexels.com/) and [Pixabay](https://pixabay.com/)
+
+## Acknowledgements
+
+I'd like to say thanks to my mentor, Simen Dehlin, for guiding from virtually being a complete beginner to where I am today. What I am today as a developer, and what I will eventually become, is a direct result of his excellent mentoring and guidance.
+
+I'd also like to thank Chris Zielinski for his help with Django and his endless patience to help me understand some of its more difficult concepts.
+
+Lastly, the whole of Code Institute including every single member of staff deserve a massive thank you for providing such an excellent learning platform and feeling of belonging during my studies.
 
 ## Disclaimer
 
