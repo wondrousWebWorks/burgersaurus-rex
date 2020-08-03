@@ -19,7 +19,7 @@ body {
     width: 100% !important;
 }
 
-/* Scrollbar */
+/* SCROLLBARS */
 ::-webkit-scrollbar {
     width: 1rem;
 }
@@ -44,7 +44,13 @@ a {
     cursor: pointer !important;
 }
 
-/* Buttons */
+.page-heading {
+    transform: rotateZ(-7deg);
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+/* BUTTONS */
 .btn-custom {
     display: inline-block;
     font-weight: 400;
@@ -69,6 +75,7 @@ a {
     color: #f7f7f7 !important;
 }
 
+/* NAVIGATION BAR */
 #navbar {
     height: 10vh;
     width: 100%;
@@ -153,6 +160,7 @@ a {
     height: 8vh !important;
 }
 
+/* DELIVERY BANNER */
 #delivery-banner {
     width: 100%;
     position: fixed;
@@ -170,6 +178,7 @@ a {
     top: 8vh !important;
 }
 
+/* HEADER */
 #header {
     height: 97vh;
     padding: 0;
@@ -249,6 +258,7 @@ a {
     }
 }
 
+/* ORDERING PROCESS */
 #ordering-process-wrapper {
     width: 100%;
     padding: 8vh 0;
@@ -276,7 +286,7 @@ a {
     }
 }
 
-
+/* INFORMATION ROW FOR HOME AND ABOUT PAGES */
 .info-row {
     transition: all .5s ease-in-out;
 
@@ -315,6 +325,7 @@ a {
     }
 }
 
+/* FOOTER */
 footer {
     background: linear-gradient(to right, rgba(var(--colour-4), 1), rgba(var(--colour-1), 1), rgba(var(--colour-5), 1));
     clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
@@ -358,16 +369,7 @@ footer {
     }
 }
 
-.page-heading {
-    transform: rotateZ(-7deg);
-    font-size: 2.5rem;
-    text-decoration: underline;
-}
-
-.headerless-container {
-    margin-top: 15vh !important;
-}
-
+/* MENU APP */
 #menu {
     h3 {
         font-size: 1.5rem;
@@ -470,6 +472,7 @@ fieldset {
     }
 }
 
+/* MESSAGES */
 .message-container {
     position: fixed;
     top: 5rem;
@@ -501,6 +504,7 @@ fieldset {
     font-family: "Open Sans", sans-serif;
 }
 
+/* AUTHENTICATION */
 .auth-container {
     height: 100vh !important;
     background-image: url('https://res.cloudinary.com/wondrouswebworks/image/upload/v1592430542/burgersaurus/header-1.jpg') !important;
@@ -559,7 +563,6 @@ fieldset {
 
         button,
         input[type='submit'] {
-            /* btn */
             display: inline-block;
             font-weight: 400;
             color: #f7f7f7;
@@ -572,12 +575,12 @@ fieldset {
             padding: .375rem .75rem;
             font-size: 1rem;
 
-            /* standard bootstrap btn transitions */
             transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
         }
     }
 }
 
+/* PROFILE APP */
 .profile-form-input {
     font-family: 'Open Sans', sans-serif;
 }
@@ -592,26 +595,6 @@ fieldset {
 .profile-form-input::placeholder {
     color: #aab7c4;
 }
-
-.custom-button-1 {
-    background-color: rgba(var(--colour-2), 1);
-    font-family: "Open Sans", sans-serif;
-}
-
-.custom-button-1:hover {
-    background-color: rgba(var(--colour-2), .7);
-}
-
-.custom-button-2 {
-    background-color: rgba(var(--colour-4), 1);
-    font-family: "Open Sans", sans-serif;
-}
-
-.custom-button-2:hover {
-    background-color: rgba(var(--colour-4), .7);
-}
-
-/* PROFILE APP */
 select,
 select option {
     font-family: "Open Sans", sans-serif;
@@ -633,7 +616,7 @@ select option[value=""] {
     opacity: 1 !important;
 }
 
-/* Themes */
+/* THEMES */
 #theme-selector-wrapper {
     position: fixed;
     z-index: 10000;
@@ -703,6 +686,7 @@ select option[value=""] {
     }
 }
 
+/* IMAGES APP */
 #images {
     
     .image-card {
@@ -742,53 +726,13 @@ select option[value=""] {
 }
 
 
-/* About App */
-#supplier-wrapper-1 {
-    background-attachment: fixed;
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-}
-
-#supplier-wrapper-2 {
-    background-attachment: fixed;
-    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-}
-
-.supplier-wrapper {
-    position: relative;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 50vh;
-    box-shadow: inset 7rem 7rem 14rem #000,
-                inset -7rem -7rem 14rem #000;
-    transition: all .5s ease-in-out;
-}
-
-.supplier-wrapper:hover {
-    box-shadow: inset 12rem 12rem 18rem #000,
-                inset -12rem -12rem 18rem #000;
-}
-
-.supplier-wrapper p {
-    position: absolute;
-    width: 60%;
-    z-index: 1000;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-}
-
+/* ABOUT APP */
 .about-row {
     overflow: hidden;
 }
 
 .about-card {
     transition: all .5s ease-in-out;
-
-    &:hover {
-        transform: rotate3d(-1, 1, 0, 0) !important;
-        clip-path: polygon(0 0, 33% 0, 58% 0, 82% 0, 100% 0, 100% 33%, 100% 56%, 100% 81%, 100% 100%, 73% 100%, 44% 100%, 16% 100%, 0 100%, 0 83%, 0 56%, 0 33%, 0 14%);
-    }
 
     p {
         font-size: 1.3rem;
@@ -801,6 +745,5 @@ select option[value=""] {
         background-color: #111;
     }
 }
-
 
 @import 'media-queries';
