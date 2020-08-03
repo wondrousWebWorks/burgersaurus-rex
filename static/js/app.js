@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 
+/* Grabbing elements and storing them in variables */
 const nav = document.querySelector('#navbar');
 const deliveryBanner = document.querySelector('#delivery-banner');
 const themesWrapper = document.querySelector('#theme-options');
@@ -15,6 +16,8 @@ let darkModeColour = '28, 28, 28';
 let lightModeColour = '247, 247, 247';
 let darkModeBoxShadowColour = '0, 0, 0';
 let lightModeBoxShadowColour = '51, 51, 51';
+
+/* Set default theme and whether dark mode is enabled */
 let theme = "1";
 let darkMode = 'false';
 
@@ -26,12 +29,19 @@ const toggleNavbarBackground = () => {
     deliveryBanner.classList.toggle('add-delivery-banner-background', window.scrollY > 100);
 };
 
+/* Event listener which calls toggleNavbarBackground to change the navbar background on scroll */
 window.addEventListener('scroll', toggleNavbarBackground);
 
+/* Event listener which toggles the theme options animation when the themes button is clicked */
 document.querySelector('#theme-selector-trigger').addEventListener('click', () => {
     themesWrapper.classList.toggle('translate-left');
 });
 
+/**
+ * Listens for click event on theme buttons 
+ * and sets the selected theme accordingly. 
+ * This includes setting dark mode.
+ */
 themeSelectors.forEach(themeSelector => {
     themeSelector.addEventListener('click', () => {
         const themeSelectorClassList = themeSelector.classList;
@@ -137,6 +147,11 @@ const setTheme = () => {
     }
 };
 
+/**
+ * Checks which theme is loaded whenever a page refreshes 
+ * and ensures the theme selection persists by setting the 
+ * theme again on page reload.
+ */
 window.addEventListener('DOMContentLoaded', () => {
     getTheme();
     setTheme();
