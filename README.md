@@ -372,6 +372,47 @@ NOTE: In order to deploy successfully to Heroku, both a *requirements.txt* file 
     EMAIL_HOST_USER | <"your email address that is used to send emails">
     DEFAULT_FROM_EMAIL | <"the email address you'd like the email to be sent from, e.g. info@burgersaurusrex.com">
 
+10. While still on Heroku with the **Convig Vars** revealed, copy the value of DATABASE_URL
+11. In your local IDE, add the following code to your `env.py` file:
+
+    `os.environ[DATABASE_URL] = <the value you copied from Heroku goes here>`
+
+    NOTE: If you haven't set up an env.py file yet, follow the instructions in **Running the project locally** to do so. Click [here](#running-the-project-locally) to see how it's done.
+
+    NOTE: Ensure that no value is set for `DEVELOPMENT` in your `env.py` file. If it is set, delete it from the file now.
+
+12. Migrate the database models to the Postgres database on Heroku by running the following commands:
+
+    `python3 manage.py makemigrations`
+
+    `python3 manage.py migrate`
+
+13. Populate the Postgres database on Heroku with data using the following commands:
+
+    ```bash
+        python3 manage.py loaddata categories.json
+        python3 manage.py loaddata allergens.json
+        python3 manage.py loaddata products.json
+        python3 manage.py loaddata pages.json
+        python3 manage.py loaddata images.json
+    ```
+
+14. Create a **superuser** for the Postgres database on Heroku as follows:
+
+    `python3 manage.py createsuperuser`
+
+    - Follow the instructions to finish creating the superuser
+
+15. In Heroku, navigate to the **Deployment** section by clicking on *Deployment* in the navigation bar
+16. In the **Deployment** section, select **GitHub** as the deployment method
+17. Link the Heroku app to the correctGitHub repository for the project
+18. Select **Enable Automatic Deploys** in the *Automatic Deployment* section
+19. Perform a `git push` to Github to also push the project to Heroku
+20. In Heroku, navigate to the **Activity** tab to see how ti project's build is progressing
+21. Once successful deployment is indicated, click on **Open App** to view the deployed site
+22. Log into the site using your superuser credentials created earlier and verify your email address. You are now ready to use the app, Enjoy!
+
+
 ## Testing
 
 Testing details can be found in the testing.md file [here](https://github.com/wondrousWebWorks/burgersaurus-rex/blob/master/testing.md)
