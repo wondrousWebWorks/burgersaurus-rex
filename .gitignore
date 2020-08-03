@@ -4,3 +4,4 @@ package-lock.json
 *.iml
 temp-images/
 db.sqlite3
+env.py
