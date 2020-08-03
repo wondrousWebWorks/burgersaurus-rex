@@ -2,6 +2,8 @@
 
 [Link to Live Site](https://burgersaurus-rex.herokuapp.com/)
 
+In order to test the full functionality of the site, testing credentials are included and be found [here](#testing-credentials)
+
 Welcome to my project! I really hope you enjoy it, and that it provides a good user experience. Burgersaurus Rex is takeway site which allows users to order and pay for food online. It provides all the functionality one would expect to see in such a site, such as the ability to view the menu and add items to your order, modify your order before payment and paying securely. It also offers the user the opportunity to create an account o make future checkouts easier as well as allowing users to view their full order history and select a past order to speed up the ordering process if they order the same on a regular basis. The site owner is provided with the ability to add, update or remove products from the site, as well as viewing the full order customer order history. A lot of love went into making this app, and I hope that comes across to you, the user.
 
 - [Burgersaurus Rex](#burgersaurus-rex)
@@ -16,6 +18,7 @@ Welcome to my project! I really hope you enjoy it, and that it provides a good u
       - [About Page](#about-page)
       - [Order Summary Page](#order-summary-page)
       - [Checkout Page](#checkout-page)
+  - [Testing Credentials](#testing-credentials)
   - [Wireframes](#wireframes)
   - [Information Architecture](#information-architecture)
     - [Database Choice](#database-choice)
@@ -86,6 +89,13 @@ Due to Django's ability to effortlessly render multi-page sites, Burgersaurus re
 #### Order Summary Page
 
 #### Checkout Page
+
+## Testing Credentials
+
+In order to test the site functionality, the following admin credentials can be used to log in as a superuser:
+
+- Username: **admin**
+- Password: **M@ryh@d@l1ttl3l@mb**
 
 ## Wireframes
 
