@@ -12,12 +12,12 @@ Burgersaurus Rex is takeway site which allows users to order and pay for food on
     - [Site Owner Stories](#site-owner-stories)
     - [Colours](#colours)
     - [Fonts](#fonts)
-    - [Site Layout](#site-layout)
-      - [Home Page](#home-page)
-      - [Menu Page](#menu-page)
-      - [About Page](#about-page)
-      - [Order Summary Page](#order-summary-page)
-      - [Checkout Page](#checkout-page)
+    - [Features](#features)
+      - [Existing Features](#existing-features)
+        - [Themes](#themes)
+        - [Menu](#menu)
+        - [Cart](#cart)
+        - [Checkout](#checkout)
   - [Testing Credentials](#testing-credentials)
   - [Wireframes](#wireframes)
   - [Information Architecture](#information-architecture)
@@ -76,19 +76,46 @@ While I was looking for a suitable colour palette for Burgersaurus Rex, I notice
 
 I took inpiration from Nandos, my favourite restaurant, and looked for a font equally cartoony and unique for my project. I finally settled on [Miltonian Tattoo](https://fonts.google.com/specimen/Miltonian+Tattoo?sidebar.open&selection.family=Miltonian+Tattoo&preview.text_type=custom&query=miltonian#standard-styles). Coupled with this is [Open Sans](https://fonts.google.com/specimen/Open+Sans?sidebar.open&selection.family=Miltonian+Tattoo&preview.text_type=custom&query=open#standard-styles), commonly used with the cartoony Miltonian Tattoo to provide a more regular font to balance site text. Both fonts were imported from [Google Fonts](https://fonts.google.com/?preview.text_type=custom&query=open#standard-styles).
 
-### Site Layout
+### Features
 
-Due to Django's ability to effortlessly render multi-page sites, Burgersaurus rex was designed to feature multiple pages.
+#### Existing Features
 
-#### Home Page
+##### Themes
 
-#### Menu Page
+    - Users have the ability to change between three themes to change the appearance of the site. They can also set dark mode if they so choose.  These settings are session dependant and will persist between pages
 
-#### About Page
+##### Menu
 
-#### Order Summary Page
+    - Users can browse the full menu or filter the menu by category to see specific items
+    - A search input in the navbar allows the user to search for specific items. The menu item names and descriptions are targeted for the search query
+    - Users can view a list of allergens for each item and click on individual allergens to be directed to an external site with more information on it
+    - The item quantity can be set before an item to the shopping cart
+    - A **success** message is displayed to notify the user than an item has been added to the shopping cart
+    - Individual menu items fade up onto the screen as the user scrolls on the page
 
-#### Checkout Page
+##### Cart
+
+    - A summary of the user's order is displayed where the **item names**, **quantities** and **sub-totals** can be seen
+    - Individual cart items fade onto the screen as the user scrolls down the page
+    - Users can modify the order quantities here or remove items from their order completely
+    - Adjusting the order quantities updates the order total on the go
+    - A success message is displayed whenever a change to the order is made
+    - The user can navigate back to the menu or proceed to the **Checkout** from here
+
+##### Checkout
+
+    - A summary of the user's order is displayed for inspection featuring **item names**, **quantities** and **sub-totals** for all order items
+    - The user needs to fill in the payment form in order to proceed with the payment
+    - If they already have an account, the form will be populated with their information
+    - The user will be offered an opportunity to **Sign In** or **Sign Up** before proceeding with the payment
+    - A checkbox allows the form data to be saved to the user's account if they've already got one
+    - A secure test payment can be made using Stripe's testing details
+    - The form will only be submitted once it has been validated
+    - A loading screen obscures that checkout page while the payment is being processed, while the payment form's submit button is also deactivated to prevent submitting the payment twice by accident
+    - A webhook is used to ensure that the order is processed even when the payment process gets interrupted
+    - If successful, the user is directed to the **Checkout Success** page where they can view a summary of their order
+    - A confirmation email is also sent to the user upon successful completion of a payment
+    - The user will see a success message wit their order number displayed as an additional measure to ensure they get confirmation of an order being processed successfully
 
 ## Testing Credentials
 
