@@ -501,7 +501,7 @@ Testing details can be found in the testing.md file [here](https://github.com/wo
 
 ## Acknowledgements
 
-I'd like to say thanks to my mentor, Simen Dehlin, for guiding from virtually being a complete beginner to where I am today. What I am today as a developer, and what I will eventually become, is a direct result of his excellent mentoring and guidance.
+I'd like to say thanks to my mentor, Simen Daehlin, for guiding from virtually being a complete beginner to where I am today. What I am today as a developer, and what I will eventually become, is a direct result of his excellent mentoring and guidance.
 
 I'd also like to thank Chris Zielinski for his help with Django and his endless patience to help me understand some of its more difficult concepts.
 
