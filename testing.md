@@ -44,6 +44,7 @@
       - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
       - [Navbar Displayed Wider Than Screen Width on Mobile Devices](#navbar-displayed-wider-than-screen-width-on-mobile-devices)
       - [Dark and Light Mode Text Colour Change in Menu App](#dark-and-light-mode-text-colour-change-in-menu-app)
+      - [Payment_intent.succeeded webhook not working](#payment_intentsucceeded-webhook-not-working)
     - [Existing Bugs](#existing-bugs)
 
 ## Testing
@@ -384,6 +385,32 @@ There are simply too many pages here to list individually within my time constra
 - **Verdict**
 
     This bug was squashed, and the light and dark mode font colours display as expected. :heavy_check_mark:
+
+#### Payment_intent.succeeded webhook not working
+
+- **Bug**
+
+    Trying to submit the checkout form did not result in the `payment_intent.succeeded` webhook being handle as expected. Instead, an HTTP status code of 500 was returned and no confirmation email was sent.
+
+- **Fix**
+
+    Inspecting the Heroku logs using the command `heroku logs --tail --app burgersaurus-rex` revelaed that an HTTP 500 status code was returned when trying to handle **payment_intent.succeeded** requests. An error message was displayed stating that an unknown attribute, `data`, was found in payment intents.
+
+    Further inspection of the **events** panel in my Stripe account showed that there were unhandled webhooks for **payment_intent.succeeded** requests.
+
+    Adding several `print` statements to the `handle_payment_intent_succeeded` method in the `Stripe_Web_Hook_Handler` class in **webhook-handler.py** printed out the payment intent as received by the method. Comparing the payment intent printed this way to the payment intent on Stripe's site, I noticed that I was trying to access values in the payment intent using key values in dot notation on the incorrect order.
+
+    The original statement looked like this:
+
+    `order_total = round(intent.data.charges[0].amount / 100, 2)`
+
+    The correct statement is:
+
+    `order_total = round(intent.charges.data[0].amount / 100, 2)`
+
+- **Verdict**
+
+    This bug was squashed, and the webhook handler works as expected and now result in confirmation emails being sent successfully. :heavy_check_mark:
 
 ### Existing Bugs
 
