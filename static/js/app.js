@@ -54,9 +54,6 @@ themeSelectors.forEach(themeSelector => {
             setThemeColours(pink, yellow, lightBlue, darkBlue, green);
         } else if (themeSelectorClassList.contains('theme-3')) {
             sessionStorage.setItem('theme', '3');
-            setThemeColours(yellow, lightBlue, darkBlue, green, pink);
-        } else if (themeSelectorClassList.contains('theme-4')) {
-            sessionStorage.setItem('theme', '4');
             setThemeColours(lightBlue, darkBlue, green, pink, yellow);
         } else if (themeSelectorClassList.contains('dark-mode')) {
             let darkModeCheck = sessionStorage.getItem('dark-mode');
@@ -127,9 +124,6 @@ const setTheme = () => {
             setThemeColours(pink, yellow, lightBlue, darkBlue, green);
             break;
         case '3':
-            setThemeColours(yellow, lightBlue, darkBlue, green, pink);
-            break;
-        case '4':
             setThemeColours(lightBlue, darkBlue, green, pink, yellow);
             break;
         default:
