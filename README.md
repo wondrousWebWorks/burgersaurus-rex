@@ -20,6 +20,12 @@ Burgersaurus Rex is takeway site which allows users to order and pay for food on
         - [Menu](#menu)
         - [Cart](#cart)
         - [Checkout](#checkout)
+        - [Profile](#profile)
+        - [Images](#images)
+      - [Features to be Implemented](#features-to-be-implemented)
+        - [Navbar](#navbar)
+        - [Menu](#menu-1)
+        - [Custom 404 and 500 pages](#custom-404-and-500-pages)
   - [Testing Credentials](#testing-credentials)
   - [Wireframes](#wireframes)
   - [Information Architecture](#information-architecture)
@@ -118,6 +124,34 @@ I took inpiration from Nandos, my favourite restaurant, and looked for a font eq
 - If successful, the user is directed to the **Checkout Success** page where they can view a summary of their order
 - A confirmation email is also sent to the user upon successful completion of a payment
 - The user will see a success message wit their order number displayed as an additional measure to ensure they get confirmation of an order being processed successfully
+
+##### Profile
+
+- Once the user has signed up to the site, they can access their profile where they can change their default delivery information and see their order history
+
+##### Images
+
+- The site owner or any user with the correct privileges can edit the images on the site
+- The Image Management page displays all the images by app section so the user can quickly identify where they are used
+- The image names are hard-coded and not editable by the user as the ability to filter images correctly for each page depends on their names
+- When clicking an image for editing, the user is directed to the **Edit Image** page where they can select a new image for a given section of the site
+
+#### Features to be Implemented
+
+Some features were not implemented due to time constraints. It is my intention to perfect the app when I can dedicate more time to it.
+
+##### Navbar
+
+- I'd love to implement a side navigation bar at some point. I think it will suit the site very well
+
+##### Menu
+
+- Add images for all the items on the menu. This will be a Herculean task!
+
+##### Custom 404 and 500 pages
+
+- Create and implement custom pages for HTML status codes of 404 (Page Not Found) and 500 (Internal Server Error)
+- An attempt at this was made a the end of the project, but due to aforementioned time constraint their implementation couldn't be finished
 
 ## Testing Credentials
 
