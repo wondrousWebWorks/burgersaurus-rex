@@ -44,6 +44,7 @@
       - [Checkout Issue for Non-Authenticated Users](#checkout-issue-for-non-authenticated-users)
       - [Navbar Displayed Wider Than Screen Width on Mobile Devices](#navbar-displayed-wider-than-screen-width-on-mobile-devices)
       - [Dark and Light Mode Text Colour Change in Menu App](#dark-and-light-mode-text-colour-change-in-menu-app)
+    - [Existing Bugs](#existing-bugs)
 
 ## Testing
 
@@ -383,3 +384,39 @@ There are simply too many pages here to list individually within my time constra
 - **Verdict**
 
     This bug was squashed, and the light and dark mode font colours display as expected. :heavy_check_mark:
+
+### Existing Bugs
+
+If a user tries to use the app without populating the Image model with data first, an error is thrown because the images for the **Home** page cannot be found. It should be possible to squash this by using `try` and `except` statements to return a default image for display if no others are found. This is what I will implement at a later date. As it stands, deploying the site using the instructions in the README.md file should populate the *Postgres* database on *Heroku* with the required data to prevent this bug from manifesting itself.
+
+The Image app requires a set naming convention for the images to work, so if the database can't be populated with data using the deployment steps in the README file, add `/admin/` to the end of the URL for the deployed app to access the **Admin** panel. Once there:
+
+1. Click on **Pages** in the *Images* section
+2. Add the following entries:
+   1. home
+   2. about
+   3. menu
+
+3. Navigate back to the **Admin** home page
+4. Click on **Images** in the *Images* section
+5. Add the following fields and add an image for each entry
+
+    | Friendly Name | Name | Page | Image |
+    --- | --- | --- | ---
+    About Header | about-header | about | your image selection here
+    Farm | about-farm | about | your image selection here
+    Hydroponics | about-hydroponics | about | your image selection here
+    Burgers | category-burgers | menu | your image selection here
+    Meal Deals | category-meal-deals | menu | your image selection here
+    Hotdogs | category-hotdogs | menu | your image selection here
+    Kebabs | category-kebabs | menu | your image selection here
+    Chips | category-chips | menu | your image selection here
+    Drinks | category-drinks | menu | your image selection here
+    Extras | category-extras | menu | your image selection here
+    Fish | category-fish | menu | your image selection here
+    Default | category-default | menu | your image selection here
+    Carousel Image 3 | carousel-image-3 | home | your image selection here
+    Carousel Image 2 | carousel-image-2 | home | your image selection here
+    Carousel Image 1 | carousel-image-1 | home | your image selection here
+
+The page should now work without any issues.
