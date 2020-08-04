@@ -38,8 +38,8 @@
                                     <form class="form" action="{% url 'update_cart' cart_item.item_id %}" method="POST">
                                         {% csrf_token %}
                                         <input type="number" name="quantity" value="{{ cart_item.quantity }}" min="1" max="99" data-id="{{ cart_item.item_id }}" id="item-id-{{ cart_item.item_id }}">
-                                        <a class="update-quantity-link cart-quantity-link mr-xs-0 mr-sm-2 text-success" data-id="{{ cart_item.item_id }}"><small>Update</small></a>
-                                        <a class="remove-item-link cart-quantity-link text-danger" data-id="{{ cart_item.item_id }}"><small>Remove</small></a>
+                                        <a class="update-quantity-link cart-quantity-link mr-xs-0 mr-sm-2 text-success text-shadow-1px" data-id="{{ cart_item.item_id }}"><small><strong>Update</strong></small></a>
+                                        <a class="remove-item-link cart-quantity-link text-danger text-shadow-1px" data-id="{{ cart_item.item_id }}"><small><strong>Remove</strong></small></a>
                                     </form>
                                 </td>
                                 <td class="py-3 align-middle">

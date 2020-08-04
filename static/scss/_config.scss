@@ -108,6 +108,10 @@
     text-shadow: 2px 2px #1c1c1c;
 }
 
+.text-shadow-1px {
+    text-shadow: 1px 1px #1c1c1c;
+}
+
 /* BOX SHADOW CLASS */
 .medium-box-shadow {
     box-shadow: 5px 5px 5px rgba(var(--box-shadow-colour), 1);
