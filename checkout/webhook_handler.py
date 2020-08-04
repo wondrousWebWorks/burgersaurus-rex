@@ -82,7 +82,6 @@ class Stripe_Web_Hook_Handler:
                     postcode__iexact=shipping_details.address.postal_code,
                     town_or_city__iexact=shipping_details.address.city,
                     street_address1__iexact=shipping_details.address.line1,
-                    street_address2__iexact=shipping_details.address.line2,
                     order_total=order_total,
                     original_cart=cart,
                     stripe_pid=pid,
