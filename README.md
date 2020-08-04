@@ -486,6 +486,8 @@ NOTE: In order to deploy successfully to Heroku, both a *requirements.txt* file 
 21. Once successful deployment is indicated, click on **Open App** to view the deployed site
 22. Log into the site using your superuser credentials created earlier and verify your email address. You are now ready to use the app, Enjoy!
 
+NOTE: In the rare event that the Postgres database fails be populated with data in step 13 above, the site will crash at first and not work as expected.  A fix for this can be found [here](https://github.com/wondrousWebWorks/burgersaurus-rex/blob/master/testing.md#existing-bugs) in the **testing** file.
+
 ## Testing
 
 Testing details can be found in the testing.md file [here](https://github.com/wondrousWebWorks/burgersaurus-rex/blob/master/testing.md)
